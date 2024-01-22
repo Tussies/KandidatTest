@@ -29,7 +29,10 @@ def draw_map(screen, game_map, path, show_path):
             
             # Check if the tile is part of the path and control points have been passed
             if show_path and (x, y) in path:
-                color = (255, 255, 0)  # Yellow color for the path
+                # Draw a circle for the path with the same color as the player
+                player_radius = TILE_SIZE // 2
+                player_center = (x * TILE_SIZE + player_radius, y * TILE_SIZE + player_radius)
+                pygame.draw.circle(screen, PLAYER, player_center, player_radius)
             else:
                 if tile == BLACK:
                     color = (0, 0, 0)
@@ -44,7 +47,7 @@ def draw_map(screen, game_map, path, show_path):
                 elif tile == PLAYER:
                     color = PLAYER
 
-            pygame.draw.rect(screen, color, (x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE))
+                pygame.draw.rect(screen, color, (x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE))
 
 def draw_player(screen, position):
     player_radius = TILE_SIZE // 2
@@ -148,7 +151,7 @@ def main():
 
         # Draw the trail of the player's movement
         for point in control_points:
-            pygame.draw.rect(screen, PLAYER, (point[0] * TILE_SIZE, point[1] * TILE_SIZE, TILE_SIZE, TILE_SIZE))
+            pygame.draw.circle(screen, PLAYER, (point[0] * TILE_SIZE + TILE_SIZE // 2, point[1] * TILE_SIZE + TILE_SIZE // 2), TILE_SIZE // 2)
 
         pygame.display.flip()
 
