@@ -6,8 +6,10 @@ WIDTH, HEIGHT = 25, 25
 TILE_SIZE = 10  # Adjust this to change the size of each tile
 
 # Colors
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
+WHITE = 0
+BLACK = 1  # Wall
+PURPLE = 2  # Barrier
+RED = 3  # Stairs
 
 def create_empty_map():
     return [[0 for _ in range(WIDTH)] for _ in range(HEIGHT)]
@@ -15,7 +17,15 @@ def create_empty_map():
 def draw_map(screen, game_map):
     for y, row in enumerate(game_map):
         for x, tile in enumerate(row):
-            color = WHITE if tile == 0 else BLACK
+            if tile == WHITE:
+                color = (255, 255, 255)
+            elif tile == BLACK:
+                color = (0, 0, 0)
+            elif tile == PURPLE:
+                color = (128, 0, 128)
+            elif tile == RED:
+                color = (255, 0, 0)
+            
             pygame.draw.rect(screen, color, (x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE))
 
 def main():
@@ -25,26 +35,30 @@ def main():
 
     game_map = create_empty_map()
 
-    # Manually set some pixels to black (1)
+    # Manually set some pixels
+    for x in range(0, 25):
+        game_map[x][0] = BLACK
+        game_map[0][x] = BLACK
+        game_map[24][x] = BLACK
+        game_map[x][24] = BLACK
+        game_map[x][12] = BLACK
+    
+    game_map[20][11] = BLACK
+    game_map[22][11] = BLACK
+    game_map[21][11] = RED
+    
+    game_map[20][23] = BLACK
+    game_map[22][23] = BLACK
+    game_map[21][23] = RED
     
     
-    
-    for x in range(0,25):
-        game_map[x][0] = 1
-        game_map[0][x] = 1
-        game_map[24][x] = 1
-        game_map[x][24] = 1
-        game_map[x][12] = 1
-    
-        
-        
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
 
-        screen.fill(WHITE)
+        screen.fill((255, 255, 255))  # Set background color to white
         draw_map(screen, game_map)
         pygame.display.flip()
 
