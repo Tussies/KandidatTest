@@ -88,6 +88,7 @@ def main():
         game_map[x][8] = BLACK
     
     game_map[10][6] = BLUE
+    game_map[16][4] = BLUE
     
     player_position = [10, 2]  # Initial player position
     player_direction = [0, 0]  # Initial player direction
