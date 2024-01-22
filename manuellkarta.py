@@ -15,26 +15,34 @@ BLUE = 5  # Kontroll
 PLAYER = (255, 255, 0)  # Player dot color (Yellow)
 CONTROL_POINT = 6  # Blue dots
 
+# Add this line at the beginning to initialize the path array
+path = []
+
 def create_empty_map():
     return [[0 for _ in range(HEIGHT)] for _ in range(WIDTH)]
 
-def draw_map(screen, game_map):
+def draw_map(screen, game_map, path, show_path):
     for x in range(WIDTH):
         for y in range(HEIGHT):
             tile = game_map[x][y]
             color = (255, 255, 255)
-            if tile == BLACK:
-                color = (0, 0, 0)
-            elif tile == PURPLE:
-                color = (128, 0, 128)
-            elif tile == RED:
-                color = (255, 0, 0)
-            elif tile == GREEN:
-                color = (0, 255, 0)
-            elif tile == BLUE:
-                color = (0, 0, 255)
-            elif tile == PLAYER:
-                color = PLAYER
+            
+            # Check if the tile is part of the path and control points have been passed
+            if show_path and (x, y) in path:
+                color = (255, 255, 0)  # Yellow color for the path
+            else:
+                if tile == BLACK:
+                    color = (0, 0, 0)
+                elif tile == PURPLE:
+                    color = (128, 0, 128)
+                elif tile == RED:
+                    color = (255, 0, 0)
+                elif tile == GREEN:
+                    color = (0, 255, 0)
+                elif tile == BLUE:
+                    color = (0, 0, 255)
+                elif tile == PLAYER:
+                    color = PLAYER
 
             pygame.draw.rect(screen, color, (x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE))
 
@@ -43,7 +51,7 @@ def draw_player(screen, position):
     player_center = (position[0] * TILE_SIZE + player_radius, position[1] * TILE_SIZE + player_radius)
     pygame.draw.circle(screen, PLAYER, player_center, player_radius)
 
-def move_player(game_map, current_position, direction, control_points):
+def move_player(game_map, current_position, direction, control_points, path):
     # Calculate the new position based on the direction
     new_position = [current_position[0] + direction[0], current_position[1] + direction[1]]
 
@@ -61,10 +69,13 @@ def move_player(game_map, current_position, direction, control_points):
                 game_map[new_position[0]][new_position[1]] = 0  # Remove the blue dot from the map
             elif game_map[new_position[0]][new_position[1]] == BLUE:
                 game_map[new_position[0]][new_position[1]] = WHITE  # Turn the blue tile to white
+            
+            # Update the path array
+            path.append(tuple(new_position))
+            
             return new_position
     else:
         return current_position
-
 
 def main():
     pygame.init()
@@ -105,6 +116,7 @@ def main():
     key_pressed = False
 
     control_points = []  # List to store passed control points
+    all_control_points_passed = False
 
     running = True
     while running:
@@ -125,12 +137,13 @@ def main():
                 key_pressed = False
                 player_direction = [0, 0]
 
-        if key_pressed:
+        if not all_control_points_passed and key_pressed:
             # Move the player dot one step
-            player_position = move_player(game_map, player_position, player_direction, control_points)
+            player_position = move_player(game_map, player_position, player_direction, control_points, path)
 
         screen.fill((255, 255, 255))  # Set background color to white
-        draw_map(screen, game_map)
+        # Pass a boolean flag to indicate whether to show the path
+        draw_map(screen, game_map, path, all_control_points_passed)
         draw_player(screen, player_position)
 
         # Draw the trail of the player's movement
@@ -144,8 +157,7 @@ def main():
         # Check if all control points are passed
         if len(control_points) == sum(row.count(BLUE) for row in game_map):
             print("All control points passed!")
-            # Additional actions can be performed when all control points are passed
-            running = False
+            all_control_points_passed = True
 
     pygame.quit()
 
