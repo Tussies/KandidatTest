@@ -2,7 +2,7 @@ import pygame
 import sys
 
 # Constants
-WIDTH, HEIGHT = 26, 26
+WIDTH, HEIGHT = 25, 25
 TILE_SIZE = 10  # Adjust this to change the size of each tile
 
 # Colors
@@ -29,11 +29,12 @@ def main():
     
     
     
-    for x in range(0,26):
+    for x in range(0,25):
         game_map[x][0] = 1
         game_map[0][x] = 1
-        game_map[25][x] = 1
-        game_map[x][25] = 1
+        game_map[24][x] = 1
+        game_map[x][24] = 1
+        game_map[x][12] = 1
     
         
         
