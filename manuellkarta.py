@@ -156,9 +156,10 @@ def main():
 
         # Check if all control points are passed
         if len(control_points) == sum(row.count(BLUE) for row in game_map):
-            print("All control points passed!")
             all_control_points_passed = True
 
+    # Move the "All control points passed!" message outside the main loop
+    print("All control points passed!")
     pygame.quit()
 
 if __name__ == "__main__":
