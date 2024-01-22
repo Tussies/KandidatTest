@@ -4,7 +4,7 @@ import heapq
 
 # Constants
 WIDTH, HEIGHT = 800, 600
-GRID_SIZE = 20
+GRID_SIZE = 75
 CELL_SIZE = WIDTH // GRID_SIZE
 
 # Colors
