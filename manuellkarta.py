@@ -13,6 +13,7 @@ RED = 3  # Stairs
 GREEN = 4  # START
 BLUE = 5  # Kontroll
 PLAYER = (255, 255, 0)  # Player dot color (Yellow)
+CONTROL_POINT = 6  # Blue dots
 
 def create_empty_map():
     return [[0 for _ in range(HEIGHT)] for _ in range(WIDTH)]
@@ -32,6 +33,8 @@ def draw_map(screen, game_map):
                 color = (0, 255, 0)
             elif tile == BLUE:
                 color = (0, 0, 255)
+            elif tile == PLAYER:
+                color = PLAYER
 
             pygame.draw.rect(screen, color, (x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE))
 
@@ -40,7 +43,7 @@ def draw_player(screen, position):
     player_center = (position[0] * TILE_SIZE + player_radius, position[1] * TILE_SIZE + player_radius)
     pygame.draw.circle(screen, PLAYER, player_center, player_radius)
 
-def move_player(game_map, current_position, direction):
+def move_player(game_map, current_position, direction, control_points):
     # Calculate the new position based on the direction
     new_position = [current_position[0] + direction[0], current_position[1] + direction[1]]
 
@@ -52,9 +55,16 @@ def move_player(game_map, current_position, direction):
         elif new_position == [23, 21]:
             return [11, 21]
         else:
+            # Check for control points
+            if game_map[new_position[0]][new_position[1]] == CONTROL_POINT:
+                control_points.append(new_position)
+                game_map[new_position[0]][new_position[1]] = 0  # Remove the blue dot from the map
+            elif game_map[new_position[0]][new_position[1]] == BLUE:
+                game_map[new_position[0]][new_position[1]] = WHITE  # Turn the blue tile to white
             return new_position
     else:
         return current_position
+
 
 def main():
     pygame.init()
@@ -94,6 +104,8 @@ def main():
     player_direction = [0, 0]  # Initial player direction
     key_pressed = False
 
+    control_points = []  # List to store passed control points
+
     running = True
     while running:
         for event in pygame.event.get():
@@ -115,14 +127,25 @@ def main():
 
         if key_pressed:
             # Move the player dot one step
-            player_position = move_player(game_map, player_position, player_direction)
+            player_position = move_player(game_map, player_position, player_direction, control_points)
 
         screen.fill((255, 255, 255))  # Set background color to white
         draw_map(screen, game_map)
         draw_player(screen, player_position)
+
+        # Draw the trail of the player's movement
+        for point in control_points:
+            pygame.draw.rect(screen, PLAYER, (point[0] * TILE_SIZE, point[1] * TILE_SIZE, TILE_SIZE, TILE_SIZE))
+
         pygame.display.flip()
 
         pygame.time.Clock().tick(30)  # Limit the frame rate to 30 FPS
+
+        # Check if all control points are passed
+        if len(control_points) == sum(row.count(BLUE) for row in game_map):
+            print("All control points passed!")
+            # Additional actions can be performed when all control points are passed
+            running = False
 
     pygame.quit()
 
