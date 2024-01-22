@@ -15,8 +15,9 @@ def create_empty_map():
     return [[0 for _ in range(WIDTH)] for _ in range(HEIGHT)]
 
 def draw_map(screen, game_map):
-    for y, row in enumerate(game_map):
-        for x, tile in enumerate(row):
+    for x in range(WIDTH):
+        for y in range(HEIGHT):
+            tile = game_map[y][x]
             if tile == WHITE:
                 color = (255, 255, 255)
             elif tile == BLACK:
@@ -25,7 +26,7 @@ def draw_map(screen, game_map):
                 color = (128, 0, 128)
             elif tile == RED:
                 color = (255, 0, 0)
-            
+
             pygame.draw.rect(screen, color, (x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE))
 
 def main():
@@ -36,22 +37,21 @@ def main():
     game_map = create_empty_map()
 
     # Manually set some pixels
-    for x in range(0, 25):
-        game_map[x][0] = BLACK
+    for x in range(25):
         game_map[0][x] = BLACK
-        game_map[24][x] = BLACK
+        game_map[x][0] = BLACK
         game_map[x][24] = BLACK
-        game_map[x][12] = BLACK
+        game_map[24][x] = BLACK
+        game_map[12][x] = BLACK
     
-    game_map[20][11] = BLACK
-    game_map[22][11] = BLACK
-    game_map[21][11] = RED
+    game_map[11][20] = BLACK
+    game_map[11][22] = BLACK
+    game_map[11][21] = RED
     
-    game_map[20][23] = BLACK
-    game_map[22][23] = BLACK
-    game_map[21][23] = RED
-    
-    
+    game_map[23][20] = BLACK
+    game_map[23][22] = BLACK
+    game_map[23][21] = RED
+
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
