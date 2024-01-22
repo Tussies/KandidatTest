@@ -46,7 +46,13 @@ def move_player(game_map, current_position, direction):
 
     # Check if the new position is a valid move
     if 0 <= new_position[0] < WIDTH and 0 <= new_position[1] < HEIGHT and game_map[new_position[0]][new_position[1]] != BLACK:
-        return new_position
+        # Check for teleportation points
+        if new_position == [11, 21]:
+            return [23, 21]
+        elif new_position == [23, 21]:
+            return [11, 21]
+        else:
+            return new_position
     else:
         return current_position
 
