@@ -1,0 +1,17 @@
+#map-container {
+    position: relative;
+  }
+  
+  #map-image {
+    max-width: 100%;
+  }
+  
+  .node {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
