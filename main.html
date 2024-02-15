@@ -45,7 +45,7 @@
     }
 
     .grid-square {
-      border: 1px solid #000;
+      border: 1px solid #665e5e;
     }
   </style>
 </head>
@@ -86,7 +86,7 @@
       }
 
       function placeNodesRandomly(columns, rows, columnWidth, rowHeight) {
-        const totalNodes = 20; // Adjust as needed
+        const totalNodes = 30; // Adjust as needed
         const gridSquares = document.querySelectorAll('.grid-square');
 
         for (let i = 0; i < totalNodes; i++) {
@@ -117,11 +117,11 @@
           const aspectRatio = mapWidth / mapHeight;
           let columns, rows;
           if (aspectRatio >= 1) {
-            columns = 20;
-            rows = Math.round(20 / aspectRatio);
+            columns = 100;
+            rows = Math.round(100 / aspectRatio);
           } else {
-            columns = Math.round(20 * aspectRatio);
-            rows = 20;
+            columns = Math.round(100 * aspectRatio);
+            rows = 100;
           }
 
           // Create grid based on map dimensions
