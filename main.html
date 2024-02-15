@@ -42,6 +42,20 @@
       border-radius: 50%;
       position: absolute;
       cursor: pointer;
+      display: none; /* Hide nodes by default */
+    }
+
+    .node.active {
+      display: block; /* Show active node */
+    }
+
+    .node-number {
+      color: white;
+      font-size: 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .player-dot {
@@ -83,63 +97,80 @@
       let playerPosition = { x: 0, y: 0 };
       const gridSquares = [];
 
-      function createGrid(mapWidth, mapHeight, columns, rows) {
-        const columnWidth = mapWidth / columns;
-        const rowHeight = mapHeight / rows;
+      const nodes = [
+        { x: 20, y: 20, number: 1 }, // Adjust the positions as needed
+        { x: 40, y: 40, number: 2 },
+        { x: 60, y: 60, number: 3 },
+        { x: 80, y: 80, number: 4 },
+        { x: 90, y: 10, number: 5 }
+      ];
 
-        for (let col = 0; col < columns; col++) {
-          for (let row = 0; row < rows; row++) {
-            const gridSquare = document.createElement('div');
-            gridSquare.classList.add('grid-square');
-            gridSquare.style.width = columnWidth + 'px';
-            gridSquare.style.height = rowHeight + 'px';
-            gridSquare.style.position = 'absolute';
-            gridSquare.style.left = (col * columnWidth) + 'px';
-            gridSquare.style.top = (row * rowHeight) + 'px';
-            nodesContainer.appendChild(gridSquare);
-            gridSquares.push(gridSquare);
-          }
-        }
+      let currentNodeIndex = 0; // Index of the current node the player should move to
+
+      function createNodes() {
+        nodes.forEach((node, index) => {
+          const nodeElement = document.createElement('div');
+          nodeElement.classList.add('node');
+          nodeElement.style.left = node.x + '%';
+          nodeElement.style.top = node.y + '%';
+          
+          const nodeNumber = document.createElement('div');
+          nodeNumber.classList.add('node-number');
+          nodeNumber.textContent = index + 1; // Display numbers starting from 1
+          nodeElement.appendChild(nodeNumber);
+
+          nodesContainer.appendChild(nodeElement);
+        });
       }
 
       function updatePlayerPosition() {
-  const mapWidth = mapImage.clientWidth;
-  const mapHeight = mapImage.clientHeight;
-  const columnWidth = mapWidth / 100;
-  const rowHeight = mapHeight / 100;
+        const mapWidth = mapImage.clientWidth;
+        const mapHeight = mapImage.clientHeight;
+        const columnWidth = mapWidth / 100;
+        const rowHeight = mapHeight / 100;
 
-  playerDot.style.left = (playerPosition.x * columnWidth + (columnWidth / 2) - (playerDot.offsetWidth / 2)) + 'px';
-  playerDot.style.top = (playerPosition.y * rowHeight + (rowHeight / 2) - (playerDot.offsetHeight / 2)) + 'px';
-}
-
+        playerDot.style.left = (playerPosition.x * columnWidth + (columnWidth / 2) - (playerDot.offsetWidth / 2)) + 'px';
+        playerDot.style.top = (playerPosition.y * rowHeight + (rowHeight / 2) - (playerDot.offsetHeight / 2)) + 'px';
+      }
 
       function movePlayer(direction) {
-  switch (direction) {
-    case 'up':
-      if (playerPosition.y > 0) {
-        playerPosition.y--;
-      }
-      break;
-    case 'down':
-      if (playerPosition.y < 100) { // Updated condition to check if y-coordinate is less than 100
-        playerPosition.y++;
-      }
-      break;
-    case 'left':
-      if (playerPosition.x > 0) {
-        playerPosition.x--;
-      }
-      break;
-    case 'right':
-      if (playerPosition.x < 100) {
-        playerPosition.x++;
-      }
-      break;
-  }
-  updatePlayerPosition();
-}
+        const moveDistance = 1; // Adjust the move distance as needed
+        
+        switch (direction) {
+          case 'up':
+            if (playerPosition.y > 0) {
+              playerPosition.y -= moveDistance;
+            }
+            break;
+          case 'down':
+            if (playerPosition.y < 100) {
+              playerPosition.y += moveDistance;
+            }
+            break;
+          case 'left':
+            if (playerPosition.x > 0) {
+              playerPosition.x -= moveDistance;
+            }
+            break;
+          case 'right':
+            if (playerPosition.x < 100) {
+              playerPosition.x += moveDistance;
+            }
+            break;
+        }
+        updatePlayerPosition();
 
-
+        // Check if the player reached the current node
+        const currentNode = nodes[currentNodeIndex];
+        if (playerPosition.x === currentNode.x && playerPosition.y === currentNode.y) {
+          currentNodeIndex++; // Move to the next node
+          if (currentNodeIndex === nodes.length) {
+            // All nodes have been captured
+            alert('Congratulations! You have captured all nodes.');
+            currentNodeIndex = 0; // Reset node index for next game
+          }
+        }
+      }
 
       document.addEventListener('keydown', function(event) {
         switch (event.key) {
@@ -175,10 +206,8 @@
           const mapHeight = mapImage.clientHeight;
 
           // Create grid based on map dimensions
-          createGrid(mapWidth, mapHeight, 100, 100); // Adjust the number of columns and rows as needed
-
-          // Update player position based on grid size
-          updatePlayerPosition();
+          createNodes(); // Create nodes
+          updatePlayerPosition(); // Update player position
         });
       });
 
