@@ -32,6 +32,7 @@
     
     #map-image {
       max-width: calc(100% - 160px); /* Adjust to accommodate sidebar width */
+      position: relative;
     }
 
     .node {
@@ -41,6 +42,10 @@
       border-radius: 50%;
       position: absolute;
       cursor: pointer;
+    }
+
+    .grid-square {
+      border: 1px solid #000;
     }
   </style>
 </head>
@@ -53,41 +58,66 @@
   
   <div id="map-container">
     <img id="map-image" src="karta1.jpeg" alt="Map">
-    <div id="nodes-container">
-      <!-- Pre-placed nodes for Map 1 -->
-      <div class="node map1" id="node1" style="left: 70px; top: 70px;"></div>
-      <div class="node map1" id="node2" style="left: 230px; top: 70px;"></div>
-      <div class="node map1" id="node3" style="left: 70px; top: 170px;"></div>
-      
-      <!-- Pre-placed nodes for Map 2 -->
-      <div class="node map2" id="node4" style="left: 150px; top: 150px; display: none;"></div>
-      <div class="node map2" id="node5" style="left: 250px; top: 250px; display: none;"></div>
-      <div class="node map2" id="node6" style="left: 350px; top: 350px; display: none;"></div>
-    </div>
+    <div id="nodes-container"></div>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const thumbnails = document.querySelectorAll('.map-thumbnail');
       const mapImage = document.getElementById('map-image');
-      const nodes = document.querySelectorAll('.node');
-  
+      const nodesContainer = document.getElementById('nodes-container');
+
+      function createGrid(mapWidth, mapHeight, columns, rows) {
+        const columnWidth = mapWidth / columns;
+        const rowHeight = mapHeight / rows;
+
+        for (let col = 0; col < columns; col++) {
+          for (let row = 0; row < rows; row++) {
+            const gridSquare = document.createElement('div');
+            gridSquare.classList.add('grid-square');
+            gridSquare.style.width = columnWidth + 'px';
+            gridSquare.style.height = rowHeight + 'px';
+            gridSquare.style.position = 'absolute';
+            gridSquare.style.left = (col * columnWidth) + 'px';
+            gridSquare.style.top = (row * rowHeight) + 'px';
+            nodesContainer.appendChild(gridSquare);
+          }
+        }
+      }
+
+      function placeNodesRandomly(columns, rows) {
+        const totalNodes = 10; // Adjust as needed
+        const gridSquares = document.querySelectorAll('.grid-square');
+
+        for (let i = 0; i < totalNodes; i++) {
+          const randomSquareIndex = Math.floor(Math.random() * gridSquares.length);
+          const randomSquare = gridSquares[randomSquareIndex];
+
+          const node = document.createElement('div');
+          node.classList.add('node');
+          node.style.left = randomSquare.style.left;
+          node.style.top = randomSquare.style.top;
+          nodesContainer.appendChild(node);
+        }
+      }
+
       thumbnails.forEach(thumbnail => {
         thumbnail.addEventListener('click', function() {
           const mapSrc = thumbnail.getAttribute('data-src');
           mapImage.src = mapSrc;
 
-          // Hide all nodes
-          nodes.forEach(node => {
-            node.style.display = 'none';
-          });
+          // Remove existing grid squares and nodes
+          nodesContainer.innerHTML = '';
 
-          // Show nodes corresponding to the selected map
-          const mapClass = thumbnail.getAttribute('data-map');
-          const nodesToShow = document.querySelectorAll(`.node.${mapClass}`);
-          nodesToShow.forEach(node => {
-            node.style.display = 'block';
-          });
+          // Calculate grid dimensions based on map image size
+          const mapWidth = mapImage.clientWidth;
+          const mapHeight = mapImage.clientHeight;
+
+          // Create grid based on map dimensions
+          createGrid(mapWidth, mapHeight, 10, 10); // Adjust the number of columns and rows as needed
+
+          // Place nodes randomly within the grid
+          placeNodesRandomly(10, 10); // Adjust the number of columns and rows as needed
         });
       });
 
