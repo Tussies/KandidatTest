@@ -85,8 +85,8 @@
         }
       }
 
-      function placeNodesRandomly(columns, rows) {
-        const totalNodes = 10; // Adjust as needed
+      function placeNodesRandomly(columns, rows, columnWidth, rowHeight) {
+        const totalNodes = 20; // Adjust as needed
         const gridSquares = document.querySelectorAll('.grid-square');
 
         for (let i = 0; i < totalNodes; i++) {
@@ -113,11 +113,24 @@
           const mapWidth = mapImage.clientWidth;
           const mapHeight = mapImage.clientHeight;
 
+          // Determine the number of columns and rows based on aspect ratio
+          const aspectRatio = mapWidth / mapHeight;
+          let columns, rows;
+          if (aspectRatio >= 1) {
+            columns = 20;
+            rows = Math.round(20 / aspectRatio);
+          } else {
+            columns = Math.round(20 * aspectRatio);
+            rows = 20;
+          }
+
           // Create grid based on map dimensions
-          createGrid(mapWidth, mapHeight, 10, 10); // Adjust the number of columns and rows as needed
+          createGrid(mapWidth, mapHeight, columns, rows); // Adjust the number of columns and rows as needed
 
           // Place nodes randomly within the grid
-          placeNodesRandomly(10, 10); // Adjust the number of columns and rows as needed
+          const columnWidth = mapWidth / columns;
+          const rowHeight = mapHeight / rows;
+          placeNodesRandomly(columns, rows, columnWidth, rowHeight); // Adjust the number of columns and rows as needed
         });
       });
 
