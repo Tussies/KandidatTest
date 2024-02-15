@@ -38,11 +38,10 @@
     .node {
       width: 20px;
       height: 20px;
-      background-color: red; /* Adjust as needed */
+      background-color: purple; /* Change node color to purple */
       border-radius: 50%;
       position: absolute;
       cursor: pointer;
-      display: none; /* Hide nodes by default */
     }
 
     .node.active {
@@ -70,6 +69,10 @@
 
     .grid-square {
       border: 1px solid #000;
+      width: 20px; /* Adjust to fit nodes within one square */
+      height: 20px; /* Adjust to fit nodes within one square */
+      position: relative;
+      float: left; /* Ensures grid layout */
     }
   </style>
 </head>
@@ -83,6 +86,7 @@
   <div id="map-container">
     <img id="map-image" src="karta1.jpeg" alt="Map">
     <div id="nodes-container"></div>
+    <div class="grid-square"></div> <!-- Grid square to ensure layout -->
   </div>
 
   <script>
@@ -98,11 +102,11 @@
       const gridSquares = [];
 
       const nodes = [
-        { x: 20, y: 20, number: 1 }, // Adjust the positions as needed
-        { x: 40, y: 40, number: 2 },
-        { x: 60, y: 60, number: 3 },
-        { x: 80, y: 80, number: 4 },
-        { x: 90, y: 10, number: 5 }
+        { x: 25, y: 25, number: 1 }, // Adjust the positions as needed
+        { x: 45, y: 45, number: 2 },
+        { x: 65, y: 65, number: 3 },
+        { x: 85, y: 85, number: 4 },
+        { x: 95, y: 5, number: 5 }
       ];
 
       let currentNodeIndex = 0; // Index of the current node the player should move to
@@ -193,30 +197,15 @@
         }
       });
 
+      createNodes(); // Create nodes
+      updatePlayerPosition(); // Update player position
+
       thumbnails.forEach(thumbnail => {
         thumbnail.addEventListener('click', function() {
           const mapSrc = thumbnail.getAttribute('data-src');
           mapImage.src = mapSrc;
-
-          // Remove existing grid squares
-          nodesContainer.innerHTML = '';
-
-          // Calculate grid dimensions based on map image size
-          const mapWidth = mapImage.clientWidth;
-          const mapHeight = mapImage.clientHeight;
-
-          // Create grid based on map dimensions
-          createNodes(); // Create nodes
           updatePlayerPosition(); // Update player position
         });
-      });
-
-      // Show nodes for the default map
-      const defaultMap = document.querySelector('.map-thumbnail');
-      const defaultMapClass = defaultMap.getAttribute('data-map');
-      const defaultNodesToShow = document.querySelectorAll(`.node.${defaultMapClass}`);
-      defaultNodesToShow.forEach(node => {
-        node.style.display = 'block';
       });
     });
   </script>
