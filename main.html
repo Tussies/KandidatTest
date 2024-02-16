@@ -4,78 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indoor Orienteering Game</title>
-  <style>
-    #sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 150px; /* Adjust as needed */
-      height: 100%; /* Adjust as needed */
-      background-color: black;
-      color: white;
-      overflow-y: auto;
-    }
-    
-    .map-thumbnail {
-      padding: 10px;
-      cursor: pointer;
-    }
-    
-    .map-thumbnail:hover {
-      background-color: #333;
-    }
-    
-    #map-container {
-      margin-left: 160px; /* Adjust to accommodate sidebar width */
-      position: relative;
-    }
-    
-    #map-image {
-      max-width: calc(100% - 160px); /* Adjust to accommodate sidebar width */
-      position: relative;
-    }
-
-    .node {
-      width: 20px;
-      height: 20px;
-      background-color: purple; /* Change node color to purple */
-      border-radius: 50%;
-      position: absolute;
-      cursor: pointer;
-    }
-
-    .node.active {
-      display: block; /* Show active node */
-    }
-
-    .node-number {
-      color: white;
-      font-size: 12px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .player-dot {
-      width: 10px;
-      height: 10px;
-      background-color: blue;
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .grid-square {
-      border: 1px solid #000;
-      width: 20px; /* Adjust to fit nodes within one square */
-      height: 20px; /* Adjust to fit nodes within one square */
-      position: relative;
-      float: left; /* Ensures grid layout */
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div id="sidebar">
     <div class="map-thumbnail" data-src="karta1.jpeg" data-map="map1">Map 1</div>
