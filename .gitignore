@@ -21,6 +21,7 @@ jspm_packages/
 
 # Misc
 .DS_Store
+**/.DS_Store
 *.pem
 
 # Runtime data
