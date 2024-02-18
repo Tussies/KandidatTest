@@ -21,10 +21,10 @@ jobs:
           node-version: ${{ env.WORKFLOW_NODE_VERSION }}
       - name: npm install
         run: npm i
-        run: npm i prettier
       - name: tests
         run: npm test
       - name: Prettier
+        run: npm i prettier
         uses: EPMatt/reviewdog-action-prettier@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
