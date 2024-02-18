@@ -1,4 +1,4 @@
-name: Testing
+name: Formatting
 
 on:
   push:
@@ -19,7 +19,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.WORKFLOW_NODE_VERSION }}
-      - name: npm install
+      - name: npm install Prettier
         run: npm i
-      - name: tests
-        run: npm test
+      - run: npm i prettier
+      - name: Prettier
+        uses: EPMatt/reviewdog-action-prettier@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-check
+          filter_mode: file
+          level: warning
+          tool_name: Prettier
