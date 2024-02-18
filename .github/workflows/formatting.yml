@@ -10,7 +10,7 @@ env:
   WORKFLOW_NODE_VERSION: 20.x
 
 jobs:
-  tests:
+  run-linters:
     runs-on: ubuntu-latest
 
     steps:
