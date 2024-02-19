@@ -105,20 +105,22 @@
       let currentNodeIndex = 0; // Index of the current node the player should move to
 
       function createNodes() {
-        nodes.forEach((node, index) => {
-          const nodeElement = document.createElement('div');
-          nodeElement.classList.add('node');
-          nodeElement.style.left = node.x + '%';
-          nodeElement.style.top = node.y + '%';
-          
-          const nodeNumber = document.createElement('div');
-          nodeNumber.classList.add('node-number');
-          nodeNumber.textContent = index + 1; // Display numbers starting from 1
-          nodeElement.appendChild(nodeNumber);
+  nodes.forEach((node, index) => {
+    const nodeElement = document.createElement('div');
+    nodeElement.classList.add('node');
+    nodeElement.style.left = node.x + '%';
+    nodeElement.style.top = node.y + '%';
+    nodeElement.setAttribute('data-number', node.number); // Set data-number attribute
+    
+    const nodeNumber = document.createElement('div');
+    nodeNumber.classList.add('node-number');
+    nodeNumber.textContent = index + 1; // Display numbers starting from 1
+    nodeElement.appendChild(nodeNumber);
 
-          nodesContainer.appendChild(nodeElement);
-        });
-      }
+    nodesContainer.appendChild(nodeElement);
+  });
+}
+
 
       function updatePlayerPosition() {
   const columnWidth = 1; // Each percentage represents 1% of the map width
