@@ -66,14 +66,7 @@
       top: 0;
       left: 0;
     }
-
-    .grid-square {
-      border: 1px solid #000;
-      width: 20px; /* Adjust to fit nodes within one square */
-      height: 20px; /* Adjust to fit nodes within one square */
-      position: relative;
-      float: left; /* Ensures grid layout */
-    }
+    
   </style>
 </head>
 <body>
@@ -99,7 +92,7 @@
       nodesContainer.appendChild(playerDot);
 
       let playerPosition = { x: 0, y: 0 };
-      const gridSquares = [];
+      
 
       const nodes = [
         { x: 25, y: 25, number: 1 }, // Adjust the positions as needed
@@ -128,53 +121,70 @@
       }
 
       function updatePlayerPosition() {
-        const mapWidth = mapImage.clientWidth;
-        const mapHeight = mapImage.clientHeight;
-        const columnWidth = mapWidth / 100;
-        const rowHeight = mapHeight / 100;
+  const columnWidth = 1; // Each percentage represents 1% of the map width
+  const rowHeight = 1; // Each percentage represents 1% of the map height
 
-        playerDot.style.left = (playerPosition.x * columnWidth + (columnWidth / 2) - (playerDot.offsetWidth / 2)) + 'px';
-        playerDot.style.top = (playerPosition.y * rowHeight + (rowHeight / 2) - (playerDot.offsetHeight / 2)) + 'px';
-      }
+  // Calculate player position relative to map container size
+  playerDot.style.left = (playerPosition.x * columnWidth) + '%';
+  playerDot.style.top = (playerPosition.y * rowHeight) + '%';
+}
+
+
+
+     
 
       function movePlayer(direction) {
-        const moveDistance = 1; // Adjust the move distance as needed
-        
-        switch (direction) {
-          case 'up':
-            if (playerPosition.y > 0) {
-              playerPosition.y -= moveDistance;
-            }
-            break;
-          case 'down':
-            if (playerPosition.y < 100) {
-              playerPosition.y += moveDistance;
-            }
-            break;
-          case 'left':
-            if (playerPosition.x > 0) {
-              playerPosition.x -= moveDistance;
-            }
-            break;
-          case 'right':
-            if (playerPosition.x < 100) {
-              playerPosition.x += moveDistance;
-            }
-            break;
-        }
-        updatePlayerPosition();
-
-        // Check if the player reached the current node
-        const currentNode = nodes[currentNodeIndex];
-        if (playerPosition.x === currentNode.x && playerPosition.y === currentNode.y) {
-          currentNodeIndex++; // Move to the next node
-          if (currentNodeIndex === nodes.length) {
-            // All nodes have been captured
-            alert('Congratulations! You have captured all nodes.');
-            currentNodeIndex = 0; // Reset node index for next game
-          }
-        }
+  const moveDistance = 1; // Adjust the move distance as needed
+  
+  switch (direction) {
+    case 'up':
+      if (playerPosition.y > 0) {
+        playerPosition.y -= moveDistance;
       }
+      break;
+    case 'down':
+      if (playerPosition.y < 100) {
+        playerPosition.y += moveDistance;
+      }
+      break;
+    case 'left':
+      if (playerPosition.x > 0) {
+        playerPosition.x -= moveDistance;
+      }
+      break;
+    case 'right':
+      if (playerPosition.x < 100) {
+        playerPosition.x += moveDistance;
+      }
+      break;
+  }
+
+  // Update player position
+  updatePlayerPosition();
+  console.log('x and y',playerPosition.x,playerPosition.y)
+
+  // Check if the player reached a control node
+  const currentNode = nodes[currentNodeIndex];
+  if (playerPosition.x === currentNode.x && playerPosition.y === currentNode.y) {
+    // Check if it's the correct node
+    if (currentNode.number === currentNodeIndex + 1) {
+      // The correct node is found, mark it as found
+      const nodeElement = document.querySelector(`.node[data-number='${currentNode.number}']`);
+      nodeElement.style.display = 'none'; // Hide the node on the map
+
+      // Move to the next node
+      currentNodeIndex++;
+
+      // Check if all nodes have been captured
+      if (currentNodeIndex === nodes.length) {
+        // All nodes have been captured
+        alert('Congratulations! You have captured all nodes.');
+        currentNodeIndex = 0; // Reset node index for next game
+      }
+    }
+  }
+}
+
 
       document.addEventListener('keydown', function(event) {
         switch (event.key) {
