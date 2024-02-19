@@ -95,11 +95,11 @@
       
 
       const nodes = [
-        { x: 25, y: 25, number: 1 }, // Adjust the positions as needed
-        { x: 25, y: 30, number: 2 },
-        { x: 30, y: 35, number: 3 },
-        { x: 40, y: 40, number: 4 },
-        { x: 20, y: 50, number: 5 }
+        { x: 10, y: 10, number: 1 }, // Adjust the positions as needed
+        { x: 10, y: 11, number: 2 },
+        { x: 10, y: 12, number: 3 },
+        { x: 10, y: 13, number: 4 },
+        { x: 10, y: 14, number: 5 }
       ];
 
       let currentNodeIndex = 0; // Index of the current node the player should move to
@@ -133,11 +133,13 @@
 
 
 
-     
+const playerPath = [];     
 
       function movePlayer(direction) {
   const moveDistance = 1; // Adjust the move distance as needed
   
+  playerPath.push({ x: playerPosition.x, y: playerPosition.y });      
+
   switch (direction) {
     case 'up':
       if (playerPosition.y > 0) {
@@ -180,6 +182,8 @@
       // Check if all nodes have been captured
       if (currentNodeIndex === nodes.length) {
         // All nodes have been captured
+
+        displayPlayerPath();
         alert('Congratulations! You have captured all nodes.');
         currentNodeIndex = 0; // Reset node index for next game
       }
@@ -187,6 +191,24 @@
   }
 }
 
+function displayPlayerPath() {
+  const pathColor = 'black'; // Color for the player's path
+
+  playerPath.forEach((position, index) => {
+    const pathDot = document.createElement('div');
+    pathDot.classList.add('node'); // Reuse the node class for styling
+    pathDot.style.backgroundColor = pathColor; // Set the color
+    pathDot.style.left = position.x + '%';
+    pathDot.style.top = position.y + '%';
+
+    const pathNumber = document.createElement('div');
+    pathNumber.classList.add('node-number');
+    pathNumber.textContent = index + 1; // Display numbers starting from 1
+    pathDot.appendChild(pathNumber);
+
+    nodesContainer.appendChild(pathDot); // Append to the container
+  });
+}
 
       document.addEventListener('keydown', function(event) {
         switch (event.key) {
