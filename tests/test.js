@@ -1,5 +1,5 @@
 test('sample test', () => {
-    const result = 2 + 2;
+  const result = 2 + 2;
 
-    expect(result).toBe(4);
-  });
+  expect(result).toBe(4);
+});
