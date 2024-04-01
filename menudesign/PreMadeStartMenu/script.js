@@ -1,4 +1,4 @@
-import Game from "../../Iteration3/scripts/model/game.js";
+import GameMode from "../../Iteration3/scripts/model/gameMode.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   // Placeholder for adding courses dynamically, you would fetch this data or retrieve it from an array.
@@ -13,9 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("play-course").addEventListener("click", function () {
-    const selectedCourse = courseDropdown.value;
-
-    let game = new Game();
+    const selectedCourse = courseDropdown.value.slice(-1);
+    let gameMode = new GameMode(selectedCourse);
     // Add functionality to play the selected course
   });
 });

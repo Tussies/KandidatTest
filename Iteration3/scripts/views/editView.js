@@ -93,15 +93,18 @@ class EditView {
 
   update({ graph, image, controlNodes }) {
     const self = this;
-
+    if (image.complete) {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.canvas.width = image.naturalWidth;
     this.canvas.height = image.naturalHeight;
 
-    if (image.complete) {
+    
       self.ctx.drawImage(image, 0, 0, image.naturalWidth, image.naturalHeight);
     } else {
       image.onload = function () {
+        self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
+        self.canvas.width = image.naturalWidth;
+        self.canvas.height = image.naturalHeight;
         self.ctx.drawImage(
           image,
           0,

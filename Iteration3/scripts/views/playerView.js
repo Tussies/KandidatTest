@@ -56,9 +56,16 @@ class PlayerView   {
 
         update({startNode, playerNode, image, controlNodes, completed, shortestPath, playerPath}) {
             
+            if(image.complete) {
             this.renderNeighbours(playerNode);
             this.renderPlayer(playerNode);
-
+            }
+            else {
+                image.onload = function() {
+                    this.renderNeighbours(playerNode);
+                    this.renderPlayer(playerNode);  
+                }
+            }
             if(completed) {
             this.renderpath(playerPath);
             }

@@ -1,16 +1,16 @@
 document
   .getElementById("premade-course")
   .addEventListener("click", function () {
-    console.log("Play Pre-Made Course clicked");
+    window.location.href = "../PreMadeStartMenu/premade.html";
     // Add functionality for playing a pre-made course here
   });
 
 document.getElementById("random-course").addEventListener("click", function () {
-  console.log("Play Random Course clicked");
+  window.location.href = "../RandomStartMenu/random.html";
   // Add functionality for playing a random course here
 });
 
 document.getElementById("build-course").addEventListener("click", function () {
-  console.log("Play Build Your Own Course clicked");
+  window.location.href = "../BuildOwnStartMenu/edit.html";
   // Add functionality for building your own course here
 });

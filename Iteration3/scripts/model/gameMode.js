@@ -1,14 +1,14 @@
+import Mode from "./Mode.js"
 import MapData from "./map.js";
 import Player from "./player.js";
-import Observable from "./observers.js";
 import PlayerController from "../controllers/playerController.js";
 import GameView from "../views/gameView.js";
 import PlayerView from "../views/playerView.js";
 import GameController from "../controllers/gameController.js";
 
-class Game {
-  constructor(map) {
-    this.observers = new Observable();
+class GameMode extends Mode {
+  constructor(imageIndex) {
+    super(imageIndex)
 
     this.gameState = {
       startNode: null,
@@ -22,10 +22,10 @@ class Game {
 
     this.jsonGraphPaths = [
       "graphs/standardGraph.json",
-      "../graphs/3.json",
       "../graphs/FourLevelsGraph.json",
+      "../graphs/3.json",
+      
     ];
-    this.imagePaths = ["images/karta1.jpeg", "images/FourLevels.jpg"];
     this.mapData = null;
 
     this.gameView = new GameView(this);
@@ -34,18 +34,15 @@ class Game {
     this.playerController = new PlayerController(this);
     this.gameController = new GameController(this, this.gameView);
 
-    this.map = map;
     this.takenControls = 0;
 
-    this.initcourse();
+    this.initcourse(imageIndex);
   }
 
-  async initcourse() {
-    //if(map === 1) {
-    this.image = new Image();
-    this.image.src = this.imagePaths[1];
+  async initcourse(imageIndex) {
+    
     this.mapData = new MapData(this.image);
-    await this.mapData.loadJSON(this.jsonGraphPaths[1]);
+    await this.mapData.loadJSON(this.jsonGraphPaths[imageIndex]);
     this.player = new Player(this.mapData.getGraph());
 
     this.gameState.startNode = this.mapData.getNode(1);
@@ -57,7 +54,7 @@ class Game {
 
     this.observers.update(this.gameState);
 
-    //  }
+    
   }
 
   move(x, y) {
@@ -83,23 +80,6 @@ class Game {
     this.observers.update(this.gameState);
   }
 
-  goToHomePage() {
-    this.gameController = null;
-    this.gameView = null;
-    this.playerView = null;
-    this.playerController = null;
-
-    window.location.href = "index.html";
-  }
-
-  subscribe(observer) {
-    this.observers.subscribe(observer);
-  }
-
-  // Method to unsubscribe observers
-  unsubscribe(observer) {
-    this.observers.unsubscribe(observer);
-  }
 }
 
-export default Game;
+export default GameMode;
