@@ -6,14 +6,11 @@ class EditController {
     this.canvas = this.view.canvas;
 
     this.save = this.view.save;
+    this.quit = this.view.quit;
 
-    document.addEventListener("keydown", this.goToHomePage.bind(this));
 
-    /*
-    this.save = document.getElementById("save");
-    this.shortest = document.getElementById("shortest");
-*/
     this.save.addEventListener("click", this.handleSave.bind(this));
+    this.quit.addEventListener("click", this.goToHomePage.bind(this));
 
     canvas.addEventListener("mousedown", this.handleMouseDown.bind(this));
     canvas.addEventListener("mouseup", this.handleMouseup.bind(this));

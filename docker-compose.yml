@@ -4,6 +4,8 @@ services:
   kandidat:
     image: nginx
     volumes:
-      - ./Iteration2:/usr/share/nginx/html
+      - ./menudesign/StartMenu:/usr/share/nginx/html
+      - ./premademenu/graphs:/usr/share/nginx/html/graphs 
+
     ports:
       - "80:80"

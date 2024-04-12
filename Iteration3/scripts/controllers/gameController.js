@@ -3,11 +3,9 @@ class GameController {
         this.game = game;
         this.view = view;
 
-        this.menuButton = this.view.menuButton;
+        this.quit = this.view.quit;
 
-        this.menuButton.addEventListener('click', this.goToHomePage.bind(this));
-
-        document.addEventListener('keydown', this.goToHomePage.bind(this))
+        this.quit.addEventListener('click', this.goToHomePage.bind(this));
     }
 
     goToHomePage() {

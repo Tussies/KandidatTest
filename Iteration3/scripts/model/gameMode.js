@@ -1,4 +1,4 @@
-import Mode from "./Mode.js"
+import Mode from "./Mode.js";
 import MapData from "./map.js";
 import Player from "./player.js";
 import PlayerController from "../controllers/playerController.js";
@@ -7,28 +7,20 @@ import PlayerView from "../views/playerView.js";
 import GameController from "../controllers/gameController.js";
 
 class GameMode extends Mode {
-  constructor(imageIndex) {
-    super(imageIndex)
+  constructor(image, jsongraph) {
+    super();
 
     this.gameState = {
       startNode: null,
       playerNode: null,
-      image: null,
+      image: image,
       controlNodes: {},
       completed: false,
       shortestPath: null,
       playerPath: null,
     };
 
-    this.jsonGraphPaths = [
-      "graphs/standardGraph.json",
-      "../graphs/FourLevelsGraph.json",
-      "../graphs/3.json",
-      
-    ];
-    this.mapData = null;
-
-    this.gameView = new GameView(this);
+    this.gameView = new GameView(this, image.naturalWidth, image.naturalHeight);
     this.playerView = new PlayerView(this);
 
     this.playerController = new PlayerController(this);
@@ -36,25 +28,21 @@ class GameMode extends Mode {
 
     this.takenControls = 0;
 
-    this.initcourse(imageIndex);
+    this.initcourse(jsongraph);
   }
 
-  async initcourse(imageIndex) {
-    
-    this.mapData = new MapData(this.image);
-    await this.mapData.loadJSON(this.jsonGraphPaths[imageIndex]);
+  async initcourse(jsonGraph) {
+    await this.mapData.loadJSON(jsonGraph);
+
     this.player = new Player(this.mapData.getGraph());
 
     this.gameState.startNode = this.mapData.getNode(1);
     this.gameState.playerNode = this.player.getCurrentNode();
-    this.gameState.image = this.image;
 
     let controlNodes = this.mapData.getControlNodes();
     this.gameState.controlNodes = controlNodes;
 
     this.observers.update(this.gameState);
-
-    
   }
 
   move(x, y) {
@@ -79,7 +67,6 @@ class GameMode extends Mode {
 
     this.observers.update(this.gameState);
   }
-
 }
 
 export default GameMode;

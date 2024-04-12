@@ -1,21 +1,34 @@
 import EditController from "../controllers/editController.js";
 import EditView from "../views/editView.js";
-import MapData from "./map.js";
 import Mode from "./Mode.js";
 
 class EditMode extends Mode {
-  constructor(imageIndex) {
-    super(imageIndex);
-    this.mapData = new MapData(this.image);
+  constructor(image) {
+    super();
 
-    this.view = new EditView(this);
+    this.width = image.naturalWidth;
+    this.height = image.naturalHeight;
+
+    if(image.naturalWidth > document.documentElement.clientWidth) {
+      this.width = image.naturalWidth;
+      //this.width = document.documentElement.clientWidth - 200;
+    }
+
+    if(image.naturalHeight > document.documentElement.clientHeight) {
+     this.height = image.naturalHeight;
+      //this.height = document.documentElement.clientHeight - 200;
+    
+    }
+
+
+    this.view = new EditView(this, this.width, this.height);
     this.controller = new EditController(this, this.view);
     this.nodeID = 1;
     this.controlN = 1;
 
     this.state = {
       graph: this.mapData.getGraph(),
-      image: this.image,
+      image: image,
       controlNodes: this.mapData.getControls(),
     };
 

@@ -1,21 +1,29 @@
 const NODE_RADIUS = 5;
 
 class EditView {
-  constructor(game) {
+  constructor(game, width, height) {
     document.body.innerHTML = "";
 
     this.game = game;
+    this.width = width;
+    this.height = height;
 
     this.buttonContainer = document.createElement("div");
-    this.buttonContainer.classList.add("button-container");
+    this.buttonContainer.setAttribute("id", "button-container");
 
     // Create the save button
     this.save = document.createElement("button");
     this.save.textContent = "Save";
     this.save.classList.add("save");
 
-    // Append the save button to the button container
+    // Create the quit button
+    this.quit = document.createElement("button");
+    this.quit.textContent = "Quit";
+    this.quit.classList.add("quit");
+
+    // Append the buttons to the button container
     this.buttonContainer.appendChild(this.save);
+    this.buttonContainer.appendChild(this.quit);
 
     // Append the button container to the body
     document.body.appendChild(this.buttonContainer);
@@ -23,8 +31,8 @@ class EditView {
     // init the canvas
     this.canvas = document.createElement("canvas");
     this.canvas.id = "canvas";
-    this.canvas.width = 900;
-    this.canvas.height = 900;
+    this.canvas.width = this.width;
+    this.canvas.height = this.height;
     this.canvas.style.border = "5px solid black";
     this.canvas.style.position = "absolute";
     this.canvas.style.top = "10%";
@@ -94,41 +102,25 @@ class EditView {
   update({ graph, image, controlNodes }) {
     const self = this;
     if (image.complete) {
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    this.canvas.width = image.naturalWidth;
-    this.canvas.height = image.naturalHeight;
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-    
-      self.ctx.drawImage(image, 0, 0, image.naturalWidth, image.naturalHeight);
-    } else {
-      image.onload = function () {
-        self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
-        self.canvas.width = image.naturalWidth;
-        self.canvas.height = image.naturalHeight;
-        self.ctx.drawImage(
-          image,
-          0,
-          0,
-          image.naturalWidth,
-          image.naturalHeight
-        );
-      };
-    }
+      self.ctx.drawImage(image, 0, 0, this.width, this.height);
 
-    for (const [id, node] of Object.entries(graph.adjacencyList)) {
-      this.drawNode(node.node, controlNodes);
-    }
+      for (const [id, node] of Object.entries(graph.adjacencyList)) {
+        this.drawNode(node.node, controlNodes);
+      }
 
-    for (const startNode of Object.values(graph.adjacencyList)) {
-      for (const neighbour of Object.values(startNode.edges)) {
-        this.drawEdge(
-          startNode.node.posX,
-          startNode.node.posY,
-          neighbour.node.posX,
-          neighbour.node.posY,
-          graph.getWeight(startNode.node.id, neighbour.node.id),
-          "purple"
-        );
+      for (const startNode of Object.values(graph.adjacencyList)) {
+        for (const neighbour of Object.values(startNode.edges)) {
+          this.drawEdge(
+            startNode.node.posX,
+            startNode.node.posY,
+            neighbour.node.posX,
+            neighbour.node.posY,
+            graph.getWeight(startNode.node.id, neighbour.node.id),
+            "purple"
+          );
+        }
       }
     }
   }

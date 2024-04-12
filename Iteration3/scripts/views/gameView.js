@@ -2,39 +2,37 @@ const TRIANGLE_SIZE = 20;
 const CONTROL_RADIUS = 15;
 
 class GameView {
-  constructor(game) {
+  constructor(game, width, height) {
+    document.body.innerHTML = "";
+
     this.game = game;
+
+    this.buttonContainer = document.createElement("div");
+    this.buttonContainer.setAttribute("id", "button-container");
+
+    // Create the quit button
+    this.quit = document.createElement("button");
+    this.quit.textContent = "Quit";
+    this.quit.classList.add("quit");
 
     // init the canvas
     this.canvas = document.createElement("canvas");
     this.canvas.id = "canvas";
-    this.canvas.width = 900;
-    this.canvas.height = 900;
+    this.canvas.width = width;
+    this.canvas.height = height;
     this.canvas.style.border = "5px solid black";
-    // this.canvas.style.position = "absolute";
-    // this.canvas.style.top = "50%";
-    // this.canvas.style.left = "50%";
-    // this.canvas.style.transform = "translate(-50%,-50%)";
+    this.canvas.style.position = "absolute";
+    this.canvas.style.top = "10%";
+    this.canvas.style.left = "10%";
     this.ctx = this.canvas.getContext("2d");
 
-    //Clears the entire html from rendering done by the menu
-    document.body.innerHTML = "";
+    this.buttonContainer.appendChild(this.quit);
+    document.body.appendChild(this.buttonContainer);
 
     // Append canvas to document body or any other container
     document.body.appendChild(this.canvas);
 
-    /* Do this for different observers. Like one for only tracking 
-            tracking the player pos or the menu.
-        const playerObservers = new Observable();
-        const mapObservers = new Observable();
-        */
-    this.menuContainer = document.createElement("div");
     this.game.subscribe(this.update.bind(this));
-    this.menuButton = document.createElement("button");
-    this.menuButton.setAttribute("id", "menuButton");
-    this.menuButton.textContent = "Quit";
-
-    this.menuContainer.appendChild(this.menuButton);
   }
   //Render the startNode as a triangle
   renderStartNode(startNode, angle, fstControl) {
@@ -171,34 +169,10 @@ class GameView {
     shortestPath,
     playerPath,
   }) {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
+    this.ctx.drawImage(image, 0, 0, this.canvas.width, this.canvas.height);
 
-
-
-    const self  =  this
-
-if (image.complete) {    
-    self.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    self.canvas.width = image.naturalWidth;
-    self.canvas.height = image.naturalHeight;
-    self.ctx.drawImage(image, 0, 0, image.naturalWidth, image.naturalHeight);
-    } else {
-      image.onload = function () {
-        self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
-        self.canvas.width = image.naturalWidth;
-        self.canvas.height = image.naturalHeight;
-        self.ctx.drawImage(
-          image,
-          0,
-          0,
-          image.naturalWidth,
-          image.naturalHeight
-        );
-      
-    }
-    }
-
-    
     const controlNodeValues = Object.values(controlNodes);
     const fstControl = controlNodeValues[0];
 

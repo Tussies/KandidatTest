@@ -2,18 +2,14 @@ import MapData from "./map.js";
 import Observable from "./observers.js";
 
 class Mode {
-  constructor(imageIndex) {
-    this.imagePaths = ["images/karta1.jpeg", "images/FourLevels.jpg"];
+  constructor() {
 
-    this.image = new Image();
-    this.image.src = this.imagePaths[imageIndex - 1];
-
-    this.map = new MapData();
+    this.mapData = new MapData();
     this.observers = new Observable();
   }
 
   goToHomePage() {
-    window.location.href = "index.html";
+    window.location.href =  "../StartMenu/index.html";
   }
 
   // Method to subscribe observers
