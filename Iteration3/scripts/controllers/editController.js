@@ -8,7 +8,6 @@ class EditController {
     this.save = this.view.save;
     this.quit = this.view.quit;
 
-
     this.save.addEventListener("click", this.handleSave.bind(this));
     this.quit.addEventListener("click", this.goToHomePage.bind(this));
 

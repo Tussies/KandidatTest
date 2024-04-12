@@ -3,13 +3,12 @@ import Observable from "./observers.js";
 
 class Mode {
   constructor() {
-
     this.mapData = new MapData();
     this.observers = new Observable();
   }
 
   goToHomePage() {
-    window.location.href =  "../StartMenu/index.html";
+    window.location.href = "../StartMenu/index.html";
   }
 
   // Method to subscribe observers
