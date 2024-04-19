@@ -37,10 +37,14 @@ class PlayerView {
         neighbour.node.posY,
         NODE_RADIUS,
         0,
-        Math.PI * 2
-      );
+        Math.PI * 2);
       this.ctx.stroke();
       this.ctx.closePath();
+   
+      // this.ctx.beginPath();
+      // this.ctx.arc(playerNode.edges[neighbour.node.id].weight);
+      // this.ctx.stroke();
+      // this.ctx.closePath();
     }
   }
 

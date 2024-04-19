@@ -67,7 +67,7 @@ class EditView {
     }
   }
 
-  // Draw the edge between src and dest node with the given color.
+  // Draw the edge between src and dest node with the given color and arrow
   drawEdge(srcX, srcY, destX, destY, weight, color) {
     const angle = Math.atan2(destY - srcY, destX - srcX);
 
@@ -88,15 +88,32 @@ class EditView {
     this.ctx.stroke();
     this.ctx.closePath();
 
+    // Draw arrow
+    const arrowLength = 10; // Length of the arrow
+    const arrowAngle = Math.PI / 4; // Angle of the arrow
+    const arrowStartX = endX - arrowLength * Math.cos(angle - arrowAngle);
+    const arrowStartY = endY - arrowLength * Math.sin(angle - arrowAngle);
+    const arrowEndX = endX - arrowLength * Math.cos(angle + arrowAngle);
+    const arrowEndY = endY - arrowLength * Math.sin(angle + arrowAngle);
+
+    this.ctx.beginPath();
+    this.ctx.moveTo(endX, endY);
+    this.ctx.lineTo(arrowStartX, arrowStartY);
+    this.ctx.moveTo(endX, endY);
+    this.ctx.lineTo(arrowEndX, arrowEndY);
+    this.ctx.strokeStyle = color;
+    this.ctx.lineWidth = 2;
+    this.ctx.stroke();
+    this.ctx.closePath();
+
     // Display the weight
-    /* const textX = (startX + endX) / 2;
+    const textX = (startX + endX) / 2;
     const textY = (startY + endY) / 2;
     this.ctx.fillStyle = "black";
     this.ctx.textAlign = "center";
     this.ctx.textBaseline = "middle";
-    this.ctx.font = "20px Arial";
+    this.ctx.font = "10px Arial";
     this.ctx.fillText(weight, textX, textY);
-    */
   }
 
   update({ graph, image, controlNodes }) {

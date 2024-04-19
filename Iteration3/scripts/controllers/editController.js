@@ -50,19 +50,25 @@ class EditController {
       (this.mouseDownX - mouseUpX) ** 2 + (this.mouseDownY - mouseUpY) ** 2
     );
 
-    // if the user has barely moved the mouse, then we create a node.
+    // If the user has barely moved the mouse, then we create a node.
     if (distance < 2) {
       this.game.addNode(mouseUpX, mouseUpY);
 
-      // else we will create an edge.
-      // To determin which nodes we will use the findNodeAtPosition() function.
+      // Otherwise, we will create an edge.
+      // To determine which nodes we will use the findNodeAtPosition() function.
     } else {
+      // Check if the Shift key is pressed for one-directional edge
+      const oneDirectional = event.shiftKey;
+      console.log("Shift key pressed:", oneDirectional);
+
+      // Pass the oneDirectional value to the addEdge method when calling it
       this.game.addEdge(
         this.mouseDownX,
         this.mouseDownY,
         mouseUpX,
         mouseUpY,
-        distance
+        distance,
+        oneDirectional // Pass true if shift key is pressed, otherwise false
       );
     }
   }

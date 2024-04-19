@@ -3,39 +3,368 @@
     "1": {
       "node": {
         "id": 1,
-        "posX": 493.8046875,
-        "posY": 115.203125,
-        "control": true,
-        "controlN": 1
+        "posX": 446,
+        "posY": 111.703125,
+        "control": false,
+        "controlN": null
       },
       "edges": {
-        "3": {
+        "2": {
           "node": {
-            "id": 3,
-            "posX": 461.8046875,
-            "posY": 145.203125,
+            "id": 2,
+            "posX": 590,
+            "posY": 116.703125,
             "control": false,
             "controlN": null
           },
-          "weight": 41.012193308819754
+          "weight": 140.356688476182
         },
-        "4": {
+        "9": {
           "node": {
-            "id": 4,
-            "posX": 541.8046875,
-            "posY": 104.203125,
-            "control": true,
-            "controlN": 2
+            "id": 9,
+            "posX": 458,
+            "posY": 132.703125,
+            "control": false,
+            "controlN": null
           },
-          "weight": 53.36665625650534
+          "weight": 25.553864678361276
         }
       }
     },
     "2": {
       "node": {
         "id": 2,
-        "posX": 546.8046875,
-        "posY": 139.203125,
+        "posX": 590,
+        "posY": 116.703125,
+        "control": false,
+        "controlN": null
+      },
+      "edges": {
+        "1": {
+          "node": {
+            "id": 1,
+            "posX": 446,
+            "posY": 111.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 140.356688476182
+        },
+        "4": {
+          "node": {
+            "id": 4,
+            "posX": 565,
+            "posY": 170.703125,
+            "control": true,
+            "controlN": 1
+          },
+          "weight": 55.46169849544819
+        }
+      }
+    },
+    "3": {
+      "node": {
+        "id": 3,
+        "posX": 442,
+        "posY": 242.703125,
+        "control": true,
+        "controlN": 2
+      },
+      "edges": {
+        "6": {
+          "node": {
+            "id": 6,
+            "posX": 446,
+            "posY": 324.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 81.00617260431454
+        },
+        "10": {
+          "node": {
+            "id": 10,
+            "posX": 448,
+            "posY": 147.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 90.08884503644167
+        }
+      }
+    },
+    "4": {
+      "node": {
+        "id": 4,
+        "posX": 565,
+        "posY": 170.703125,
+        "control": true,
+        "controlN": 1
+      },
+      "edges": {
+        "2": {
+          "node": {
+            "id": 2,
+            "posX": 590,
+            "posY": 116.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 55.46169849544819
+        },
+        "11": {
+          "node": {
+            "id": 11,
+            "posX": 491,
+            "posY": 137.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 80.62257748298549
+        }
+      }
+    },
+    "5": {
+      "node": {
+        "id": 5,
+        "posX": 451,
+        "posY": 451.703125,
+        "control": true,
+        "controlN": 3
+      },
+      "edges": {
+        "6": {
+          "node": {
+            "id": 6,
+            "posX": 446,
+            "posY": 324.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 126.14277624977183
+        },
+        "7": {
+          "node": {
+            "id": 7,
+            "posX": 524,
+            "posY": 529.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 104.7377677822093
+        },
+        "8": {
+          "node": {
+            "id": 8,
+            "posX": 543,
+            "posY": 509.703125,
+            "control": true,
+            "controlN": 4
+          },
+          "weight": 109.29318368498559
+        },
+        "12": {
+          "node": {
+            "id": 12,
+            "posX": 450,
+            "posY": 510.703125,
+            "control": true,
+            "controlN": 5
+          },
+          "weight": 59.033888572581766
+        }
+      }
+    },
+    "6": {
+      "node": {
+        "id": 6,
+        "posX": 446,
+        "posY": 324.703125,
+        "control": false,
+        "controlN": null
+      },
+      "edges": {
+        "3": {
+          "node": {
+            "id": 3,
+            "posX": 442,
+            "posY": 242.703125,
+            "control": true,
+            "controlN": 2
+          },
+          "weight": 81.00617260431454
+        },
+        "5": {
+          "node": {
+            "id": 5,
+            "posX": 451,
+            "posY": 451.703125,
+            "control": true,
+            "controlN": 3
+          },
+          "weight": 126.14277624977183
+        }
+      }
+    },
+    "7": {
+      "node": {
+        "id": 7,
+        "posX": 524,
+        "posY": 529.703125,
+        "control": false,
+        "controlN": null
+      },
+      "edges": {
+        "5": {
+          "node": {
+            "id": 5,
+            "posX": 451,
+            "posY": 451.703125,
+            "control": true,
+            "controlN": 3
+          },
+          "weight": 104.7377677822093
+        },
+        "8": {
+          "node": {
+            "id": 8,
+            "posX": 543,
+            "posY": 509.703125,
+            "control": true,
+            "controlN": 4
+          },
+          "weight": 26.248809496813376
+        },
+        "13": {
+          "node": {
+            "id": 13,
+            "posX": 533,
+            "posY": 566.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 37.36308338453881
+        },
+        "14": {
+          "node": {
+            "id": 14,
+            "posX": 482,
+            "posY": 567.703125,
+            "control": true,
+            "controlN": 6
+          },
+          "weight": 49.51767361255979
+        }
+      }
+    },
+    "8": {
+      "node": {
+        "id": 8,
+        "posX": 543,
+        "posY": 509.703125,
+        "control": true,
+        "controlN": 4
+      },
+      "edges": {
+        "5": {
+          "node": {
+            "id": 5,
+            "posX": 451,
+            "posY": 451.703125,
+            "control": true,
+            "controlN": 3
+          },
+          "weight": 109.29318368498559
+        },
+        "7": {
+          "node": {
+            "id": 7,
+            "posX": 524,
+            "posY": 529.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 26.248809496813376
+        }
+      }
+    },
+    "9": {
+      "node": {
+        "id": 9,
+        "posX": 458,
+        "posY": 132.703125,
+        "control": false,
+        "controlN": null
+      },
+      "edges": {
+        "1": {
+          "node": {
+            "id": 1,
+            "posX": 446,
+            "posY": 111.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 25.553864678361276
+        },
+        "10": {
+          "node": {
+            "id": 10,
+            "posX": 448,
+            "posY": 147.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 13.038404810405298
+        },
+        "11": {
+          "node": {
+            "id": 11,
+            "posX": 491,
+            "posY": 137.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 33.734255586866
+        }
+      }
+    },
+    "10": {
+      "node": {
+        "id": 10,
+        "posX": 448,
+        "posY": 147.703125,
+        "control": false,
+        "controlN": null
+      },
+      "edges": {
+        "3": {
+          "node": {
+            "id": 3,
+            "posX": 442,
+            "posY": 242.703125,
+            "control": true,
+            "controlN": 2
+          },
+          "weight": 90.08884503644167
+        },
+        "9": {
+          "node": {
+            "id": 9,
+            "posX": 458,
+            "posY": 132.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 13.038404810405298
+        }
+      }
+    },
+    "11": {
+      "node": {
+        "id": 11,
+        "posX": 491,
+        "posY": 137.703125,
         "control": false,
         "controlN": null
       },
@@ -43,64 +372,105 @@
         "4": {
           "node": {
             "id": 4,
-            "posX": 541.8046875,
-            "posY": 104.203125,
+            "posX": 565,
+            "posY": 170.703125,
             "control": true,
-            "controlN": 2
+            "controlN": 1
           },
-          "weight": 36.345563690772494
+          "weight": 80.62257748298549
+        },
+        "9": {
+          "node": {
+            "id": 9,
+            "posX": 458,
+            "posY": 132.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 33.734255586866
         }
       }
     },
-    "3": {
+    "12": {
       "node": {
-        "id": 3,
-        "posX": 461.8046875,
-        "posY": 145.203125,
+        "id": 12,
+        "posX": 450,
+        "posY": 510.703125,
+        "control": true,
+        "controlN": 5
+      },
+      "edges": {
+        "5": {
+          "node": {
+            "id": 5,
+            "posX": 451,
+            "posY": 451.703125,
+            "control": true,
+            "controlN": 3
+          },
+          "weight": 59.033888572581766
+        }
+      }
+    },
+    "13": {
+      "node": {
+        "id": 13,
+        "posX": 533,
+        "posY": 566.703125,
         "control": false,
         "controlN": null
       },
       "edges": {
-        "1": {
+        "7": {
           "node": {
-            "id": 1,
-            "posX": 493.8046875,
-            "posY": 115.203125,
-            "control": true,
-            "controlN": 1
-          },
-          "weight": 41.012193308819754
-        }
-      }
-    },
-    "4": {
-      "node": {
-        "id": 4,
-        "posX": 541.8046875,
-        "posY": 104.203125,
-        "control": true,
-        "controlN": 2
-      },
-      "edges": {
-        "1": {
-          "node": {
-            "id": 1,
-            "posX": 493.8046875,
-            "posY": 115.203125,
-            "control": true,
-            "controlN": 1
-          },
-          "weight": 53.36665625650534
-        },
-        "2": {
-          "node": {
-            "id": 2,
-            "posX": 546.8046875,
-            "posY": 139.203125,
+            "id": 7,
+            "posX": 524,
+            "posY": 529.703125,
             "control": false,
             "controlN": null
           },
-          "weight": 36.345563690772494
+          "weight": 37.36308338453881
+        },
+        "14": {
+          "node": {
+            "id": 14,
+            "posX": 482,
+            "posY": 567.703125,
+            "control": true,
+            "controlN": 6
+          },
+          "weight": 49.09175083453431
+        }
+      }
+    },
+    "14": {
+      "node": {
+        "id": 14,
+        "posX": 482,
+        "posY": 567.703125,
+        "control": true,
+        "controlN": 6
+      },
+      "edges": {
+        "7": {
+          "node": {
+            "id": 7,
+            "posX": 524,
+            "posY": 529.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 49.51767361255979
+        },
+        "13": {
+          "node": {
+            "id": 13,
+            "posX": 533,
+            "posY": 566.703125,
+            "control": false,
+            "controlN": null
+          },
+          "weight": 49.09175083453431
         }
       }
     }

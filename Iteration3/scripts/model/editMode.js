@@ -9,17 +9,15 @@ class EditMode extends Mode {
     this.width = image.naturalWidth;
     this.height = image.naturalHeight;
 
-    if(image.naturalWidth > document.documentElement.clientWidth) {
+    if (image.naturalWidth > document.documentElement.clientWidth) {
       this.width = image.naturalWidth;
       //this.width = document.documentElement.clientWidth - 200;
     }
 
-    if(image.naturalHeight > document.documentElement.clientHeight) {
-     this.height = image.naturalHeight;
+    if (image.naturalHeight > document.documentElement.clientHeight) {
+      this.height = image.naturalHeight;
       //this.height = document.documentElement.clientHeight - 200;
-    
     }
-
 
     this.view = new EditView(this, this.width, this.height);
     this.controller = new EditController(this, this.view);
@@ -36,15 +34,34 @@ class EditMode extends Mode {
   }
 
   handleSave() {
-    const jsonData = JSON.stringify(this.mapData.getGraph());
+    // Get the graph data
+    const graphData = this.mapData.getGraph();
+
+    // Convert the graph data to JSON format
+    const jsonData = JSON.stringify(graphData, (key, value) => {
+      // If the value is an object and has a property called 'oneDirectional',
+      // convert it to a boolean to ensure it's serialized properly
+      if (typeof value === "object" && "oneDirectional" in value) {
+        return { ...value, oneDirectional: Boolean(value.oneDirectional) };
+      }
+      return value;
+    });
+
+    // Create a Blob object from the JSON data
     const blob = new Blob([jsonData], { type: "application/json" });
+
+    // Create a URL for the Blob object
     const url = URL.createObjectURL(blob);
 
+    // Create a link element to trigger the download
     const link = document.createElement("a");
     link.href = url;
     link.download = "graph_data.json";
+
+    // Simulate a click event to trigger the download
     link.click();
 
+    // Revoke the URL to release the resources
     URL.revokeObjectURL(url);
   }
 
@@ -65,12 +82,11 @@ class EditMode extends Mode {
     this.observers.update(this.state);
   }
 
-  addEdge(startX, startY, destX, destY, distance) {
+  addEdge(startX, startY, destX, destY, distance, oneDirectional) {
     const startNode = this.mapData.findNodeAtPosition(startX, startY);
-
     const destNode = this.mapData.findNodeAtPosition(destX, destY);
     if (startNode && destNode !== startNode) {
-      this.mapData.addEdge(startNode.id, destNode.id, distance);
+      this.mapData.addEdge(startNode.id, destNode.id, distance, oneDirectional);
     }
     console.log(this.mapData.getGraph());
     this.observers.update(this.state);

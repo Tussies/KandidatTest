@@ -59,8 +59,8 @@ class MapData {
     this.statGraph.addNode(id, x, y);
   }
 
-  addEdge(startID, destID, distance) {
-    this.statGraph.addEdge(startID, destID, distance);
+  addEdge(startID, destID, distance, oneDirectional) {
+    this.statGraph.addEdge(startID, destID, distance, oneDirectional);
   }
 
   calculateShortest() {

@@ -22,23 +22,28 @@ class Graph {
   // Then, traverses the list of edges and checks if the
   //neighbour exists. If both exists, an edge from start node
   //to the neighbour node will be created.
-  addEdge(startId, neighbourId, weight) {
+  addEdge(startId, neighbourId, weight, oneDirectional = false) {
     if (this.contains(startId) && this.contains(neighbourId)) {
       const neighNode = this.getNode(neighbourId).node;
 
-      this.adjacencyList[startId].edges[neighbourId] = {};
+      // Add the edge from startId to neighbourId
       this.adjacencyList[startId].edges[neighbourId] = {
         node: neighNode,
         weight,
+        oneDirectional: oneDirectional,
       };
 
-      if (this.adjacencyList[neighbourId].edges[startId] !== null) {
+      // Log the edge object immediately after adding it
+      console.log(this.adjacencyList[startId].edges[neighbourId]);
+
+      // Add the reverse edge if it's not one-directional
+      if (this.adjacencyList[neighbourId].edges[startId] === undefined) {
         const startNode = this.getNode(startId).node;
 
-        this.adjacencyList[neighbourId].edges[startId] = {};
         this.adjacencyList[neighbourId].edges[startId] = {
           node: startNode,
           weight,
+          oneDirectional: oneDirectional,
         };
       }
     }
