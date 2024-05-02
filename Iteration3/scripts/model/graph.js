@@ -8,9 +8,9 @@ class Graph {
 
   // Checks if the node is already present
   // if not it will be added with an empty edges list
-  addNode(id, x, y) {
+  addNode(id, x, y, floor) {
     if (this.adjacencyList[id] == undefined) {
-      const node = new Node(id, x, y);
+      const node = new Node(id, x, y, floor);
       this.adjacencyList[id] = {
         node,
         edges: {},
@@ -22,7 +22,15 @@ class Graph {
   // Then, traverses the list of edges and checks if the
   //neighbour exists. If both exists, an edge from start node
   //to the neighbour node will be created.
-  addEdge(startId, neighbourId, weight, oneDirectional) {
+  addEdge(
+    startId,
+    neighbourId,
+    weight,
+    stairCase,
+    newFloor,
+    previousFloor,
+    oneDirectional
+  ) {
     if (this.contains(startId) && this.contains(neighbourId)) {
       const neighNode = this.getNode(neighbourId).node;
 
@@ -30,6 +38,7 @@ class Graph {
       this.adjacencyList[startId].edges[neighbourId] = {
         node: neighNode,
         weight,
+        stair: { stairCase, newFloor },
         oneDirectional: oneDirectional,
       };
 
@@ -37,14 +46,57 @@ class Graph {
       console.log(this.adjacencyList[startId].edges[neighbourId]);
 
       // Add the reverse edge if it's not one-directional
-      if (this.adjacencyList[neighbourId].edges[startId] === undefined && oneDirectional == false) {
+      if (
+        this.adjacencyList[neighbourId].edges[startId] === undefined &&
+        oneDirectional == false
+      ) {
         const startNode = this.getNode(startId).node;
-
+        if (neighNode.floor > startNode.floor) {
+          weight = 20;
+        } else if (neighNode.floor < startNode.floor) {
+          weight = 30;
+        }
+        this.adjacencyList[neighbourId].edges[startId] = {};
         this.adjacencyList[neighbourId].edges[startId] = {
           node: startNode,
           weight,
+          stair: { stairCase, goToFloor: previousFloor },
           oneDirectional: oneDirectional,
         };
+      }
+    }
+  }
+
+  canReachAllNodes() {
+    const visited = {};
+    const nodes = Object.keys(this.adjacencyList);
+
+    // Start DFS from each node
+    for (const node of nodes) {
+      // Initialize visited set for current DFS
+      const currentVisited = {};
+      this._dfs(node, currentVisited);
+
+      // Merge current DFS's visited nodes into overall visited set
+      Object.assign(visited, currentVisited);
+
+      // If all nodes are visited, return true
+      if (Object.keys(visited).length === nodes.length) {
+        return true;
+      }
+    }
+
+    // If not all nodes are visited, return false
+    return false;
+  }
+
+  // Depth First Search (DFS)
+  _dfs(nodeId, visited) {
+    if (!visited[nodeId]) {
+      visited[nodeId] = true;
+      const edges = this.adjacencyList[nodeId].edges;
+      for (const neighbourId in edges) {
+        this._dfs(neighbourId, visited);
       }
     }
   }

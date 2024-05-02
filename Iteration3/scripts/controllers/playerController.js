@@ -4,7 +4,8 @@ class PlayerController {
     this.canvas = document.getElementById("canvas");
     this.rect = this.canvas.getBoundingClientRect();
 
-    this.canvas.addEventListener("click", this.move.bind(this));
+    this.moveFunc = this.move.bind(this);
+    this.canvas.addEventListener("click", this.moveFunc);
   }
 
   move(event) {
@@ -13,6 +14,10 @@ class PlayerController {
     const y = event.clientY - this.rect.top - 5;
 
     this.game.move(x, y);
+  }
+
+  disableWalk() {
+    this.canvas.removeEventListener("click", this.moveFunc);
   }
 }
 

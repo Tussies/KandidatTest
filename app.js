@@ -1,1 +1,1 @@
-console.log('Hello, kandidatgruppen!');
+console.log("Hello, kandidatgruppen!");

@@ -84,3 +84,26 @@ button:hover {
 .canvas.highlighted {
   border-color: red; /* Adjust color as needed */
 }
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.inputField {
+  align-content: center;
+}
+
+.floor-number {
+  left: 500px;
+  top: 10px;
+}

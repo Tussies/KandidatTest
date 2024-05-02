@@ -37,29 +37,15 @@ class PlayerView {
         neighbour.node.posY,
         NODE_RADIUS,
         0,
-        Math.PI * 2);
+        Math.PI * 2
+      );
       this.ctx.stroke();
       this.ctx.closePath();
-   
+
       // this.ctx.beginPath();
       // this.ctx.arc(playerNode.edges[neighbour.node.id].weight);
       // this.ctx.stroke();
       // this.ctx.closePath();
-    }
-  }
-
-  renderpath(path) {
-    for (const [order, node] of Object.entries(path)) {
-      if (path[parseInt(order) + 1]) {
-        let nextNode = path[parseInt(order) + 1].node;
-
-        this.ctx.beginPath();
-        this.ctx.moveTo(node.node.posX, node.node.posY);
-        this.ctx.lineTo(nextNode.posX, nextNode.posY);
-        this.ctx.strokeStyle = "red";
-        this.ctx.stroke();
-        this.ctx.closePath();
-      }
     }
   }
 
@@ -72,18 +58,8 @@ class PlayerView {
     shortestPath,
     playerPath,
   }) {
-    if (image.complete) {
-      this.renderNeighbours(playerNode);
-      this.renderPlayer(playerNode);
-    } else {
-      image.onload = function () {
-        this.renderNeighbours(playerNode);
-        this.renderPlayer(playerNode);
-      };
-    }
-    if (completed) {
-      this.renderpath(playerPath);
-    }
+    this.renderNeighbours(playerNode);
+    this.renderPlayer(playerNode);
   }
 }
 

@@ -1,4 +1,5 @@
 import Graph from "./graph.js";
+import RandomCourse from "./randControlPlacement.js";
 
 class MapData {
   constructor(image) {
@@ -21,6 +22,7 @@ class MapData {
         .then((jsonData) => {
           this.statGraph.adjacencyList = jsonData.adjacencyList;
           this.setControlsFromJSON();
+          this.randomControlPlacement = new RandomCourse(this.statGraph);
           resolve();
         })
         .catch((error) => {
@@ -28,6 +30,21 @@ class MapData {
           reject(error);
         });
     });
+  }
+
+  randomizeCourse(difficulty, nControl) {
+    //TODO: Randomize the edges
+
+    //this.statGraph = newGraph;
+
+    // Randomize the controls in the courseGenerator.
+    let randomControls = this.randomControlPlacement.buildCourse(
+      1,
+      difficulty,
+      nControl
+    );
+
+    this.controls = randomControls;
   }
 
   setControlsFromJSON() {
@@ -55,12 +72,30 @@ class MapData {
     }
   }
 
-  addNode(id, x, y) {
-    this.statGraph.addNode(id, x, y);
+  addNode(id, x, y, floor) {
+    this.statGraph.addNode(id, x, y, floor);
   }
 
-  addEdge(startID, destID, distance, oneDirectional) {
-    this.statGraph.addEdge(startID, destID, distance, oneDirectional);
+  addEdge(
+    startID,
+    destID,
+    distance,
+    stairCase,
+    newFloor,
+    previousFloor,
+    oneDirectional
+  ) {
+    this.statGraph.addEdge(
+      startID,
+      destID,
+      distance,
+      stairCase,
+      newFloor,
+      previousFloor,
+      oneDirectional,
+      previousFloor,
+      oneDirectional
+    );
   }
 
   calculateShortest() {

@@ -8,7 +8,7 @@ class Mode {
   }
 
   goToHomePage() {
-    window.location.href = "../StartMenu/index.html";
+    window.location.href = "../../../index.html";
   }
 
   // Method to subscribe observers

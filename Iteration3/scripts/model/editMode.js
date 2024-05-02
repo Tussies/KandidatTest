@@ -65,7 +65,7 @@ class EditMode extends Mode {
     URL.revokeObjectURL(url);
   }
 
-  addNode(x, y) {
+  addNode(x, y, floor) {
     let nodeAtPos = this.mapData.findNodeAtPosition(x, y);
 
     //If there is a node at the position, we will make it a control
@@ -75,20 +75,39 @@ class EditMode extends Mode {
 
       // Otherwise we just create a new node
     } else {
-      this.mapData.addNode(this.nodeID, x, y);
+      this.mapData.addNode(this.nodeID, x, y, floor);
       this.nodeID++;
     }
 
     this.observers.update(this.state);
   }
 
-  addEdge(startX, startY, destX, destY, distance, oneDirectional) {
+  addEdge(startX, startY, destX, destY, distance, stairCase, oneDirectional) {
     const startNode = this.mapData.findNodeAtPosition(startX, startY);
+    let newFloor = null;
+    let previousFloor = null;
+
     const destNode = this.mapData.findNodeAtPosition(destX, destY);
     if (startNode && destNode !== startNode) {
-      this.mapData.addEdge(startNode.id, destNode.id, distance, oneDirectional);
+      if (destNode.floor < startNode.floor) {
+        distance = 20;
+        previousFloor = startNode.floor;
+        newFloor = destNode.floor;
+      } else if (destNode.floor > startNode.floor) {
+        distance = 30;
+        previousFloor = startNode.floor;
+        newFloor = destNode.floor;
+      }
+      this.mapData.addEdge(
+        startNode.id,
+        destNode.id,
+        distance,
+        stairCase,
+        newFloor,
+        previousFloor,
+        oneDirectional
+      );
     }
-    console.log(this.mapData.getGraph());
     this.observers.update(this.state);
   }
 }

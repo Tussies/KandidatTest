@@ -5,7 +5,7 @@ services:
     image: nginx
     volumes:
       - ./menudesign/StartMenu:/usr/share/nginx/html
-      - ./premademenu/graphs:/usr/share/nginx/html/graphs 
+      - ./premademenu/graphs:/usr/share/nginx/html/graphs
 
     ports:
       - "80:80"

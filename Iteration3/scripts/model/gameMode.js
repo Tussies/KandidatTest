@@ -9,6 +9,7 @@ import GameController from "../controllers/gameController.js";
 class GameMode extends Mode {
   constructor(image, jsongraph) {
     super();
+    this.jsonGraph = jsongraph;
 
     this.gameState = {
       startNode: null,
@@ -27,12 +28,10 @@ class GameMode extends Mode {
     this.gameController = new GameController(this, this.gameView);
 
     this.takenControls = 0;
-
-    this.initcourse(jsongraph);
   }
 
-  async initcourse(jsonGraph) {
-    await this.mapData.loadJSON(jsonGraph);
+  async initcourse() {
+    await this.mapData.loadJSON(this.jsonGraph);
 
     this.player = new Player(this.mapData.getGraph());
 
@@ -62,6 +61,7 @@ class GameMode extends Mode {
         this.gameState.completed = true;
         this.gameState.shortestPath = this.mapData.calculateShortest();
         this.gameState.playerPath = this.player.getPath();
+        this.playerController.disableWalk();
       }
     }
 

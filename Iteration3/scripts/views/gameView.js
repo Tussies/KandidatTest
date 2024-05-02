@@ -143,12 +143,83 @@ class GameView {
     // Ensure the angle is in the range [0, 2*PI)
     return angle >= 0 ? angle : angle + 2 * Math.PI;
   }
+  renderPlayerPath(path, coloredPlayerPaths) {
+    for (const [order, node] of Object.entries(path)) {
+      if (path[parseInt(order) + 1]) {
+        let skip = false;
+        let nextNode = path[parseInt(order) + 1].node;
+        for (let i = 0; i < coloredPlayerPaths.length; i++) {
+          if (
+            (coloredPlayerPaths[i][0].node === node.node &&
+              coloredPlayerPaths[i][1].node === nextNode) ||
+            (coloredPlayerPaths[i][0].node === nextNode &&
+              coloredPlayerPaths[i][1].node === node.node)
+          ) {
+            skip = true;
+          }
 
-  renderShortestPath(path) {
+          if (node.edges[nextNode.id].stair.stairCase !== undefined) {
+            skip = true;
+          }
+        }
+        if (!skip) {
+          this.ctx.beginPath();
+          this.ctx.moveTo(node.node.posX, node.node.posY);
+          this.ctx.lineTo(nextNode.posX, nextNode.posY);
+          this.ctx.strokeStyle = "red";
+          this.ctx.stroke();
+          this.ctx.closePath();
+        }
+      }
+    }
+  }
+
+  renderShortestPath(path, playerPath) {
+    let coloredPlayerPaths = [];
+    for (const [order, node] of Object.entries(path)) {
+      if (path[parseInt(order) + 1]) {
+        let nextNode = path[parseInt(order) + 1];
+
+        if (path[order].edges[nextNode.node.id].stair.stairCase !== undefined) {
+          continue;
+        }
+
+        let color = "blue";
+        for (const [playerOrder, playerPathNode] of Object.entries(
+          playerPath
+        )) {
+          if (playerPath[parseInt(playerOrder) + 1]) {
+            let nextPlayerPathNode = playerPath[parseInt(playerOrder) + 1];
+
+            if (
+              (node === playerPathNode && nextNode === nextPlayerPathNode) ||
+              (node === nextPlayerPathNode && nextNode === playerPathNode)
+            ) {
+              color = "green";
+              coloredPlayerPaths.push([playerPathNode, nextPlayerPathNode]);
+            }
+          }
+        }
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(node.node.posX, node.node.posY);
+        this.ctx.lineTo(nextNode.node.posX, nextNode.node.posY);
+        this.ctx.strokeStyle = color;
+        this.ctx.stroke();
+        this.ctx.closePath();
+      }
+    }
+
+    this.renderPlayerPath(playerPath, coloredPlayerPaths);
+  }
+
+  renderShortestAtStart(path) {
     for (const [order, node] of Object.entries(path)) {
       if (path[parseInt(order) + 1]) {
         let nextNode = path[parseInt(order) + 1].node;
-
+        if (path[order].edges[nextNode.id].stair.stairCase !== undefined) {
+          continue;
+        }
         this.ctx.beginPath();
         this.ctx.moveTo(node.node.posX, node.node.posY);
         this.ctx.lineTo(nextNode.posX, nextNode.posY);
@@ -181,8 +252,11 @@ class GameView {
     this.renderStartNode(startNode, angle, fstControl);
     this.rendercontrolNodes(controlNodes);
 
+    //   this.renderShortestAtStart(shortestPath);
+
     if (completed) {
-      this.renderShortestPath(shortestPath);
+      // this.renderpath(playerPath)
+      this.renderShortestPath(shortestPath, playerPath);
     }
   }
 }

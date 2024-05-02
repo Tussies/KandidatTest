@@ -38,10 +38,12 @@ button.active {
 button:hover {
   background: #555;
 }
-.main-content {
-  margin-top: 150px;
-  margin-left: 200px; /* Adjusted to actual sidebar width */
+
+.content {
+  flex: 1;
   padding: 20px;
+  box-sizing: border-box;
+  margin-left: 200px;
 }
 
 .form-control {
@@ -64,12 +66,14 @@ button:hover {
   margin-right: 10px;
 }
 
-#play-button {
-  margin-top: 20px;
-  padding: 20px 50px;
-  font-size: 20px;
-  color: #fff;
-  background: #000;
-  border: none;
-  cursor: pointer;
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.canvas {
+  border: 5px solid #080808;
+}
+.canvas.highlighted {
+  border-color: red; /* Adjust color as needed */
 }

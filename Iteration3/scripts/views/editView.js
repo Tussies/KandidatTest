@@ -8,6 +8,11 @@ class EditView {
     this.width = width;
     this.height = height;
 
+    this.floorNumber = document.createElement("div");
+    this.floorNumber.classList.add("floor-number");
+    this.floorNumber.textContent = `Floor: ${0}`;
+    document.body.appendChild(this.floorNumber);
+
     this.buttonContainer = document.createElement("div");
     this.buttonContainer.setAttribute("id", "button-container");
 
@@ -39,12 +44,30 @@ class EditView {
     this.canvas.style.left = "10%";
     this.ctx = this.canvas.getContext("2d");
 
-    //Clears the entire html from rendering done by the menu
+    // Initializing the popup
+    this.popup = document.createElement("div");
+    this.popup.setAttribute("id", "popup");
+    this.popup.classList.add("popup");
 
-    // Append canvas to document body or any other container
+    this.inputStair = document.createElement("div");
+    this.inputStair.classList.add("inputField");
+    this.inputStair.innerHTML = `<label for="staircase">StairCase:</label> <input type="text" id="staircase" name="staircase">`;
+
+    this.popupSave = document.createElement("button");
+    this.popupSave.innerHTML = ` <button>Submit</button>`;
+
+    this.popup.appendChild(this.inputStair);
+    this.popup.appendChild(this.popupSave);
+
+    // Append the popup and the canvas to document body
+    document.body.appendChild(this.popup);
     document.body.appendChild(this.canvas);
 
     this.game.subscribe(this.update.bind(this));
+  }
+
+  updateNumber(floor) {
+    this.floorNumber.textContent = `Floor: ${floor}`;
   }
 
   // Draw the given node onto the canvas.
@@ -114,6 +137,27 @@ class EditView {
     this.ctx.textBaseline = "middle";
     this.ctx.font = "10px Arial";
     this.ctx.fillText(weight, textX, textY);
+  }
+
+  //This will display the popup
+  displayPopup() {
+    this.popup.style.display = "block";
+  }
+
+  savePopup() {
+    // Handle saving popup data
+    const staircaseInput = document.getElementById("staircase").value;
+    const floorInput = document.getElementById("floor").value;
+    console.log("Staircase:", staircaseInput);
+    console.log("Floor:", floorInput);
+    // You can perform further processing or send this data to your backend
+    // After handling the submission, you can close the popup
+    //this.closePopup();
+  }
+
+  closePopup() {
+    // Hide the popup
+    this.popup.style.display = "none";
   }
 
   update({ graph, image, controlNodes }) {
