@@ -1,31 +1,25 @@
-import Graph from "./graph.js";
-
 class RandomCourse {
-  constructor(graph) {
+  constructor(graph, width, height) {
+    this.width = width;
+    this.height = height;
     this.graph = graph;
     this.currentControlNode = 1; //startId
-    this.controls = {};
+    this.controls = [];
   }
 
   buildCourse(startId, courseDifficulty, controlAmount) {
     const legList = this.courseSpecifications(courseDifficulty, controlAmount); // generate list of legs
-    let controlN = 1;
     for (let i = 0; i < legList.length; i++) {
-      let control = this.buildLeg(this.currentControlNode, legList[i]).id;
-      this.currentControlNode = control;
-      this.controls[this.currentControlNode] = controlN;
-      controlN += 1;
+      let control = this.buildLeg(this.currentControlNode, legList[i]);
+      this.currentControlNode = control.id;
+      this.controls.push(control);
     }
-    /* for(const [id,controlN] of Object.entries(this.controls)) {
-        reformattedControls[controlN] = id
-    }*/
     return this.controls;
   }
 
   buildLeg(currentControlNode, legDifficulty) {
     if (legDifficulty == "e") {
-      let control = this.findValidControlNodes(currentControlNode, 5, 15, 0, 1);
-      return control;
+      return this.findValidControlNodes(currentControlNode, 5, 15, 0, 1);
     }
 
     if (legDifficulty == "m") {
@@ -44,8 +38,8 @@ class RandomCourse {
       let control = this.findValidControlNodes(
         currentControlNode,
         20,
-        4000,
-        2,
+        700,
+        1,
         4
       );
       return control;
@@ -54,167 +48,238 @@ class RandomCourse {
   }
 
   // a list of valid controls according to leg-criterea will be returned
-  // risque of high complexiy
+  // risk of high complexiy
   findValidControlNodes(
     startNode,
-    minDistance,
-    maxDistance,
+    minJumps,
+    maxJumps,
     minFloorChanges,
     maxFloorChanges
   ) {
-    const validControlNodes = [];
-    let latestStairCase = null;
-    let floorChangeCounter = 0;
+    const distances = {};
+    const visited = new Set();
+    const priorityQueue = new Map();
+    const candidates = [];
+    let random = 0;
     let control = null;
 
-    let randomId = Math.floor(Math.random() * this.graph.getOrder()) + 1;
-    if (this.controls.hasOwnProperty(randomId)) {
-      control = this.findValidControlNodes(
-        startNode,
-        minDistance,
-        maxDistance,
-        minFloorChanges,
-        maxFloorChanges
-      );
-      return control;
-    }
-    if (randomId === 1) {
-      control = this.findValidControlNodes(
-        startNode,
-        minDistance,
-        maxDistance,
-        minFloorChanges,
-        maxFloorChanges
-      );
-      return control;
-    }
-
-    for (const id in this.controls) {
-      let nodeEdges = this.graph.adjacencyList[id].edges;
-
-      if (nodeEdges.hasOwnProperty(randomId)) {
-        control = this.findValidControlNodes(
-          startNode,
-          minDistance,
-          maxDistance,
-          minFloorChanges,
-          maxFloorChanges
-        );
-        return control;
+    // Initialize distances and priority queue
+    for (const nodeId in this.graph.adjacencyList) {
+      if (nodeId == startNode) {
+        distances[nodeId] = { cost: 0, stairs: 0, jumps: 0 };
+      } else {
+        distances[nodeId] = {
+          cost: Infinity,
+          stairs: Infinity,
+          jumps: Infinity,
+        };
       }
+      priorityQueue.set(nodeId, distances[nodeId].cost);
     }
 
-    let shortestPath = this.graph.findSegment(startNode, randomId);
+    //Calculation to gain better coverage.
+    let xy = this.coverage();
 
-    if (shortestPath && shortestPath.length > 1) {
-      // hur funkar shortestpath leg?
-      let distanceToNode = shortestPath.length;
-      if (distanceToNode >= minDistance && distanceToNode <= maxDistance) {
-        for (let i = 0; i < distanceToNode; i++) {
-          if (shortestPath[i + 1]) {
-            let nextNode = shortestPath[i + 1].node;
-            if (
-              shortestPath[i].edges[parseInt(nextNode.id)].stair.stairCase !==
-              undefined
-            ) {
-              if (
-                shortestPath[i].edges[parseInt(nextNode.id)].stair.stairCase !==
-                latestStairCase
-              ) {
-                latestStairCase =
-                  shortestPath[i].edges[parseInt(nextNode.id)].stair.stairCase;
+    while (priorityQueue.size > 0) {
+      const currentNodeId = Array.from(priorityQueue.keys()).reduce((a, b) =>
+        priorityQueue.get(a) < priorityQueue.get(b) ? a : b
+      );
 
-                floorChangeCounter += 1;
-              }
+      const currentNode = this.graph.adjacencyList[currentNodeId];
+      const currentDistance = priorityQueue.get(currentNodeId);
+
+      const alreadyAControl = this.controls.some(
+        (node) => node.id == currentNodeId
+      );
+      const isNeighbour = false;
+
+      visited.add(currentNodeId);
+      if (
+        distances[currentNodeId].stairs >= minFloorChanges &&
+        distances[currentNodeId].jumps >= minJumps &&
+        (distances[currentNodeId].stairs <= maxFloorChanges ||
+          distances[currentNodeId].jumps <= maxJumps) &&
+        currentNodeId != 1 &&
+        !alreadyAControl &&
+        !isNeighbour
+      ) {
+        if ((xy[0] === 0 && xy[1] === 0) || control === null) {
+          // No controls placed
+          if (control === null) {
+            control = currentNode.node;
+          } else {
+            random = Math.random();
+            if (random < 0.1) {
+              control = currentNode.node;
             }
           }
-        }
-        //distance criteria
-        if (
-          floorChangeCounter >= minFloorChanges &&
-          floorChangeCounter <= maxFloorChanges
-        ) {
-          control = shortestPath[shortestPath.length - 1].node;
-          return control;
         } else {
-          control = this.findValidControlNodes(
-            startNode,
-            minDistance,
-            maxDistance,
-            minFloorChanges,
-            maxFloorChanges
-          );
-          return control;
-        }
-      } else {
-        control = this.findValidControlNodes(
-          startNode,
-          minDistance,
-          maxDistance,
-          minFloorChanges,
-          maxFloorChanges
-        );
-        return control;
-      }
+          if (xy[0] >= 0.5 && xy[1] >= 0.5) {
+            // Current controls are mostly in top-left
 
-      // more code for floorchanges needed here
-    } else {
-      control = this.findValidControlNodes(
-        startNode,
-        minDistance,
-        maxDistance,
-        minFloorChanges,
-        maxFloorChanges
-      );
-      return control;
-    }
+            if (xy[0] > xy[1]) {
+              // If x is greater than y, give precedence to x
 
-    /*
-    for (let nodeId = 1; nodeId <= this.graph.getOrder(); nodeId++) {
-      let latestStairCase = null;
-      let floorChangeCounter = 0;
-      if (nodeId !== 1) {
-        const shortestPath = this.graph.findSegment(startNode, nodeId);
+              if (control.posX >= currentNode.node.posX) {
+                random = Math.random();
+                if (random < 0.1) {
+                  control = currentNode.node;
+                }
+              }
+            } else {
+              // Give precedence to y
 
-        if (shortestPath && shortestPath.length > 1) {
-          // hur funkar shortestpath leg?
-          let distanceToNode = shortestPath.length;
-          if (distanceToNode >= minDistance && distanceToNode <= maxDistance) {
-            for (let i = 0; i < distanceToNode; i++) {
-              if (shortestPath[i + 1]) {
-                let nextNode = shortestPath[i + 1].node;
-                if (this.graph.adjacencyList[shortestPath[i].node.id].edges[parseInt(nextNode.id)].stair.stairCase !== undefined) {
-                  if (
-                    this.graph.adjacencyList[shortestPath[i].node.id].edges[parseInt(nextNode.id)]
-                      .stair.stairCase !== latestStairCase
-                  ) {
-                    latestStairCase =
-                      this.graph.adjacencyList[shortestPath[i].node.id].edges[parseInt(nextNode.id)]
-                        .stair.stairCase;
-
-                    floorChangeCounter += 1;
-                  }
+              if (control.posY >= currentNode.node.posY) {
+                random = Math.random();
+                if (random < 0.1) {
+                  control = currentNode.node;
                 }
               }
             }
-            //distance criteria
-            if (
-              floorChangeCounter >= minFloorChanges &&
-              floorChangeCounter <= maxFloorChanges
-            ) {
-              validControlNodes.push({
-                node: shortestPath[shortestPath.length - 1].node,
-                distance: distanceToNode,
-              });
+          }
+
+          if (xy[0] <= 0.5 && xy[1] <= 0.5) {
+            // Current controls are mostly in the lower-left
+
+            if (xy[0] < xy[1]) {
+              // If x is lesser than y, give precedence to x because its the most contributing factor to "drag" the coverage to the bottom left.
+
+              if (control.posX <= currentNode.node.posX) {
+                random = Math.random();
+                if (random < 0.1) {
+                  control = currentNode.node;
+                }
+              }
+            } else {
+              if (control.posY <= currentNode.node.posY) {
+                random = Math.random();
+                if (random < 0.1) {
+                  control = currentNode.node;
+                }
+              }
             }
           }
 
-          // more code for floorchanges needed here
+          if (xy[0] >= 0.5 && xy[1] <= 0.5) {
+            // Current controls are mostly in the bottom-right
+
+            if (xy[0] - 0.5 > Math.abs(xy[1] - 0.5)) {
+              if (control.posX > currentNode.node.posX) {
+                random = Math.random();
+                if (random < 0.1) {
+                  control = currentNode.node;
+                }
+              }
+            } else {
+              if (control.posY < currentNode.node.posY) {
+                random = Math.random();
+                if (random < 0.1) {
+                  control = currentNode.node;
+                }
+              }
+            }
+          }
+
+          if (xy[0] <= 0.5 && xy[1] >= 0.5) {
+            // Current controls are mostly in hte top-left
+
+            if (Math.abs(xy[0] - 0.5) > xy[1] - 0.5) {
+              if (control.posX < currentNode.node.posX) {
+                random = Math.random();
+                if (random < 0.1) {
+                  control = currentNode.node;
+                }
+              }
+            } else {
+              if (control.posY > currentNode.node.posY) {
+                random = Math.random();
+                if (random < 0.1) {
+                  control = currentNode.node;
+                }
+              }
+            }
+          }
+        }
+
+        // candidates.push(this.graph.getNode(currentNodeId));
+      }
+      priorityQueue.delete(currentNodeId);
+
+      for (const neighbourId in currentNode.edges) {
+        if (visited.has(neighbourId)) {
+          continue;
+        }
+        const neighbour = currentNode.edges[neighbourId];
+        const distanceToNeighbour = currentDistance + neighbour.weight;
+        let stairsToNeighbour = distances[currentNodeId].stairs;
+        const jumpsToNeighbour = distances[currentNodeId].jumps + 1;
+
+        if (currentNode.edges[neighbourId].stair.stairCase !== undefined) {
+          stairsToNeighbour++;
+        }
+        if (
+          stairsToNeighbour > maxFloorChanges ||
+          jumpsToNeighbour > maxJumps
+        ) {
+          continue;
+        }
+
+        if (distanceToNeighbour < distances[neighbourId].cost) {
+          distances[neighbourId] = {
+            cost: distanceToNeighbour,
+            stairs: stairsToNeighbour,
+            jumps: jumpsToNeighbour,
+          };
+          priorityQueue.set(neighbourId, distanceToNeighbour);
         }
       }
-    }*/
+    }
+    if (control === null) {
+      window.location.href = "/index.html";
+      alert(
+        "Error when constructing the course. Most likely that the program didn't find a valid control node. Try decreasing the amount of controls or try again."
+      );
+    }
+    return control;
+  }
 
-    return validControlNodes;
+  coverage() {
+    let x = 0;
+    let y = 0;
+
+    if (this.controls.length === 0) {
+      return [x, y];
+    }
+
+    for (const control of this.controls) {
+      x += control.posX;
+      y += control.posY;
+    }
+
+    x = x / (this.controls.length * this.width);
+    y = y / (this.controls.length * this.height);
+
+    return [x, y];
+  }
+
+  distance(node1, node2) {
+    let dx = node1.posX - node2.posX;
+    let dy = node1.posY - node2.posY;
+
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+
+  checkIfBest(candidate) {
+    let coverage = 0;
+
+    for (const control of Object.values(this.controls)) {
+      let controlNode = this.graph.getNode(control).node;
+
+      let distance = this.distance(candidate, controlNode);
+
+      coverage += 1 / distance;
+    }
+    return coverage;
   }
 
   ///// ----------------- LOVISAS HÄR UNDER ---------------------/////

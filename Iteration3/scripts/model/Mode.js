@@ -2,13 +2,13 @@ import MapData from "./map.js";
 import Observable from "./observers.js";
 
 class Mode {
-  constructor() {
-    this.mapData = new MapData();
+  constructor(image) {
+    this.mapData = new MapData(image);
     this.observers = new Observable();
   }
 
   goToHomePage() {
-    window.location.href = "../../../index.html";
+    window.location.href = "/index.html";
   }
 
   // Method to subscribe observers

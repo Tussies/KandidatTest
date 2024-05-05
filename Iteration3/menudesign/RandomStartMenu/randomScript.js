@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("quit").addEventListener("click", function () {
-    window.location.href = "../StartMenu/index.html";
+    window.location.href = "/index.html";
   });
 
   for (let i = 0; i < canvases.length; i++) {

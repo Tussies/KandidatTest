@@ -62,8 +62,8 @@ class GameView {
     this.ctx.beginPath();
     this.ctx.moveTo(x1, y1);
     this.ctx.lineTo(
-      fstControl.node.posX - CONTROL_RADIUS * Math.cos(angle),
-      fstControl.node.posY - CONTROL_RADIUS * Math.sin(angle)
+      fstControl.posX - CONTROL_RADIUS * Math.cos(angle),
+      fstControl.posY - CONTROL_RADIUS * Math.sin(angle)
     );
     this.ctx.stroke();
     this.ctx.closePath();
@@ -71,6 +71,55 @@ class GameView {
 
   //Rendering of the controlNodes.
   rendercontrolNodes(controlNodes) {
+    for (let i = 0; i <= controlNodes.length; i++) {
+      let node = controlNodes[i];
+      this.ctx.beginPath();
+      this.ctx.arc(node.posX, node.posY, CONTROL_RADIUS, 0, Math.PI * 2);
+
+      this.ctx.strokeStyle = "purple";
+      this.ctx.stroke();
+      this.ctx.closePath();
+
+      // Render control number
+      this.ctx.fillStyle = "black";
+      this.ctx.font = "12px Arial";
+      this.ctx.textAlign = "center";
+      this.ctx.textBaseline = "middle";
+      this.ctx.fillText(i + 1, node.posX + 15, node.posY - 15);
+
+      if (controlNodes[i + 1]) {
+        let nextNode = controlNodes[i + 1];
+        const angle = Math.atan2(
+          nextNode.posY - node.posY,
+          nextNode.posX - node.posX
+        );
+
+        // Set line color and width
+        const startX = node.posX + CONTROL_RADIUS * Math.cos(angle);
+        const startY = node.posY + CONTROL_RADIUS * Math.sin(angle);
+        const endX = nextNode.posX - CONTROL_RADIUS * Math.cos(angle);
+        const endY = nextNode.posY - CONTROL_RADIUS * Math.sin(angle);
+
+        // Set line color and width
+        this.ctx.strokeStyle = "purple";
+
+        // Draw line between current control and next control
+        this.ctx.beginPath();
+        this.ctx.moveTo(startX, startY);
+        this.ctx.lineTo(endX, endY);
+        this.ctx.stroke();
+        this.ctx.closePath();
+      } else {
+        // Render the extra circle for the last control node
+        this.ctx.beginPath();
+        this.ctx.arc(node.posX, node.posY, CONTROL_RADIUS - 3, 0, Math.PI * 2);
+
+        this.ctx.strokeStyle = "purple";
+        this.ctx.stroke();
+        this.ctx.closePath();
+      }
+    }
+    /*
     for (const [controlNum, node] of Object.entries(controlNodes)) {
       // Render control as a circle
       this.ctx.beginPath();
@@ -130,12 +179,12 @@ class GameView {
         this.ctx.stroke();
         this.ctx.closePath();
       }
-    }
+    }*/
   }
 
   calculateAngle(startNode, fstControl) {
-    const deltaX = fstControl.node.posX - startNode.node.posX;
-    const deltaY = fstControl.node.posY - startNode.node.posY;
+    const deltaX = fstControl.posX - startNode.node.posX;
+    const deltaY = fstControl.posY - startNode.node.posY;
 
     // Calculate the angle using atan2
     const angle = Math.atan2(deltaY, deltaX);
@@ -244,12 +293,9 @@ class GameView {
 
     this.ctx.drawImage(image, 0, 0, this.canvas.width, this.canvas.height);
 
-    const controlNodeValues = Object.values(controlNodes);
-    const fstControl = controlNodeValues[0];
+    let angle = this.calculateAngle(startNode, controlNodes[0]);
 
-    let angle = this.calculateAngle(startNode, fstControl);
-
-    this.renderStartNode(startNode, angle, fstControl);
+    this.renderStartNode(startNode, angle, controlNodes[0]);
     this.rendercontrolNodes(controlNodes);
 
     //   this.renderShortestAtStart(shortestPath);

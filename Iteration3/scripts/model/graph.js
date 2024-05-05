@@ -143,6 +143,78 @@ class Graph {
     return null;
   }
 
+  dijkstra(sourceNodeId, minJumps, maxJumps, minFloorChanges, maxFloorChanges) {
+    const distances = {};
+    const visited = new Set();
+    const priorityQueue = new Map();
+    const candidates = [];
+
+    // Initialize distances and priority queue
+    for (const nodeId in this.adjacencyList) {
+      if (nodeId == sourceNodeId) {
+        distances[nodeId] = { cost: 0, stairs: 0, jumps: 0 };
+      } else {
+        distances[nodeId] = {
+          cost: Infinity,
+          stairs: Infinity,
+          jumps: Infinity,
+        };
+      }
+      priorityQueue.set(nodeId, distances[nodeId].cost);
+    }
+
+    while (priorityQueue.size > 0) {
+      const currentNodeId = Array.from(priorityQueue.keys()).reduce((a, b) =>
+        priorityQueue.get(a) < priorityQueue.get(b) ? a : b
+      );
+
+      const currentNode = this.adjacencyList[currentNodeId];
+      const currentDistance = priorityQueue.get(currentNodeId);
+
+      visited.add(currentNodeId);
+      if (
+        distances[currentNodeId].stairs >= minFloorChanges &&
+        distances[currentNodeId].jumps >= minJumps &&
+        (distances[currentNodeId].stairs <= maxFloorChanges ||
+          distances[currentNodeId].jumps <= maxJumps)
+      ) {
+        candidates.push(this.getNode(currentNodeId));
+      }
+      priorityQueue.delete(currentNodeId);
+
+      for (const neighbourId in currentNode.edges) {
+        if (visited.has(neighbourId)) {
+          continue;
+        }
+        const neighbour = currentNode.edges[neighbourId];
+        const distanceToNeighbour = currentDistance + neighbour.weight;
+        let stairsToNeighbour = distances[currentNodeId].stairs;
+        const jumpsToNeighbour = distances[currentNodeId].jumps + 1;
+
+        if (currentNode.edges[neighbourId].stair.stairCase !== undefined) {
+          stairsToNeighbour++;
+        }
+        if (
+          stairsToNeighbour > maxFloorChanges ||
+          jumpsToNeighbour > maxJumps
+        ) {
+          continue;
+        }
+
+        if (distanceToNeighbour < distances[neighbourId].cost) {
+          distances[neighbourId] = {
+            cost: distanceToNeighbour,
+            stairs: stairsToNeighbour,
+            jumps: jumpsToNeighbour,
+          };
+          priorityQueue.set(neighbourId, distanceToNeighbour);
+        }
+      }
+    }
+
+    return candidates;
+  }
+
   // Finds the shortest between two nodes.
   // The two nodes will either be one start node of the course or
   // a control node.

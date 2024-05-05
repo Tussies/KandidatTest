@@ -22,7 +22,7 @@ class RandomMode extends GameMode {
 
     let controlNodes = this.mapData.getControlNodes();
     this.gameState.controlNodes = controlNodes;
-    this.gameState.shortestPath = this.mapData.calculateShortest();
+    //this.gameState.shortestPath = this.mapData.calculateShortest();
 
     this.observers.update(this.gameState);
   }

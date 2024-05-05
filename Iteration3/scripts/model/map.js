@@ -22,7 +22,11 @@ class MapData {
         .then((jsonData) => {
           this.statGraph.adjacencyList = jsonData.adjacencyList;
           this.setControlsFromJSON();
-          this.randomControlPlacement = new RandomCourse(this.statGraph);
+          this.randomControlPlacement = new RandomCourse(
+            this.statGraph,
+            this.image.naturalWidth,
+            this.image.naturalHeight
+          );
           resolve();
         })
         .catch((error) => {
@@ -32,7 +36,7 @@ class MapData {
     });
   }
 
-  randomizeCourse(difficulty, nControl) {
+  randomizeCourse(difficulty, nControl, width, height) {
     //TODO: Randomize the edges
 
     //this.statGraph = newGraph;
@@ -112,12 +116,14 @@ class MapData {
   }
 
   getControlNodes() {
-    const nodes = {};
+    /*const nodes = {};
     Object.entries(this.controls).forEach(([nodeID, controlN]) => {
       nodes[controlN] = this.statGraph.getNode(nodeID);
     });
 
     return nodes;
+  */
+    return this.controls;
   }
 
   getNode(nodeID) {

@@ -8,7 +8,7 @@ import GameController from "../controllers/gameController.js";
 
 class GameMode extends Mode {
   constructor(image, jsongraph) {
-    super();
+    super(image);
     this.jsonGraph = jsongraph;
 
     this.gameState = {
