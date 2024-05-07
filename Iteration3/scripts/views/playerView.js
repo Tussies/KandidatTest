@@ -58,8 +58,11 @@ class PlayerView {
     shortestPath,
     playerPath,
   }) {
-    this.renderNeighbours(playerNode);
-    this.renderPlayer(playerNode);
+    if(!completed){
+      this.renderNeighbours(playerNode);
+      this.renderPlayer(playerNode);
+    }
+    
   }
 }
 

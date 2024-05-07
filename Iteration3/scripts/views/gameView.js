@@ -254,6 +254,7 @@ class GameView {
         this.ctx.moveTo(node.node.posX, node.node.posY);
         this.ctx.lineTo(nextNode.node.posX, nextNode.node.posY);
         this.ctx.strokeStyle = color;
+        this.ctx.lineWidth = 3;
         this.ctx.stroke();
         this.ctx.closePath();
       }

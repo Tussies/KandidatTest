@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("quit").addEventListener("click", function () {
-    window.location.href = "/index.html";
+    window.location.href = "/Kandidat/index.html";
   });
 
   var canvases = document.querySelectorAll(".canvas");
