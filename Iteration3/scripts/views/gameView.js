@@ -7,13 +7,21 @@ class GameView {
 
     this.game = game;
 
-    this.buttonContainer = document.createElement("div");
-    this.buttonContainer.setAttribute("id", "button-container");
-
-    // Create the quit button
+    
     this.quit = document.createElement("button");
     this.quit.textContent = "Quit";
-    this.quit.classList.add("quit");
+    this.quit.setAttribute("id","quit")
+
+    this.sidebar = document.createElement("div");
+    this.sidebar.classList.add("sidebar");
+    this.sidebar.appendChild(this.quit);
+    //this.buttonContainer = document.createElement("div");
+    //this.buttonContainer.setAttribute("id", "button-container");
+
+    // Create the quit button
+    //this.quit = document.createElement("button");
+   // this.quit.textContent = "Quit";
+    //this.quit.classList.add("quit");
 
     // init the canvas
     this.canvas = document.createElement("canvas");
@@ -21,16 +29,17 @@ class GameView {
     this.canvas.width = width;
     this.canvas.height = height;
     this.canvas.style.border = "5px solid black";
-    this.canvas.style.position = "absolute";
+    this.canvas.style.position = "relative";
     this.canvas.style.top = "10%";
-    this.canvas.style.left = "10%";
+    this.canvas.style.left = "23%";
     this.ctx = this.canvas.getContext("2d");
 
-    this.buttonContainer.appendChild(this.quit);
-    document.body.appendChild(this.buttonContainer);
+    //this.buttonContainer.appendChild(this.quit);
+    //document.body.appendChild(this.buttonContainer);
 
     // Append canvas to document body or any other container
     document.body.appendChild(this.canvas);
+    document.body.appendChild(this.sidebar)
 
     this.game.subscribe(this.update.bind(this));
   }
@@ -119,67 +128,6 @@ class GameView {
         this.ctx.closePath();
       }
     }
-    /*
-    for (const [controlNum, node] of Object.entries(controlNodes)) {
-      // Render control as a circle
-      this.ctx.beginPath();
-      this.ctx.arc(
-        node.node.posX,
-        node.node.posY,
-        CONTROL_RADIUS,
-        0,
-        Math.PI * 2
-      );
-
-      this.ctx.strokeStyle = "purple";
-      this.ctx.stroke();
-      this.ctx.closePath();
-
-      // Render control number
-      this.ctx.fillStyle = "black";
-      this.ctx.font = "12px Arial";
-      this.ctx.textAlign = "center";
-      this.ctx.textBaseline = "middle";
-      this.ctx.fillText(controlNum, node.node.posX + 15, node.node.posY - 15);
-
-      if (controlNodes[parseInt(controlNum) + 1]) {
-        let nextNode = controlNodes[parseInt(controlNum) + 1].node;
-        const angle = Math.atan2(
-          nextNode.posY - node.node.posY,
-          nextNode.posX - node.node.posX
-        );
-
-        // Set line color and width
-        const startX = node.node.posX + CONTROL_RADIUS * Math.cos(angle);
-        const startY = node.node.posY + CONTROL_RADIUS * Math.sin(angle);
-        const endX = nextNode.posX - CONTROL_RADIUS * Math.cos(angle);
-        const endY = nextNode.posY - CONTROL_RADIUS * Math.sin(angle);
-
-        // Set line color and width
-        this.ctx.strokeStyle = "purple";
-
-        // Draw line between current control and next control
-        this.ctx.beginPath();
-        this.ctx.moveTo(startX, startY);
-        this.ctx.lineTo(endX, endY);
-        this.ctx.stroke();
-        this.ctx.closePath();
-      } else {
-        // Render the extra circle for the last control node
-        this.ctx.beginPath();
-        this.ctx.arc(
-          node.node.posX,
-          node.node.posY,
-          CONTROL_RADIUS - 3,
-          0,
-          Math.PI * 2
-        );
-
-        this.ctx.strokeStyle = "purple";
-        this.ctx.stroke();
-        this.ctx.closePath();
-      }
-    }*/
   }
 
   calculateAngle(startNode, fstControl) {

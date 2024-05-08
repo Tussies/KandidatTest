@@ -36,34 +36,33 @@ class EditMode extends Mode {
   handleSave() {
     // Get the graph data
     const graphData = this.mapData.getGraph();
-
+  
     // Convert the graph data to JSON format
     const jsonData = JSON.stringify(graphData, (key, value) => {
-      // If the value is an object and has a property called 'oneDirectional',
-      // convert it to a boolean to ensure it's serialized properly
-      if (typeof value === "object" && "oneDirectional" in value) {
+      // Check if value is not null and is an object
+      if (value !== null && typeof value === "object" && "oneDirectional" in value) {
         return { ...value, oneDirectional: Boolean(value.oneDirectional) };
       }
       return value;
     });
-
+  
     // Create a Blob object from the JSON data
     const blob = new Blob([jsonData], { type: "application/json" });
-
+  
     // Create a URL for the Blob object
     const url = URL.createObjectURL(blob);
-
+  
     // Create a link element to trigger the download
     const link = document.createElement("a");
     link.href = url;
     link.download = "graph_data.json";
-
+  
     // Simulate a click event to trigger the download
     link.click();
-
+  
     // Revoke the URL to release the resources
     URL.revokeObjectURL(url);
-  }
+  }  
 
   addNode(x, y, floor) {
     let nodeAtPos = this.mapData.findNodeAtPosition(x, y);

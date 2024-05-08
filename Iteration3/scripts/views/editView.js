@@ -13,35 +13,34 @@ class EditView {
     this.floorNumber.textContent = `Floor: ${0}`;
     document.body.appendChild(this.floorNumber);
 
-    this.buttonContainer = document.createElement("div");
-    this.buttonContainer.setAttribute("id", "button-container");
+    this.quit = document.createElement("button");
+    this.quit.textContent = "Quit";
+    this.quit.setAttribute("id","quit")
 
+    this.sidebar = document.createElement("div");
+    this.sidebar.classList.add("sidebar");
+    this.sidebar.appendChild(this.quit);
+
+  
     // Create the save button
     this.save = document.createElement("button");
     this.save.textContent = "Save";
     this.save.classList.add("save");
 
-    // Create the quit button
-    this.quit = document.createElement("button");
-    this.quit.textContent = "Quit";
-    this.quit.classList.add("quit");
+    this.sidebar.appendChild(this.quit);
+    this.sidebar.appendChild(this.save);
 
-    // Append the buttons to the button container
-    this.buttonContainer.appendChild(this.save);
-    this.buttonContainer.appendChild(this.quit);
 
-    // Append the button container to the body
-    document.body.appendChild(this.buttonContainer);
-
+  
     // init the canvas
     this.canvas = document.createElement("canvas");
     this.canvas.id = "canvas";
     this.canvas.width = this.width;
     this.canvas.height = this.height;
     this.canvas.style.border = "5px solid black";
-    this.canvas.style.position = "absolute";
+    this.canvas.style.position = "relative";
     this.canvas.style.top = "10%";
-    this.canvas.style.left = "10%";
+    this.canvas.style.left = "23%";
     this.ctx = this.canvas.getContext("2d");
 
     // Initializing the popup
@@ -62,6 +61,7 @@ class EditView {
     // Append the popup and the canvas to document body
     document.body.appendChild(this.popup);
     document.body.appendChild(this.canvas);
+    document.body.appendChild(this.sidebar)
 
     this.game.subscribe(this.update.bind(this));
   }
