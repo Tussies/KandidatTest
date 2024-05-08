@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("quit").addEventListener("click", function () {
-    window.location.href = "/Kandidat/index.html";
+    window.location.href = "/index.html";
   });
 
   var selectedCourse = null;
