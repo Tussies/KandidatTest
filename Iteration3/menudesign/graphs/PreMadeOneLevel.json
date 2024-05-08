@@ -1,0 +1,5677 @@
+{
+  "adjacencyList": {
+    "1": {
+      "node": {
+        "id": 1,
+        "posX": 27.4375,
+        "posY": 44,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "2": {
+          "node": {
+            "id": 2,
+            "posX": 75.4375,
+            "posY": 44,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 45.0111097397076,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "7": {
+          "node": {
+            "id": 7,
+            "posX": 43.4375,
+            "posY": 113,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 67.91170738539859,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "2": {
+      "node": {
+        "id": 2,
+        "posX": 75.4375,
+        "posY": 44,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "1": {
+          "node": {
+            "id": 1,
+            "posX": 27.4375,
+            "posY": 44,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 45.0111097397076,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "3": {
+          "node": {
+            "id": 3,
+            "posX": 121.4375,
+            "posY": 43,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 45,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "85": {
+          "node": {
+            "id": 85,
+            "posX": 79.4375,
+            "posY": 107.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 63.071388124885914,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "3": {
+      "node": {
+        "id": 3,
+        "posX": 121.4375,
+        "posY": 43,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "2": {
+          "node": {
+            "id": 2,
+            "posX": 75.4375,
+            "posY": 44,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 45,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "8": {
+          "node": {
+            "id": 8,
+            "posX": 117.4375,
+            "posY": 112,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 63.071388124885914,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "4": {
+      "node": {
+        "id": 4,
+        "posX": 115.4375,
+        "posY": 184,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "6": {
+          "node": {
+            "id": 6,
+            "posX": 78.4375,
+            "posY": 179,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 36.345563690772494,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "8": {
+          "node": {
+            "id": 8,
+            "posX": 117.4375,
+            "posY": 112,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 69.06518659932803,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "9": {
+          "node": {
+            "id": 9,
+            "posX": 85.4375,
+            "posY": 222,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 44.82186966202994,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "5": {
+      "node": {
+        "id": 5,
+        "posX": 44.4375,
+        "posY": 180,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "6": {
+          "node": {
+            "id": 6,
+            "posX": 78.4375,
+            "posY": 179,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 33,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "7": {
+          "node": {
+            "id": 7,
+            "posX": 43.4375,
+            "posY": 113,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 65,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "9": {
+          "node": {
+            "id": 9,
+            "posX": 85.4375,
+            "posY": 222,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 60.108235708594876,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "6": {
+      "node": {
+        "id": 6,
+        "posX": 78.4375,
+        "posY": 179,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "4": {
+          "node": {
+            "id": 4,
+            "posX": 115.4375,
+            "posY": 184,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 36.345563690772494,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "5": {
+          "node": {
+            "id": 5,
+            "posX": 44.4375,
+            "posY": 180,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 33,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "9": {
+          "node": {
+            "id": 9,
+            "posX": 85.4375,
+            "posY": 222,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 37.8549864614954,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "85": {
+          "node": {
+            "id": 85,
+            "posX": 79.4375,
+            "posY": 107.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 69.00724599634447,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "7": {
+      "node": {
+        "id": 7,
+        "posX": 43.4375,
+        "posY": 113,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "1": {
+          "node": {
+            "id": 1,
+            "posX": 27.4375,
+            "posY": 44,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 67.91170738539859,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "5": {
+          "node": {
+            "id": 5,
+            "posX": 44.4375,
+            "posY": 180,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 65,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "85": {
+          "node": {
+            "id": 85,
+            "posX": 79.4375,
+            "posY": 107.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 34.36568055487916,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "8": {
+      "node": {
+        "id": 8,
+        "posX": 117.4375,
+        "posY": 112,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "3": {
+          "node": {
+            "id": 3,
+            "posX": 121.4375,
+            "posY": 43,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 63.071388124885914,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "4": {
+          "node": {
+            "id": 4,
+            "posX": 115.4375,
+            "posY": 184,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 69.06518659932803,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "85": {
+          "node": {
+            "id": 85,
+            "posX": 79.4375,
+            "posY": 107.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 36.6742416417845,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "9": {
+      "node": {
+        "id": 9,
+        "posX": 85.4375,
+        "posY": 222,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "4": {
+          "node": {
+            "id": 4,
+            "posX": 115.4375,
+            "posY": 184,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 44.82186966202994,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "5": {
+          "node": {
+            "id": 5,
+            "posX": 44.4375,
+            "posY": 180,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 60.108235708594876,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "6": {
+          "node": {
+            "id": 6,
+            "posX": 78.4375,
+            "posY": 179,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 37.8549864614954,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "10": {
+          "node": {
+            "id": 10,
+            "posX": 85.4375,
+            "posY": 250,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 25,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "10": {
+      "node": {
+        "id": 10,
+        "posX": 85.4375,
+        "posY": 250,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "9": {
+          "node": {
+            "id": 9,
+            "posX": 85.4375,
+            "posY": 222,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 25,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "11": {
+          "node": {
+            "id": 11,
+            "posX": 85.4375,
+            "posY": 284,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 32.14031735997639,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "15": {
+          "node": {
+            "id": 15,
+            "posX": 232.4375,
+            "posY": 252,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 147.05441169852742,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "11": {
+      "node": {
+        "id": 11,
+        "posX": 85.4375,
+        "posY": 284,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "10": {
+          "node": {
+            "id": 10,
+            "posX": 85.4375,
+            "posY": 250,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 32.14031735997639,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "12": {
+          "node": {
+            "id": 12,
+            "posX": 87.4375,
+            "posY": 321,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 33,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "14": {
+          "node": {
+            "id": 14,
+            "posX": 136.4375,
+            "posY": 269,
+            "control": true,
+            "controlN": 1,
+            "floor": 0
+          },
+          "weight": 53.150729063673246,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "12": {
+      "node": {
+        "id": 12,
+        "posX": 87.4375,
+        "posY": 321,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "11": {
+          "node": {
+            "id": 11,
+            "posX": 85.4375,
+            "posY": 284,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 33,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "13": {
+          "node": {
+            "id": 13,
+            "posX": 132.4375,
+            "posY": 319,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.04648650006177,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "13": {
+      "node": {
+        "id": 13,
+        "posX": 132.4375,
+        "posY": 319,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "12": {
+          "node": {
+            "id": 12,
+            "posX": 87.4375,
+            "posY": 321,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.04648650006177,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "14": {
+          "node": {
+            "id": 14,
+            "posX": 136.4375,
+            "posY": 269,
+            "control": true,
+            "controlN": 1,
+            "floor": 0
+          },
+          "weight": 49.36598018878993,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "14": {
+      "node": {
+        "id": 14,
+        "posX": 136.4375,
+        "posY": 269,
+        "control": true,
+        "controlN": 1,
+        "floor": 0
+      },
+      "edges": {
+        "11": {
+          "node": {
+            "id": 11,
+            "posX": 85.4375,
+            "posY": 284,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 53.150729063673246,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "13": {
+          "node": {
+            "id": 13,
+            "posX": 132.4375,
+            "posY": 319,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 49.36598018878993,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "15": {
+      "node": {
+        "id": 15,
+        "posX": 232.4375,
+        "posY": 252,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "10": {
+          "node": {
+            "id": 10,
+            "posX": 85.4375,
+            "posY": 250,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 147.05441169852742,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "16": {
+          "node": {
+            "id": 16,
+            "posX": 272.4375,
+            "posY": 261,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 37,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "16": {
+      "node": {
+        "id": 16,
+        "posX": 272.4375,
+        "posY": 261,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "15": {
+          "node": {
+            "id": 15,
+            "posX": 232.4375,
+            "posY": 252,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 37,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "23": {
+          "node": {
+            "id": 23,
+            "posX": 313.4375,
+            "posY": 259,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 37.05401462729781,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "17": {
+      "node": {
+        "id": 17,
+        "posX": 348.4375,
+        "posY": 256,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "23": {
+          "node": {
+            "id": 23,
+            "posX": 313.4375,
+            "posY": 259,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 35.014282800023196,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "81": {
+          "node": {
+            "id": 81,
+            "posX": 358.4375,
+            "posY": 232,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 22.847319317591726,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "117": {
+          "node": {
+            "id": 117,
+            "posX": 371.4375,
+            "posY": 253.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 21.37755832643195,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "18": {
+      "node": {
+        "id": 18,
+        "posX": 330.4375,
+        "posY": 361,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "21": {
+          "node": {
+            "id": 21,
+            "posX": 320.4375,
+            "posY": 323,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 36.138621999185304,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "119": {
+          "node": {
+            "id": 119,
+            "posX": 327.4375,
+            "posY": 452.6666717529297,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 87.02298546935747,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "19": {
+      "node": {
+        "id": 19,
+        "posX": 301.4375,
+        "posY": 359,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "21": {
+          "node": {
+            "id": 21,
+            "posX": 320.4375,
+            "posY": 323,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 39.35733730830886,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "26": {
+          "node": {
+            "id": 26,
+            "posX": 296.4375,
+            "posY": 394.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 34.36568055487916,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "20": {
+      "node": {
+        "id": 20,
+        "posX": 276.4375,
+        "posY": 322,
+        "control": true,
+        "controlN": 2,
+        "floor": 0
+      },
+      "edges": {
+        "21": {
+          "node": {
+            "id": 21,
+            "posX": 320.4375,
+            "posY": 323,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.18564576337837,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "21": {
+      "node": {
+        "id": 21,
+        "posX": 320.4375,
+        "posY": 323,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "18": {
+          "node": {
+            "id": 18,
+            "posX": 330.4375,
+            "posY": 361,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 36.138621999185304,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "19": {
+          "node": {
+            "id": 19,
+            "posX": 301.4375,
+            "posY": 359,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 39.35733730830886,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "20": {
+          "node": {
+            "id": 20,
+            "posX": 276.4375,
+            "posY": 322,
+            "control": true,
+            "controlN": 2,
+            "floor": 0
+          },
+          "weight": 43.18564576337837,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "22": {
+          "node": {
+            "id": 22,
+            "posX": 361.4375,
+            "posY": 341,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.382023926967726,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "24": {
+          "node": {
+            "id": 24,
+            "posX": 316.4375,
+            "posY": 285,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 35.05709628591621,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "22": {
+      "node": {
+        "id": 22,
+        "posX": 361.4375,
+        "posY": 341,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "21": {
+          "node": {
+            "id": 21,
+            "posX": 320.4375,
+            "posY": 323,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.382023926967726,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "23": {
+      "node": {
+        "id": 23,
+        "posX": 313.4375,
+        "posY": 259,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "16": {
+          "node": {
+            "id": 16,
+            "posX": 272.4375,
+            "posY": 261,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 37.05401462729781,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "17": {
+          "node": {
+            "id": 17,
+            "posX": 348.4375,
+            "posY": 256,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 35.014282800023196,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "24": {
+          "node": {
+            "id": 24,
+            "posX": 316.4375,
+            "posY": 285,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 26.1725046566048,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "24": {
+      "node": {
+        "id": 24,
+        "posX": 316.4375,
+        "posY": 285,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "21": {
+          "node": {
+            "id": 21,
+            "posX": 320.4375,
+            "posY": 323,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 35.05709628591621,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "23": {
+          "node": {
+            "id": 23,
+            "posX": 313.4375,
+            "posY": 259,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 26.1725046566048,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "25": {
+      "node": {
+        "id": 25,
+        "posX": 330.4375,
+        "posY": 530.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "40": {
+          "node": {
+            "id": 40,
+            "posX": 301.4375,
+            "posY": 542,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 29.732137494637012,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "41": {
+          "node": {
+            "id": 41,
+            "posX": 304.4375,
+            "posY": 574.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 46.647615158762406,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "42": {
+          "node": {
+            "id": 42,
+            "posX": 328.4375,
+            "posY": 586.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 51.088159097779204,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "119": {
+          "node": {
+            "id": 119,
+            "posX": 327.4375,
+            "posY": 452.6666717529297,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 75.16648189186454,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "26": {
+      "node": {
+        "id": 26,
+        "posX": 296.4375,
+        "posY": 394.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "19": {
+          "node": {
+            "id": 19,
+            "posX": 301.4375,
+            "posY": 359,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 34.36568055487916,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "27": {
+          "node": {
+            "id": 27,
+            "posX": 222.4375,
+            "posY": 399.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 71.17583859709698,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "27": {
+      "node": {
+        "id": 27,
+        "posX": 222.4375,
+        "posY": 399.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "26": {
+          "node": {
+            "id": 26,
+            "posX": 296.4375,
+            "posY": 394.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 71.17583859709698,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "28": {
+          "node": {
+            "id": 28,
+            "posX": 231.4375,
+            "posY": 426.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 25.632011235952593,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "28": {
+      "node": {
+        "id": 28,
+        "posX": 231.4375,
+        "posY": 426.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "27": {
+          "node": {
+            "id": 27,
+            "posX": 222.4375,
+            "posY": 399.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 25.632011235952593,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "121": {
+          "node": {
+            "id": 121,
+            "posX": 250.4375,
+            "posY": 445,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 28.284271247461902,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "29": {
+      "node": {
+        "id": 29,
+        "posX": 233.4375,
+        "posY": 466.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "30": {
+          "node": {
+            "id": 30,
+            "posX": 228.4375,
+            "posY": 510.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 47.042533945356304,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "121": {
+          "node": {
+            "id": 121,
+            "posX": 250.4375,
+            "posY": 445,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 24.839484696748443,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "30": {
+      "node": {
+        "id": 30,
+        "posX": 228.4375,
+        "posY": 510.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "29": {
+          "node": {
+            "id": 29,
+            "posX": 233.4375,
+            "posY": 466.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 47.042533945356304,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "31": {
+          "node": {
+            "id": 31,
+            "posX": 259.4375,
+            "posY": 512.3333339691162,
+            "control": true,
+            "controlN": 6,
+            "floor": 0
+          },
+          "weight": 33.13608305156178,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "31": {
+      "node": {
+        "id": 31,
+        "posX": 259.4375,
+        "posY": 512.3333339691162,
+        "control": true,
+        "controlN": 6,
+        "floor": 0
+      },
+      "edges": {
+        "30": {
+          "node": {
+            "id": 30,
+            "posX": 228.4375,
+            "posY": 510.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 33.13608305156178,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "32": {
+          "node": {
+            "id": 32,
+            "posX": 248.4375,
+            "posY": 488.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 26.419689627245813,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "32": {
+      "node": {
+        "id": 32,
+        "posX": 248.4375,
+        "posY": 488.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "31": {
+          "node": {
+            "id": 31,
+            "posX": 259.4375,
+            "posY": 512.3333339691162,
+            "control": true,
+            "controlN": 6,
+            "floor": 0
+          },
+          "weight": 26.419689627245813,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "33": {
+          "node": {
+            "id": 33,
+            "posX": 270.4375,
+            "posY": 475.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 24.698178070456937,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "33": {
+      "node": {
+        "id": 33,
+        "posX": 270.4375,
+        "posY": 475.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "32": {
+          "node": {
+            "id": 32,
+            "posX": 248.4375,
+            "posY": 488.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 24.698178070456937,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "34": {
+          "node": {
+            "id": 34,
+            "posX": 274.4375,
+            "posY": 432.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 39.05124837953327,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "34": {
+      "node": {
+        "id": 34,
+        "posX": 274.4375,
+        "posY": 432.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "33": {
+          "node": {
+            "id": 33,
+            "posX": 270.4375,
+            "posY": 475.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 39.05124837953327,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "35": {
+          "node": {
+            "id": 35,
+            "posX": 311.4375,
+            "posY": 412.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.382023926967726,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "35": {
+      "node": {
+        "id": 35,
+        "posX": 311.4375,
+        "posY": 412.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "34": {
+          "node": {
+            "id": 34,
+            "posX": 274.4375,
+            "posY": 432.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.382023926967726,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "36": {
+          "node": {
+            "id": 36,
+            "posX": 310.4375,
+            "posY": 469.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 53.009433122794285,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "36": {
+      "node": {
+        "id": 36,
+        "posX": 310.4375,
+        "posY": 469.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "35": {
+          "node": {
+            "id": 35,
+            "posX": 311.4375,
+            "posY": 412.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 53.009433122794285,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "37": {
+          "node": {
+            "id": 37,
+            "posX": 290.4375,
+            "posY": 457.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 22.825424421026653,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "37": {
+      "node": {
+        "id": 37,
+        "posX": 290.4375,
+        "posY": 457.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "36": {
+          "node": {
+            "id": 36,
+            "posX": 310.4375,
+            "posY": 469.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 22.825424421026653,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "38": {
+          "node": {
+            "id": 38,
+            "posX": 288.4375,
+            "posY": 472.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 16.0312195418814,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "38": {
+      "node": {
+        "id": 38,
+        "posX": 288.4375,
+        "posY": 472.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "37": {
+          "node": {
+            "id": 37,
+            "posX": 290.4375,
+            "posY": 457.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 16.0312195418814,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "39": {
+          "node": {
+            "id": 39,
+            "posX": 298.4375,
+            "posY": 508.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 35.4682957019364,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "39": {
+      "node": {
+        "id": 39,
+        "posX": 298.4375,
+        "posY": 508.3333339691162,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "38": {
+          "node": {
+            "id": 38,
+            "posX": 288.4375,
+            "posY": 472.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 35.4682957019364,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "40": {
+          "node": {
+            "id": 40,
+            "posX": 301.4375,
+            "posY": 542,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 30.066592756745816,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "40": {
+      "node": {
+        "id": 40,
+        "posX": 301.4375,
+        "posY": 542,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "25": {
+          "node": {
+            "id": 25,
+            "posX": 330.4375,
+            "posY": 530.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 29.732137494637012,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "39": {
+          "node": {
+            "id": 39,
+            "posX": 298.4375,
+            "posY": 508.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 30.066592756745816,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "41": {
+          "node": {
+            "id": 41,
+            "posX": 304.4375,
+            "posY": 574.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 27.294688127912362,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "41": {
+      "node": {
+        "id": 41,
+        "posX": 304.4375,
+        "posY": 574.3333435058594,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "25": {
+          "node": {
+            "id": 25,
+            "posX": 330.4375,
+            "posY": 530.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 46.647615158762406,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "40": {
+          "node": {
+            "id": 40,
+            "posX": 301.4375,
+            "posY": 542,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 27.294688127912362,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "42": {
+          "node": {
+            "id": 42,
+            "posX": 328.4375,
+            "posY": 586.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 23.259406699226016,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "43": {
+          "node": {
+            "id": 43,
+            "posX": 281.4375,
+            "posY": 572.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 23.194827009486403,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "42": {
+      "node": {
+        "id": 42,
+        "posX": 328.4375,
+        "posY": 586.3333435058594,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "25": {
+          "node": {
+            "id": 25,
+            "posX": 330.4375,
+            "posY": 530.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 51.088159097779204,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "41": {
+          "node": {
+            "id": 41,
+            "posX": 304.4375,
+            "posY": 574.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 23.259406699226016,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "46": {
+          "node": {
+            "id": 46,
+            "posX": 328.4375,
+            "posY": 609.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 23.021728866442675,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "43": {
+      "node": {
+        "id": 43,
+        "posX": 281.4375,
+        "posY": 572.3333435058594,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "41": {
+          "node": {
+            "id": 41,
+            "posX": 304.4375,
+            "posY": 574.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 23.194827009486403,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "44": {
+          "node": {
+            "id": 44,
+            "posX": 225.4375,
+            "posY": 563.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 56.88585061331157,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "45": {
+          "node": {
+            "id": 45,
+            "posX": 224.4375,
+            "posY": 587.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 59.481089431852205,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "44": {
+      "node": {
+        "id": 44,
+        "posX": 225.4375,
+        "posY": 563.3333435058594,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "43": {
+          "node": {
+            "id": 43,
+            "posX": 281.4375,
+            "posY": 572.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 56.88585061331157,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "45": {
+          "node": {
+            "id": 45,
+            "posX": 224.4375,
+            "posY": 587.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 22,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "45": {
+      "node": {
+        "id": 45,
+        "posX": 224.4375,
+        "posY": 587.3333435058594,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "43": {
+          "node": {
+            "id": 43,
+            "posX": 281.4375,
+            "posY": 572.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 59.481089431852205,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "44": {
+          "node": {
+            "id": 44,
+            "posX": 225.4375,
+            "posY": 563.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 22,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "46": {
+      "node": {
+        "id": 46,
+        "posX": 328.4375,
+        "posY": 609.6666870117188,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "42": {
+          "node": {
+            "id": 42,
+            "posX": 328.4375,
+            "posY": 586.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 23.021728866442675,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "47": {
+          "node": {
+            "id": 47,
+            "posX": 279.4375,
+            "posY": 608.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 51.0098029794274,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "47": {
+      "node": {
+        "id": 47,
+        "posX": 279.4375,
+        "posY": 608.6666870117188,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "46": {
+          "node": {
+            "id": 46,
+            "posX": 328.4375,
+            "posY": 609.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 51.0098029794274,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "48": {
+          "node": {
+            "id": 48,
+            "posX": 222.4375,
+            "posY": 605.6666870117188,
+            "control": true,
+            "controlN": 7,
+            "floor": 0
+          },
+          "weight": 56.08029957123981,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "48": {
+      "node": {
+        "id": 48,
+        "posX": 222.4375,
+        "posY": 605.6666870117188,
+        "control": true,
+        "controlN": 7,
+        "floor": 0
+      },
+      "edges": {
+        "47": {
+          "node": {
+            "id": 47,
+            "posX": 279.4375,
+            "posY": 608.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 56.08029957123981,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "49": {
+          "node": {
+            "id": 49,
+            "posX": 222.4375,
+            "posY": 633.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 29,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "49": {
+      "node": {
+        "id": 49,
+        "posX": 222.4375,
+        "posY": 633.6666870117188,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "48": {
+          "node": {
+            "id": 48,
+            "posX": 222.4375,
+            "posY": 605.6666870117188,
+            "control": true,
+            "controlN": 7,
+            "floor": 0
+          },
+          "weight": 29,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "50": {
+          "node": {
+            "id": 50,
+            "posX": 288.4375,
+            "posY": 629.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 67.06713054842886,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "50": {
+      "node": {
+        "id": 50,
+        "posX": 288.4375,
+        "posY": 629.6666870117188,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "49": {
+          "node": {
+            "id": 49,
+            "posX": 222.4375,
+            "posY": 633.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 67.06713054842886,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "51": {
+          "node": {
+            "id": 51,
+            "posX": 328.4375,
+            "posY": 638.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 41,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "51": {
+      "node": {
+        "id": 51,
+        "posX": 328.4375,
+        "posY": 638.6666870117188,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "50": {
+          "node": {
+            "id": 50,
+            "posX": 288.4375,
+            "posY": 629.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 41,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "52": {
+          "node": {
+            "id": 52,
+            "posX": 300.4375,
+            "posY": 659.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 33.015148038438355,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "52": {
+      "node": {
+        "id": 52,
+        "posX": 300.4375,
+        "posY": 659.6666870117188,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "51": {
+          "node": {
+            "id": 51,
+            "posX": 328.4375,
+            "posY": 638.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 33.015148038438355,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "53": {
+          "node": {
+            "id": 53,
+            "posX": 378.4375,
+            "posY": 665.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 74.43117626371358,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "53": {
+      "node": {
+        "id": 53,
+        "posX": 378.4375,
+        "posY": 665.6666870117188,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "52": {
+          "node": {
+            "id": 52,
+            "posX": 300.4375,
+            "posY": 659.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 74.43117626371358,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "56": {
+          "node": {
+            "id": 56,
+            "posX": 461.4375,
+            "posY": 666,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 81.02468759581859,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "57": {
+          "node": {
+            "id": 57,
+            "posX": 401.4375,
+            "posY": 709,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 47.885279575251516,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "54": {
+      "node": {
+        "id": 54,
+        "posX": 544.4375,
+        "posY": 652,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "56": {
+          "node": {
+            "id": 56,
+            "posX": 461.4375,
+            "posY": 666,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 81.74350127074322,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "78": {
+          "node": {
+            "id": 78,
+            "posX": 543.4375,
+            "posY": 605,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 41,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "122": {
+          "node": {
+            "id": 122,
+            "posX": 540.4375,
+            "posY": 691.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 39.11521443121589,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "55": {
+      "node": {
+        "id": 55,
+        "posX": 540.4375,
+        "posY": 729,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "58": {
+          "node": {
+            "id": 58,
+            "posX": 540.4375,
+            "posY": 758.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 29,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "122": {
+          "node": {
+            "id": 122,
+            "posX": 540.4375,
+            "posY": 691.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 33.13608305156178,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "56": {
+      "node": {
+        "id": 56,
+        "posX": 461.4375,
+        "posY": 666,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "53": {
+          "node": {
+            "id": 53,
+            "posX": 378.4375,
+            "posY": 665.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 81.02468759581859,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "54": {
+          "node": {
+            "id": 54,
+            "posX": 544.4375,
+            "posY": 652,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 81.74350127074322,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "118": {
+          "node": {
+            "id": 118,
+            "posX": 460.4375,
+            "posY": 707,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 38.01315561749642,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "122": {
+          "node": {
+            "id": 122,
+            "posX": 540.4375,
+            "posY": 691.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 82.28000972289685,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "57": {
+      "node": {
+        "id": 57,
+        "posX": 401.4375,
+        "posY": 709,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "53": {
+          "node": {
+            "id": 53,
+            "posX": 378.4375,
+            "posY": 665.6666870117188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 47.885279575251516,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "118": {
+          "node": {
+            "id": 118,
+            "posX": 460.4375,
+            "posY": 707,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 58.008620049092706,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "58": {
+      "node": {
+        "id": 58,
+        "posX": 540.4375,
+        "posY": 758.3333435058594,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "55": {
+          "node": {
+            "id": 55,
+            "posX": 540.4375,
+            "posY": 729,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 29,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "59": {
+          "node": {
+            "id": 59,
+            "posX": 543.4375,
+            "posY": 824.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 65.00769185258002,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "123": {
+          "node": {
+            "id": 123,
+            "posX": 512.4375,
+            "posY": 755,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 28.071337695236398,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "59": {
+      "node": {
+        "id": 59,
+        "posX": 543.4375,
+        "posY": 824.3333435058594,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "58": {
+          "node": {
+            "id": 58,
+            "posX": 540.4375,
+            "posY": 758.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 65.00769185258002,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "60": {
+          "node": {
+            "id": 60,
+            "posX": 513.4375,
+            "posY": 824.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 30.066592756745816,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "62": {
+          "node": {
+            "id": 62,
+            "posX": 544.4375,
+            "posY": 869,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 46.2709412050371,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "60": {
+      "node": {
+        "id": 60,
+        "posX": 513.4375,
+        "posY": 824.3333435058594,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "59": {
+          "node": {
+            "id": 59,
+            "posX": 543.4375,
+            "posY": 824.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 30.066592756745816,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "61": {
+          "node": {
+            "id": 61,
+            "posX": 514.4375,
+            "posY": 870,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.04648650006177,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "63": {
+          "node": {
+            "id": 63,
+            "posX": 490.4375,
+            "posY": 824,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 23,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "123": {
+          "node": {
+            "id": 123,
+            "posX": 512.4375,
+            "posY": 755,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 69.06518659932803,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "61": {
+      "node": {
+        "id": 61,
+        "posX": 514.4375,
+        "posY": 870,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "60": {
+          "node": {
+            "id": 60,
+            "posX": 513.4375,
+            "posY": 824.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.04648650006177,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "62": {
+          "node": {
+            "id": 62,
+            "posX": 544.4375,
+            "posY": 869,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 28,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "62": {
+      "node": {
+        "id": 62,
+        "posX": 544.4375,
+        "posY": 869,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "59": {
+          "node": {
+            "id": 59,
+            "posX": 543.4375,
+            "posY": 824.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 46.2709412050371,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "61": {
+          "node": {
+            "id": 61,
+            "posX": 514.4375,
+            "posY": 870,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 28,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "63": {
+      "node": {
+        "id": 63,
+        "posX": 490.4375,
+        "posY": 824,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "60": {
+          "node": {
+            "id": 60,
+            "posX": 513.4375,
+            "posY": 824.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 23,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "68": {
+          "node": {
+            "id": 68,
+            "posX": 441.4375,
+            "posY": 824,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 49.01020301937138,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "70": {
+          "node": {
+            "id": 70,
+            "posX": 439.4375,
+            "posY": 866,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 65.43699259593154,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "124": {
+          "node": {
+            "id": 124,
+            "posX": 494.4375,
+            "posY": 859,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 35.35533905932738,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "64": {
+      "node": {
+        "id": 64,
+        "posX": 488.4375,
+        "posY": 907,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "67": {
+          "node": {
+            "id": 67,
+            "posX": 442.4375,
+            "posY": 905,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 46.09772228646444,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "70": {
+          "node": {
+            "id": 70,
+            "posX": 439.4375,
+            "posY": 866,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 66.06814663663572,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "124": {
+          "node": {
+            "id": 124,
+            "posX": 494.4375,
+            "posY": 859,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.289721643826724,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "125": {
+          "node": {
+            "id": 125,
+            "posX": 541.4375,
+            "posY": 905,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 50,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "65": {
+      "node": {
+        "id": 65,
+        "posX": 394.4375,
+        "posY": 822,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "68": {
+          "node": {
+            "id": 68,
+            "posX": 441.4375,
+            "posY": 824,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 50.08991914547278,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "69": {
+          "node": {
+            "id": 69,
+            "posX": 390.4375,
+            "posY": 865,
+            "control": true,
+            "controlN": 9,
+            "floor": 0
+          },
+          "weight": 43.104524124504614,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "70": {
+          "node": {
+            "id": 70,
+            "posX": 439.4375,
+            "posY": 866,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 64.35060217278468,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "66": {
+      "node": {
+        "id": 66,
+        "posX": 394.4375,
+        "posY": 905,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "67": {
+          "node": {
+            "id": 67,
+            "posX": 442.4375,
+            "posY": 905,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 46.17358552246078,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "69": {
+          "node": {
+            "id": 69,
+            "posX": 390.4375,
+            "posY": 865,
+            "control": true,
+            "controlN": 9,
+            "floor": 0
+          },
+          "weight": 40.19950248448356,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "70": {
+          "node": {
+            "id": 70,
+            "posX": 439.4375,
+            "posY": 866,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 55.97320787662612,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "67": {
+      "node": {
+        "id": 67,
+        "posX": 442.4375,
+        "posY": 905,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "64": {
+          "node": {
+            "id": 64,
+            "posX": 488.4375,
+            "posY": 907,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 46.09772228646444,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "66": {
+          "node": {
+            "id": 66,
+            "posX": 394.4375,
+            "posY": 905,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 46.17358552246078,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "69": {
+          "node": {
+            "id": 69,
+            "posX": 390.4375,
+            "posY": 865,
+            "control": true,
+            "controlN": 9,
+            "floor": 0
+          },
+          "weight": 65.43699259593154,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "70": {
+          "node": {
+            "id": 70,
+            "posX": 439.4375,
+            "posY": 866,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 39,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "68": {
+      "node": {
+        "id": 68,
+        "posX": 441.4375,
+        "posY": 824,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "63": {
+          "node": {
+            "id": 63,
+            "posX": 490.4375,
+            "posY": 824,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 49.01020301937138,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "65": {
+          "node": {
+            "id": 65,
+            "posX": 394.4375,
+            "posY": 822,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 50.08991914547278,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "69": {
+          "node": {
+            "id": 69,
+            "posX": 390.4375,
+            "posY": 865,
+            "control": true,
+            "controlN": 9,
+            "floor": 0
+          },
+          "weight": 64.20280367709809,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "70": {
+          "node": {
+            "id": 70,
+            "posX": 439.4375,
+            "posY": 866,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 41,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "69": {
+      "node": {
+        "id": 69,
+        "posX": 390.4375,
+        "posY": 865,
+        "control": true,
+        "controlN": 9,
+        "floor": 0
+      },
+      "edges": {
+        "65": {
+          "node": {
+            "id": 65,
+            "posX": 394.4375,
+            "posY": 822,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.104524124504614,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "66": {
+          "node": {
+            "id": 66,
+            "posX": 394.4375,
+            "posY": 905,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 40.19950248448356,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "67": {
+          "node": {
+            "id": 67,
+            "posX": 442.4375,
+            "posY": 905,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 65.43699259593154,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "68": {
+          "node": {
+            "id": 68,
+            "posX": 441.4375,
+            "posY": 824,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 64.20280367709809,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "70": {
+          "node": {
+            "id": 70,
+            "posX": 439.4375,
+            "posY": 866,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 47.095647357266465,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "70": {
+      "node": {
+        "id": 70,
+        "posX": 439.4375,
+        "posY": 866,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "63": {
+          "node": {
+            "id": 63,
+            "posX": 490.4375,
+            "posY": 824,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 65.43699259593154,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "64": {
+          "node": {
+            "id": 64,
+            "posX": 488.4375,
+            "posY": 907,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 66.06814663663572,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "65": {
+          "node": {
+            "id": 65,
+            "posX": 394.4375,
+            "posY": 822,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 64.35060217278468,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "66": {
+          "node": {
+            "id": 66,
+            "posX": 394.4375,
+            "posY": 905,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 55.97320787662612,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "67": {
+          "node": {
+            "id": 67,
+            "posX": 442.4375,
+            "posY": 905,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 39,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "68": {
+          "node": {
+            "id": 68,
+            "posX": 441.4375,
+            "posY": 824,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 41,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "69": {
+          "node": {
+            "id": 69,
+            "posX": 390.4375,
+            "posY": 865,
+            "control": true,
+            "controlN": 9,
+            "floor": 0
+          },
+          "weight": 47.095647357266465,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "71": {
+      "node": {
+        "id": 71,
+        "posX": 541.4375,
+        "posY": 463,
+        "control": true,
+        "controlN": 8,
+        "floor": 0
+      },
+      "edges": {
+        "74": {
+          "node": {
+            "id": 74,
+            "posX": 467.4375,
+            "posY": 465,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 73.06161783043132,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "75": {
+          "node": {
+            "id": 75,
+            "posX": 540.4375,
+            "posY": 541,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 75,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "77": {
+          "node": {
+            "id": 77,
+            "posX": 468.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 104.00480758118829,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "72": {
+      "node": {
+        "id": 72,
+        "posX": 391.4375,
+        "posY": 460,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "74": {
+          "node": {
+            "id": 74,
+            "posX": 467.4375,
+            "posY": 465,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 74.24284477308234,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "76": {
+          "node": {
+            "id": 76,
+            "posX": 389.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 78.00640999302557,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "77": {
+          "node": {
+            "id": 77,
+            "posX": 468.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 109.62207806824317,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "73": {
+      "node": {
+        "id": 73,
+        "posX": 390.4375,
+        "posY": 632,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "79": {
+          "node": {
+            "id": 79,
+            "posX": 389.4375,
+            "posY": 602,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 29.017236257093817,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "74": {
+      "node": {
+        "id": 74,
+        "posX": 467.4375,
+        "posY": 465,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "71": {
+          "node": {
+            "id": 71,
+            "posX": 541.4375,
+            "posY": 463,
+            "control": true,
+            "controlN": 8,
+            "floor": 0
+          },
+          "weight": 73.06161783043132,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "72": {
+          "node": {
+            "id": 72,
+            "posX": 391.4375,
+            "posY": 460,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 74.24284477308234,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "75": {
+          "node": {
+            "id": 75,
+            "posX": 540.4375,
+            "posY": 541,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 104.66135867644753,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "76": {
+          "node": {
+            "id": 76,
+            "posX": 389.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 112.44998888394787,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "77": {
+          "node": {
+            "id": 77,
+            "posX": 468.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 76.02631123499285,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "75": {
+      "node": {
+        "id": 75,
+        "posX": 540.4375,
+        "posY": 541,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "71": {
+          "node": {
+            "id": 71,
+            "posX": 541.4375,
+            "posY": 463,
+            "control": true,
+            "controlN": 8,
+            "floor": 0
+          },
+          "weight": 75,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "74": {
+          "node": {
+            "id": 74,
+            "posX": 467.4375,
+            "posY": 465,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 104.66135867644753,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "77": {
+          "node": {
+            "id": 77,
+            "posX": 468.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 70.00714249274856,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "78": {
+          "node": {
+            "id": 78,
+            "posX": 543.4375,
+            "posY": 605,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 65.03076195155643,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "80": {
+          "node": {
+            "id": 80,
+            "posX": 466.4375,
+            "posY": 605,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 94.26027795418386,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "76": {
+      "node": {
+        "id": 76,
+        "posX": 389.4375,
+        "posY": 540,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "72": {
+          "node": {
+            "id": 72,
+            "posX": 391.4375,
+            "posY": 460,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 78.00640999302557,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "74": {
+          "node": {
+            "id": 74,
+            "posX": 467.4375,
+            "posY": 465,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 112.44998888394787,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "77": {
+          "node": {
+            "id": 77,
+            "posX": 468.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 82.05485969764375,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "79": {
+          "node": {
+            "id": 79,
+            "posX": 389.4375,
+            "posY": 602,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 61.032778078668514,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "80": {
+          "node": {
+            "id": 80,
+            "posX": 466.4375,
+            "posY": 605,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 100.42410069301094,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "77": {
+      "node": {
+        "id": 77,
+        "posX": 468.4375,
+        "posY": 540,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "71": {
+          "node": {
+            "id": 71,
+            "posX": 541.4375,
+            "posY": 463,
+            "control": true,
+            "controlN": 8,
+            "floor": 0
+          },
+          "weight": 104.00480758118829,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "72": {
+          "node": {
+            "id": 72,
+            "posX": 391.4375,
+            "posY": 460,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 109.62207806824317,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "74": {
+          "node": {
+            "id": 74,
+            "posX": 467.4375,
+            "posY": 465,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 76.02631123499285,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "75": {
+          "node": {
+            "id": 75,
+            "posX": 540.4375,
+            "posY": 541,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 70.00714249274856,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "76": {
+          "node": {
+            "id": 76,
+            "posX": 389.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 82.05485969764375,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "78": {
+          "node": {
+            "id": 78,
+            "posX": 543.4375,
+            "posY": 605,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 95.58765610684259,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "79": {
+          "node": {
+            "id": 79,
+            "posX": 389.4375,
+            "posY": 602,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 100.42410069301094,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "80": {
+          "node": {
+            "id": 80,
+            "posX": 466.4375,
+            "posY": 605,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 64.03124237432849,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "78": {
+      "node": {
+        "id": 78,
+        "posX": 543.4375,
+        "posY": 605,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "54": {
+          "node": {
+            "id": 54,
+            "posX": 544.4375,
+            "posY": 652,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 41,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "75": {
+          "node": {
+            "id": 75,
+            "posX": 540.4375,
+            "posY": 541,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 65.03076195155643,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "77": {
+          "node": {
+            "id": 77,
+            "posX": 468.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 95.58765610684259,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "80": {
+          "node": {
+            "id": 80,
+            "posX": 466.4375,
+            "posY": 605,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 77.00649323271382,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "79": {
+      "node": {
+        "id": 79,
+        "posX": 389.4375,
+        "posY": 602,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "73": {
+          "node": {
+            "id": 73,
+            "posX": 390.4375,
+            "posY": 632,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 29.017236257093817,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "76": {
+          "node": {
+            "id": 76,
+            "posX": 389.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 61.032778078668514,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "77": {
+          "node": {
+            "id": 77,
+            "posX": 468.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 100.42410069301094,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "80": {
+          "node": {
+            "id": 80,
+            "posX": 466.4375,
+            "posY": 605,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 76.23647421018367,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "80": {
+      "node": {
+        "id": 80,
+        "posX": 466.4375,
+        "posY": 605,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "75": {
+          "node": {
+            "id": 75,
+            "posX": 540.4375,
+            "posY": 541,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 94.26027795418386,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "76": {
+          "node": {
+            "id": 76,
+            "posX": 389.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 100.42410069301094,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "77": {
+          "node": {
+            "id": 77,
+            "posX": 468.4375,
+            "posY": 540,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 64.03124237432849,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "78": {
+          "node": {
+            "id": 78,
+            "posX": 543.4375,
+            "posY": 605,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 77.00649323271382,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "79": {
+          "node": {
+            "id": 79,
+            "posX": 389.4375,
+            "posY": 602,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 76.23647421018367,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "81": {
+      "node": {
+        "id": 81,
+        "posX": 358.4375,
+        "posY": 232,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "17": {
+          "node": {
+            "id": 17,
+            "posX": 348.4375,
+            "posY": 256,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 22.847319317591726,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "82": {
+      "node": {
+        "id": 82,
+        "posX": 359.4375,
+        "posY": 188,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "81": {
+          "node": {
+            "id": 81,
+            "posX": 358.4375,
+            "posY": 232,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 41,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": true
+        },
+        "83": {
+          "node": {
+            "id": 83,
+            "posX": 329.4375,
+            "posY": 188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 26,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "84": {
+          "node": {
+            "id": 84,
+            "posX": 390.4375,
+            "posY": 164,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 38.01315561749642,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "83": {
+      "node": {
+        "id": 83,
+        "posX": 329.4375,
+        "posY": 188,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "82": {
+          "node": {
+            "id": 82,
+            "posX": 359.4375,
+            "posY": 188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 26,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "84": {
+      "node": {
+        "id": 84,
+        "posX": 390.4375,
+        "posY": 164,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "82": {
+          "node": {
+            "id": 82,
+            "posX": 359.4375,
+            "posY": 188,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 38.01315561749642,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "86": {
+          "node": {
+            "id": 86,
+            "posX": 457.4375,
+            "posY": 162.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 63.00793600809346,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "85": {
+      "node": {
+        "id": 85,
+        "posX": 79.4375,
+        "posY": 107.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "2": {
+          "node": {
+            "id": 2,
+            "posX": 75.4375,
+            "posY": 44,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 63.071388124885914,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "6": {
+          "node": {
+            "id": 6,
+            "posX": 78.4375,
+            "posY": 179,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 69.00724599634447,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "7": {
+          "node": {
+            "id": 7,
+            "posX": 43.4375,
+            "posY": 113,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 34.36568055487916,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "8": {
+          "node": {
+            "id": 8,
+            "posX": 117.4375,
+            "posY": 112,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 36.6742416417845,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "86": {
+      "node": {
+        "id": 86,
+        "posX": 457.4375,
+        "posY": 162.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "84": {
+          "node": {
+            "id": 84,
+            "posX": 390.4375,
+            "posY": 164,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 63.00793600809346,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "87": {
+          "node": {
+            "id": 87,
+            "posX": 533.4375,
+            "posY": 169.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 75.4254598925323,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "88": {
+          "node": {
+            "id": 88,
+            "posX": 459.4375,
+            "posY": 190.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 24.08318915758459,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "87": {
+      "node": {
+        "id": 87,
+        "posX": 533.4375,
+        "posY": 169.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "86": {
+          "node": {
+            "id": 86,
+            "posX": 457.4375,
+            "posY": 162.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 75.4254598925323,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "88": {
+      "node": {
+        "id": 88,
+        "posX": 459.4375,
+        "posY": 190.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "86": {
+          "node": {
+            "id": 86,
+            "posX": 457.4375,
+            "posY": 162.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 24.08318915758459,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "89": {
+          "node": {
+            "id": 89,
+            "posX": 428.4375,
+            "posY": 201.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 33.24154027718932,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "90": {
+          "node": {
+            "id": 90,
+            "posX": 449.4375,
+            "posY": 224.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 32.89376840679705,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "89": {
+      "node": {
+        "id": 89,
+        "posX": 428.4375,
+        "posY": 201.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "88": {
+          "node": {
+            "id": 88,
+            "posX": 459.4375,
+            "posY": 190.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 33.24154027718932,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "90": {
+      "node": {
+        "id": 90,
+        "posX": 449.4375,
+        "posY": 224.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "88": {
+          "node": {
+            "id": 88,
+            "posX": 459.4375,
+            "posY": 190.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 32.89376840679705,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "91": {
+          "node": {
+            "id": 91,
+            "posX": 460.4375,
+            "posY": 234.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 15.620499351813308,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "91": {
+      "node": {
+        "id": 91,
+        "posX": 460.4375,
+        "posY": 234.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "90": {
+          "node": {
+            "id": 90,
+            "posX": 449.4375,
+            "posY": 224.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 15.620499351813308,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "92": {
+          "node": {
+            "id": 92,
+            "posX": 498.4375,
+            "posY": 196.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 53.75872022286245,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "92": {
+      "node": {
+        "id": 92,
+        "posX": 498.4375,
+        "posY": 196.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "91": {
+          "node": {
+            "id": 91,
+            "posX": 460.4375,
+            "posY": 234.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 53.75872022286245,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "93": {
+      "node": {
+        "id": 93,
+        "posX": 520.4375,
+        "posY": 198.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "94": {
+          "node": {
+            "id": 94,
+            "posX": 478.4375,
+            "posY": 245.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 59.54829972383762,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "94": {
+      "node": {
+        "id": 94,
+        "posX": 478.4375,
+        "posY": 245.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "93": {
+          "node": {
+            "id": 93,
+            "posX": 520.4375,
+            "posY": 198.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 59.54829972383762,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "95": {
+          "node": {
+            "id": 95,
+            "posX": 494.4375,
+            "posY": 261.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 21.400934559032695,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "95": {
+      "node": {
+        "id": 95,
+        "posX": 494.4375,
+        "posY": 261.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "94": {
+          "node": {
+            "id": 94,
+            "posX": 478.4375,
+            "posY": 245.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 21.400934559032695,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "96": {
+          "node": {
+            "id": 96,
+            "posX": 537.4375,
+            "posY": 213.66666412353516,
+            "control": true,
+            "controlN": 3,
+            "floor": 0
+          },
+          "weight": 65.06919393998976,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "96": {
+      "node": {
+        "id": 96,
+        "posX": 537.4375,
+        "posY": 213.66666412353516,
+        "control": true,
+        "controlN": 3,
+        "floor": 0
+      },
+      "edges": {
+        "95": {
+          "node": {
+            "id": 95,
+            "posX": 494.4375,
+            "posY": 261.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 65.06919393998976,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "97": {
+          "node": {
+            "id": 97,
+            "posX": 538.4375,
+            "posY": 244.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 29,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "97": {
+      "node": {
+        "id": 97,
+        "posX": 538.4375,
+        "posY": 244.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "96": {
+          "node": {
+            "id": 96,
+            "posX": 537.4375,
+            "posY": 213.66666412353516,
+            "control": true,
+            "controlN": 3,
+            "floor": 0
+          },
+          "weight": 29,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "98": {
+          "node": {
+            "id": 98,
+            "posX": 511.4375,
+            "posY": 273.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 42.44997055358225,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "98": {
+      "node": {
+        "id": 98,
+        "posX": 511.4375,
+        "posY": 273.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "97": {
+          "node": {
+            "id": 97,
+            "posX": 538.4375,
+            "posY": 244.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 42.44997055358225,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "99": {
+          "node": {
+            "id": 99,
+            "posX": 521.4375,
+            "posY": 283.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 12.727922061357855,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "99": {
+      "node": {
+        "id": 99,
+        "posX": 521.4375,
+        "posY": 283.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "98": {
+          "node": {
+            "id": 98,
+            "posX": 511.4375,
+            "posY": 273.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 12.727922061357855,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "100": {
+          "node": {
+            "id": 100,
+            "posX": 541.4375,
+            "posY": 274.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 24.166091947189145,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "100": {
+      "node": {
+        "id": 100,
+        "posX": 541.4375,
+        "posY": 274.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "99": {
+          "node": {
+            "id": 99,
+            "posX": 521.4375,
+            "posY": 283.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 24.166091947189145,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "101": {
+          "node": {
+            "id": 101,
+            "posX": 541.4375,
+            "posY": 304.66666412353516,
+            "control": true,
+            "controlN": 4,
+            "floor": 0
+          },
+          "weight": 29,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "101": {
+      "node": {
+        "id": 101,
+        "posX": 541.4375,
+        "posY": 304.66666412353516,
+        "control": true,
+        "controlN": 4,
+        "floor": 0
+      },
+      "edges": {
+        "100": {
+          "node": {
+            "id": 100,
+            "posX": 541.4375,
+            "posY": 274.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 29,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "102": {
+          "node": {
+            "id": 102,
+            "posX": 510.4375,
+            "posY": 304.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 30,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "102": {
+      "node": {
+        "id": 102,
+        "posX": 510.4375,
+        "posY": 304.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "101": {
+          "node": {
+            "id": 101,
+            "posX": 541.4375,
+            "posY": 304.66666412353516,
+            "control": true,
+            "controlN": 4,
+            "floor": 0
+          },
+          "weight": 30,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "103": {
+          "node": {
+            "id": 103,
+            "posX": 497.4375,
+            "posY": 287.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 21.400934559032695,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "103": {
+      "node": {
+        "id": 103,
+        "posX": 497.4375,
+        "posY": 287.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "102": {
+          "node": {
+            "id": 102,
+            "posX": 510.4375,
+            "posY": 304.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 21.400934559032695,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "104": {
+          "node": {
+            "id": 104,
+            "posX": 484.4375,
+            "posY": 307.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 25.942243542145693,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "104": {
+      "node": {
+        "id": 104,
+        "posX": 484.4375,
+        "posY": 307.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "103": {
+          "node": {
+            "id": 103,
+            "posX": 497.4375,
+            "posY": 287.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 25.942243542145693,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "105": {
+          "node": {
+            "id": 105,
+            "posX": 457.4375,
+            "posY": 305.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 27.16615541441225,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "105": {
+      "node": {
+        "id": 105,
+        "posX": 457.4375,
+        "posY": 305.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "104": {
+          "node": {
+            "id": 104,
+            "posX": 484.4375,
+            "posY": 307.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 27.16615541441225,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "106": {
+          "node": {
+            "id": 106,
+            "posX": 479.4375,
+            "posY": 278.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 34.713109915419565,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "106": {
+      "node": {
+        "id": 106,
+        "posX": 479.4375,
+        "posY": 278.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "105": {
+          "node": {
+            "id": 105,
+            "posX": 457.4375,
+            "posY": 305.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 34.713109915419565,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "107": {
+          "node": {
+            "id": 107,
+            "posX": 462.4375,
+            "posY": 263.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 23.430749027719962,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "107": {
+      "node": {
+        "id": 107,
+        "posX": 462.4375,
+        "posY": 263.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "106": {
+          "node": {
+            "id": 106,
+            "posX": 479.4375,
+            "posY": 278.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 23.430749027719962,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "108": {
+          "node": {
+            "id": 108,
+            "posX": 425.4375,
+            "posY": 305.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 54.56189146281496,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "108": {
+      "node": {
+        "id": 108,
+        "posX": 425.4375,
+        "posY": 305.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "107": {
+          "node": {
+            "id": 107,
+            "posX": 462.4375,
+            "posY": 263.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 54.56189146281496,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "109": {
+          "node": {
+            "id": 109,
+            "posX": 399.4375,
+            "posY": 305.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 25.019992006393608,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "109": {
+      "node": {
+        "id": 109,
+        "posX": 399.4375,
+        "posY": 305.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "108": {
+          "node": {
+            "id": 108,
+            "posX": 425.4375,
+            "posY": 305.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 25.019992006393608,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "110": {
+          "node": {
+            "id": 110,
+            "posX": 447.4375,
+            "posY": 251.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 72.18032973047436,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "110": {
+      "node": {
+        "id": 110,
+        "posX": 447.4375,
+        "posY": 251.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "109": {
+          "node": {
+            "id": 109,
+            "posX": 399.4375,
+            "posY": 305.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 72.18032973047436,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "111": {
+          "node": {
+            "id": 111,
+            "posX": 435.4375,
+            "posY": 238.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 17.029386365926403,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "111": {
+      "node": {
+        "id": 111,
+        "posX": 435.4375,
+        "posY": 238.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "110": {
+          "node": {
+            "id": 110,
+            "posX": 447.4375,
+            "posY": 251.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 17.029386365926403,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "112": {
+          "node": {
+            "id": 112,
+            "posX": 386.4375,
+            "posY": 290.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 70.03570517957252,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "112": {
+      "node": {
+        "id": 112,
+        "posX": 386.4375,
+        "posY": 290.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "111": {
+          "node": {
+            "id": 111,
+            "posX": 435.4375,
+            "posY": 238.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 70.03570517957252,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "113": {
+          "node": {
+            "id": 113,
+            "posX": 382.4375,
+            "posY": 271.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 14.317821063276353,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "113": {
+      "node": {
+        "id": 113,
+        "posX": 382.4375,
+        "posY": 271.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "112": {
+          "node": {
+            "id": 112,
+            "posX": 386.4375,
+            "posY": 290.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 14.317821063276353,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "114": {
+          "node": {
+            "id": 114,
+            "posX": 420.4375,
+            "posY": 230.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 53.03772242470448,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "114": {
+      "node": {
+        "id": 114,
+        "posX": 420.4375,
+        "posY": 230.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "113": {
+          "node": {
+            "id": 113,
+            "posX": 382.4375,
+            "posY": 271.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 53.03772242470448,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "115": {
+          "node": {
+            "id": 115,
+            "posX": 389.4375,
+            "posY": 200.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.18564576337837,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "115": {
+      "node": {
+        "id": 115,
+        "posX": 389.4375,
+        "posY": 200.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "114": {
+          "node": {
+            "id": 114,
+            "posX": 420.4375,
+            "posY": 230.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.18564576337837,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "116": {
+          "node": {
+            "id": 116,
+            "posX": 395.4375,
+            "posY": 229.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 27.202941017470888,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "116": {
+      "node": {
+        "id": 116,
+        "posX": 395.4375,
+        "posY": 229.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "115": {
+          "node": {
+            "id": 115,
+            "posX": 389.4375,
+            "posY": 200.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 27.202941017470888,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "117": {
+          "node": {
+            "id": 117,
+            "posX": 371.4375,
+            "posY": 253.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 32.55764119219941,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "117": {
+      "node": {
+        "id": 117,
+        "posX": 371.4375,
+        "posY": 253.66666412353516,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "17": {
+          "node": {
+            "id": 17,
+            "posX": 348.4375,
+            "posY": 256,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 21.37755832643195,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "116": {
+          "node": {
+            "id": 116,
+            "posX": 395.4375,
+            "posY": 229.66666412353516,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 32.55764119219941,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "118": {
+      "node": {
+        "id": 118,
+        "posX": 460.4375,
+        "posY": 707,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "56": {
+          "node": {
+            "id": 56,
+            "posX": 461.4375,
+            "posY": 666,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 38.01315561749642,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "57": {
+          "node": {
+            "id": 57,
+            "posX": 401.4375,
+            "posY": 709,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 58.008620049092706,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "122": {
+          "node": {
+            "id": 122,
+            "posX": 540.4375,
+            "posY": 691.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 80.06247560499239,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "119": {
+      "node": {
+        "id": 119,
+        "posX": 327.4375,
+        "posY": 452.6666717529297,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "18": {
+          "node": {
+            "id": 18,
+            "posX": 330.4375,
+            "posY": 361,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 87.02298546935747,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "25": {
+          "node": {
+            "id": 25,
+            "posX": 330.4375,
+            "posY": 530.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 75.16648189186454,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "120": {
+          "node": {
+            "id": 120,
+            "posX": 345.4375,
+            "posY": 449.6666717529297,
+            "control": true,
+            "controlN": 5,
+            "floor": 0
+          },
+          "weight": 15.132745950421556,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "120": {
+      "node": {
+        "id": 120,
+        "posX": 345.4375,
+        "posY": 449.6666717529297,
+        "control": true,
+        "controlN": 5,
+        "floor": 0
+      },
+      "edges": {
+        "119": {
+          "node": {
+            "id": 119,
+            "posX": 327.4375,
+            "posY": 452.6666717529297,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 15.132745950421556,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "121": {
+      "node": {
+        "id": 121,
+        "posX": 250.4375,
+        "posY": 445,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "28": {
+          "node": {
+            "id": 28,
+            "posX": 231.4375,
+            "posY": 426.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 28.284271247461902,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "29": {
+          "node": {
+            "id": 29,
+            "posX": 233.4375,
+            "posY": 466.3333339691162,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 24.839484696748443,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "122": {
+      "node": {
+        "id": 122,
+        "posX": 540.4375,
+        "posY": 691.3333435058594,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "54": {
+          "node": {
+            "id": 54,
+            "posX": 544.4375,
+            "posY": 652,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 39.11521443121589,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "55": {
+          "node": {
+            "id": 55,
+            "posX": 540.4375,
+            "posY": 729,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 33.13608305156178,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "56": {
+          "node": {
+            "id": 56,
+            "posX": 461.4375,
+            "posY": 666,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 82.28000972289685,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        },
+        "118": {
+          "node": {
+            "id": 118,
+            "posX": 460.4375,
+            "posY": 707,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 80.06247560499239,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "123": {
+      "node": {
+        "id": 123,
+        "posX": 512.4375,
+        "posY": 755,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "58": {
+          "node": {
+            "id": 58,
+            "posX": 540.4375,
+            "posY": 758.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 28.071337695236398,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "60": {
+          "node": {
+            "id": 60,
+            "posX": 513.4375,
+            "posY": 824.3333435058594,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 69.06518659932803,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "124": {
+      "node": {
+        "id": 124,
+        "posX": 494.4375,
+        "posY": 859,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "63": {
+          "node": {
+            "id": 63,
+            "posX": 490.4375,
+            "posY": 824,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 35.35533905932738,
+          "stair": { "stairCase": null, "newFloor": null },
+          "oneDirectional": false
+        },
+        "64": {
+          "node": {
+            "id": 64,
+            "posX": 488.4375,
+            "posY": 907,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 43.289721643826724,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    },
+    "125": {
+      "node": {
+        "id": 125,
+        "posX": 541.4375,
+        "posY": 905,
+        "control": false,
+        "controlN": null,
+        "floor": 0
+      },
+      "edges": {
+        "64": {
+          "node": {
+            "id": 64,
+            "posX": 488.4375,
+            "posY": 907,
+            "control": false,
+            "controlN": null,
+            "floor": 0
+          },
+          "weight": 50,
+          "stair": { "stairCase": null, "goToFloor": null },
+          "oneDirectional": false
+        }
+      }
+    }
+  }
+}

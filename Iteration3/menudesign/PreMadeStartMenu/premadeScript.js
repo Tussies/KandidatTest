@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var selectedCourse = null;
   var jsonGraph = null;
   const imagePaths = ["../images/karta1.jpeg", "../images/FourLevels.jpg"];
-  const jsonGraphPaths = ["../graphs/3.json", "../graphs/FourLevelsGraph.json"];
+  const jsonGraphPaths = ["../graphs/PreMadeOneLevel.json", "../graphs/TempGraph.json"];
 
   document.getElementById("play").addEventListener("click", function () {
     if (selectedCourse) {

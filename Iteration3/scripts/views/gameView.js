@@ -7,10 +7,9 @@ class GameView {
 
     this.game = game;
 
-    
     this.quit = document.createElement("button");
     this.quit.textContent = "Quit";
-    this.quit.setAttribute("id","quit")
+    this.quit.setAttribute("id", "quit");
 
     this.sidebar = document.createElement("div");
     this.sidebar.classList.add("sidebar");
@@ -20,7 +19,7 @@ class GameView {
 
     // Create the quit button
     //this.quit = document.createElement("button");
-   // this.quit.textContent = "Quit";
+    // this.quit.textContent = "Quit";
     //this.quit.classList.add("quit");
 
     // init the canvas
@@ -39,7 +38,7 @@ class GameView {
 
     // Append canvas to document body or any other container
     document.body.appendChild(this.canvas);
-    document.body.appendChild(this.sidebar)
+    document.body.appendChild(this.sidebar);
 
     this.game.subscribe(this.update.bind(this));
   }

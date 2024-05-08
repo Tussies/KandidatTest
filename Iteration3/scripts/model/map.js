@@ -7,7 +7,7 @@ class MapData {
 
     this.statGraph = new Graph();
 
-    this.controls = {};
+    this.controls = [];
   }
 
   async loadJSON(jsonGraph) {
@@ -52,11 +52,18 @@ class MapData {
   }
 
   setControlsFromJSON() {
+    let jsonControls = [];
     for (const [id, node] of Object.entries(this.statGraph.adjacencyList)) {
       if (node.node.control) {
-        this.controls[id] = node.node.controlN;
+        let control = node.node;
+        let controln = node.node.controlN;
+        jsonControls.push([controln, control]);
       }
     }
+
+    jsonControls.sort((a, b) => a[0] - b[0]);
+
+    jsonControls.forEach((element) => this.controls.push(element[1]));
   }
 
   findNodeAtPosition(x, y) {
