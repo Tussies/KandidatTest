@@ -112,6 +112,8 @@ button:hover {
 }
 
 .floor-number {
-  left: 500px;
-  top: 10px;
+  left: 250px;
+  top: 35px;
+  position: fixed;
+  z-index: 999;
 }

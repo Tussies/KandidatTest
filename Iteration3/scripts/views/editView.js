@@ -53,7 +53,7 @@ class EditView {
     this.inputStair.innerHTML = `<label for="staircase">StairCase:</label> <input type="text" id="staircase" name="staircase">`;
 
     this.popupSave = document.createElement("button");
-    this.popupSave.innerHTML = ` <button>Submit</button>`;
+    this.popupSave.innerHTML = ` Submit`;
 
     this.popup.appendChild(this.inputStair);
     this.popup.appendChild(this.popupSave);
