@@ -12,7 +12,7 @@ class PlayerView {
   }
 
   renderPlayer(playerNode) {
-    this.ctx.fillStyle = "red";
+    this.ctx.fillStyle = "blue";
 
     this.ctx.beginPath();
     this.ctx.moveTo(playerNode.node.posX, playerNode.node.posY);
@@ -29,7 +29,8 @@ class PlayerView {
 
   renderNeighbours(playerNode) {
     for (const neighbour of Object.values(playerNode.edges)) {
-      this.ctx.strokeStyle = "red";
+      this.ctx.strokeStyle = "blue";
+      this.ctx.lineWidth = 3;
 
       this.ctx.beginPath();
       this.ctx.arc(
@@ -41,6 +42,8 @@ class PlayerView {
       );
       this.ctx.stroke();
       this.ctx.closePath();
+
+      this.ctx.lineWidth = 1;
 
       // this.ctx.beginPath();
       // this.ctx.arc(playerNode.edges[neighbour.node.id].weight);

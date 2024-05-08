@@ -1,5 +1,4 @@
 import Mode from "./Mode.js";
-import MapData from "./map.js";
 import Player from "./player.js";
 import PlayerController from "../controllers/playerController.js";
 import GameView from "../views/gameView.js";

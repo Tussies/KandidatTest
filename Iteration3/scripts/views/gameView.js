@@ -154,7 +154,7 @@ class GameView {
             skip = true;
           }
 
-          if (node.edges[nextNode.id].stair.stairCase !== undefined) {
+          if (node.edges[nextNode.id].stair.stairCase !== undefined && node.edges[nextNode.id].stair.stairCase !== null) {
             skip = true;
           }
         }
@@ -176,7 +176,7 @@ class GameView {
       if (path[parseInt(order) + 1]) {
         let nextNode = path[parseInt(order) + 1];
 
-        if (path[order].edges[nextNode.node.id].stair.stairCase !== undefined) {
+        if (path[order].edges[nextNode.node.id].stair.stairCase !== undefined && path[order].edges[nextNode.node.id].stair.stairCase !== null) {
           continue;
         }
 
@@ -208,23 +208,6 @@ class GameView {
     }
 
     this.renderPlayerPath(playerPath, coloredPlayerPaths);
-  }
-
-  renderShortestAtStart(path) {
-    for (const [order, node] of Object.entries(path)) {
-      if (path[parseInt(order) + 1]) {
-        let nextNode = path[parseInt(order) + 1].node;
-        if (path[order].edges[nextNode.id].stair.stairCase !== undefined) {
-          continue;
-        }
-        this.ctx.beginPath();
-        this.ctx.moveTo(node.node.posX, node.node.posY);
-        this.ctx.lineTo(nextNode.posX, nextNode.posY);
-        this.ctx.strokeStyle = "blue";
-        this.ctx.stroke();
-        this.ctx.closePath();
-      }
-    }
   }
 
   // update function which is called from the observerable.
