@@ -59,7 +59,6 @@ class RandomCourse {
     const distances = {};
     const visited = new Set();
     const priorityQueue = new Map();
-    const candidates = [];
     let random = 0;
     let control = null;
 
@@ -91,7 +90,16 @@ class RandomCourse {
       const alreadyAControl = this.controls.some(
         (node) => node.id == currentNodeId
       );
-      const isNeighbour = false;
+      let isNeighbour = false;
+
+      for (let control of this.controls) {
+        let controlNode = this.graph.getNode(control.id);
+
+        if (controlNode.edges.hasOwnProperty(currentNodeId)) {
+          isNeighbour = true;
+          break;
+        }
+      }
 
       visited.add(currentNodeId);
       if (

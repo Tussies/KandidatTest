@@ -267,20 +267,17 @@ class Graph {
   // all the control nodes.
   findShortestPath(controls) {
     let startNodeId = this.adjacencyList[1].node.id;
-    let path = [startNodeId];
+    let path = [this.getNode(startNodeId)];
     let currentStart = startNodeId;
 
-    let controlList = Object.entries(controls);
-    controlList.sort((a, b) => a[1] - b[1]);
+    controls.sort((a, b) => a.controlnumber - b.controlnumber);
 
-    let sortedControls = Object.fromEntries(controlList);
-
-    for (const [id, controlnumber] of Object.entries(sortedControls)) {
-      const numericId = parseInt(id);
+    for (const control of controls) {
+      const { id: numericId } = control;
       let segment = this.findSegment(currentStart, numericId);
       if (segment) {
         if (segment.length === 1) {
-          path = path.concat(segment);
+          path.push(segment[0]);
         } else {
           path = path.concat(segment.slice(1));
         }
@@ -288,7 +285,6 @@ class Graph {
       }
     }
 
-    path[parseInt(0)] = this.getNode(startNodeId);
     return path;
   }
 

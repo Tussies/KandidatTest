@@ -115,17 +115,6 @@ class MapData {
     return this.statGraph;
   }
 
-  getControlNodes() {
-    /*const nodes = {};
-    Object.entries(this.controls).forEach(([nodeID, controlN]) => {
-      nodes[controlN] = this.statGraph.getNode(nodeID);
-    });
-
-    return nodes;
-  */
-    return this.controls;
-  }
-
   getNode(nodeID) {
     return this.statGraph.getNode(nodeID);
   }

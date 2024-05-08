@@ -71,7 +71,7 @@ class GameView {
 
   //Rendering of the controlNodes.
   rendercontrolNodes(controlNodes) {
-    for (let i = 0; i <= controlNodes.length; i++) {
+    for (let i = 0; i < controlNodes.length; i++) {
       let node = controlNodes[i];
       this.ctx.beginPath();
       this.ctx.arc(node.posX, node.posY, CONTROL_RADIUS, 0, Math.PI * 2);

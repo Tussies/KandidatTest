@@ -38,7 +38,7 @@ class GameMode extends Mode {
     this.gameState.startNode = this.mapData.getNode(1);
     this.gameState.playerNode = this.player.getCurrentNode();
 
-    let controlNodes = this.mapData.getControlNodes();
+    let controlNodes = this.mapData.getControls();
     this.gameState.controlNodes = controlNodes;
 
     this.observers.update(this.gameState);
@@ -49,15 +49,12 @@ class GameMode extends Mode {
     this.gameState.playerNode = this.player.getCurrentNode();
 
     if (
-      this.player.getCurrentNode() ===
-      this.mapData.getControlNodes()[parseInt(this.takenControls) + 1]
+      this.player.getCurrentNode().node ===
+      this.mapData.getControls()[this.takenControls]
     ) {
       this.takenControls += 1;
 
-      if (
-        this.takenControls ===
-        Object.keys(this.mapData.getControlNodes()).length
-      ) {
+      if (this.takenControls === this.mapData.getControls().length) {
         this.gameState.completed = true;
         this.gameState.shortestPath = this.mapData.calculateShortest();
         this.gameState.playerPath = this.player.getPath();
