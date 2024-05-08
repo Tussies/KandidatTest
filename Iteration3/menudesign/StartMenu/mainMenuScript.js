@@ -15,3 +15,7 @@ document.getElementById("build-course").addEventListener("click", function () {
   window.location.href = "./Iteration3/menudesign/BuildOwnStartMenu/edit.html";
   // Add functionality for building your own course here
 });
+
+document.getElementById("instructions-manual").addEventListener("click",function() {
+  window.location.href = "./Iteration3/menudesign/InstructionsManual/instructions.html";
+});
