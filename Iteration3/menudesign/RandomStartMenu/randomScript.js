@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Placeholder data
   const difficulties = ["Easy", "Medium", "Hard"];
   const imagePaths = ["../images/karta1.jpeg", "../images/FourLevels.jpg"];
-  const jsonGraphPaths = ["../graphs/3.json", "../graphs/randomTest.json"];
+  const jsonGraphPaths = ["../graphs/preMadeOneLevel.json", "../graphs/randomTest.json"];
 
   const mapDropdown = document.getElementById("map-dropdown");
   const difficultyDropdown = document.getElementById("difficulty-dropdown");
@@ -32,6 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("quit").addEventListener("click", function () {
     window.location.href = "/index.html";
+  });
+
+  document.getElementById("instructions").addEventListener("click", function () {
+    window.open("/iteration3/menudesign/InstructionsManual/instructions.html", "_blank");
   });
 
   for (let i = 0; i < canvases.length; i++) {

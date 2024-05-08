@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "/index.html";
   });
 
+  document.getElementById("instructions").addEventListener("click", function () {
+    window.open("/iteration3/menudesign/InstructionsManual/instructions.html", "_blank");
+  });
+
   var selectedCourse = null;
   const imagePaths = ["./images/karta1.jpeg", "./images/FourLevels.jpg"];
 

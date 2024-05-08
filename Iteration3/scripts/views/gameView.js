@@ -11,16 +11,14 @@ class GameView {
     this.quit.textContent = "Quit";
     this.quit.setAttribute("id", "quit");
 
+    this.manual = document.createElement("button");
+    this.manual.textContent = "User Manual";
+    this.manual.setAttribute("id", "instructions");
+
     this.sidebar = document.createElement("div");
     this.sidebar.classList.add("sidebar");
     this.sidebar.appendChild(this.quit);
-    //this.buttonContainer = document.createElement("div");
-    //this.buttonContainer.setAttribute("id", "button-container");
-
-    // Create the quit button
-    //this.quit = document.createElement("button");
-    // this.quit.textContent = "Quit";
-    //this.quit.classList.add("quit");
+    this.sidebar.appendChild(this.manual);
 
     // init the canvas
     this.canvas = document.createElement("canvas");
@@ -154,7 +152,10 @@ class GameView {
             skip = true;
           }
 
-          if (node.edges[nextNode.id].stair.stairCase !== undefined && node.edges[nextNode.id].stair.stairCase !== null) {
+          if (
+            node.edges[nextNode.id].stair.stairCase !== undefined &&
+            node.edges[nextNode.id].stair.stairCase !== null
+          ) {
             skip = true;
           }
         }
@@ -176,7 +177,10 @@ class GameView {
       if (path[parseInt(order) + 1]) {
         let nextNode = path[parseInt(order) + 1];
 
-        if (path[order].edges[nextNode.node.id].stair.stairCase !== undefined && path[order].edges[nextNode.node.id].stair.stairCase !== null) {
+        if (
+          path[order].edges[nextNode.node.id].stair.stairCase !== undefined &&
+          path[order].edges[nextNode.node.id].stair.stairCase !== null
+        ) {
           continue;
         }
 

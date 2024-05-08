@@ -16,6 +16,6 @@ document.getElementById("build-course").addEventListener("click", function () {
   // Add functionality for building your own course here
 });
 
-document.getElementById("instructions-manual").addEventListener("click",function() {
-  window.location.href = "./Iteration3/menudesign/InstructionsManual/instructions.html";
+document.getElementById("instructions").addEventListener("click", function () {
+  window.open("/iteration3/menudesign/InstructionsManual/instructions.html", "_blank");
 });

@@ -222,7 +222,7 @@ class RandomCourse {
         let stairsToNeighbour = distances[currentNodeId].stairs;
         const jumpsToNeighbour = distances[currentNodeId].jumps + 1;
 
-        if (currentNode.edges[neighbourId].stair.stairCase !== undefined) {
+        if (currentNode.edges[neighbourId].stair.stairCase !== undefined && currentNode.edges[neighbourId].stair.stairCase !== null) {
           stairsToNeighbour++;
         }
         if (

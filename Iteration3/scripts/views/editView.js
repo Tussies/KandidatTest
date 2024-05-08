@@ -11,6 +11,7 @@ class EditView {
     this.floorNumber = document.createElement("div");
     this.floorNumber.classList.add("floor-number");
     this.floorNumber.textContent = `Floor: ${0}`;
+    this.floorNumber.style.fontSize = '30px'
     document.body.appendChild(this.floorNumber);
 
     this.quit = document.createElement("button");
@@ -21,7 +22,10 @@ class EditView {
     this.sidebar.classList.add("sidebar");
     this.sidebar.appendChild(this.quit);
 
-  
+    this.manual = document.createElement("button");
+    this.manual.textContent = "User Manual";
+    this.manual.setAttribute("id", "instructions");
+
     // Create the save button
     this.save = document.createElement("button");
     this.save.textContent = "Save";
@@ -29,8 +33,7 @@ class EditView {
 
     this.sidebar.appendChild(this.quit);
     this.sidebar.appendChild(this.save);
-
-
+    this.sidebar.appendChild(this.manual);
   
     // init the canvas
     this.canvas = document.createElement("canvas");

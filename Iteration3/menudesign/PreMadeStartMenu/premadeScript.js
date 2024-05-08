@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const imagePaths = ["../images/karta1.jpeg", "../images/FourLevels.jpg"];
   const jsonGraphPaths = ["../graphs/PreMadeOneLevel.json", "../graphs/TempGraph.json"];
 
+
   document.getElementById("play").addEventListener("click", function () {
     if (selectedCourse) {
       let gameMode = new GameMode(selectedCourse, jsonGraph);
@@ -16,6 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("quit").addEventListener("click", function () {
     window.location.href = "/index.html";
+  });
+
+  document.getElementById("instructions").addEventListener("click", function () {
+    window.open("/iteration3/menudesign/InstructionsManual/instructions.html", "_blank");
   });
 
   var canvases = document.querySelectorAll(".canvas");

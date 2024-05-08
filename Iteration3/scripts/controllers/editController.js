@@ -27,6 +27,16 @@ class EditController {
     this.popupSaveClicked = new Promise((resolve) => {
       this.popupResolver = resolve;
     });
+
+    this.manual = view.manual;
+    this.manual.addEventListener("click", this.openInstructions.bind(this));
+  }
+
+  openInstructions() {
+    window.open(
+      "/iteration3/menudesign/InstructionsManual/instructions.html",
+      "_blank"
+    );
   }
 
   handleKeyDown(event) {
