@@ -133,13 +133,13 @@ class EditView {
     this.ctx.closePath();
 
     // Display the weight
-    const textX = (startX + endX) / 2;
-    const textY = (startY + endY) / 2;
-    this.ctx.fillStyle = "black";
-    this.ctx.textAlign = "center";
-    this.ctx.textBaseline = "middle";
-    this.ctx.font = "10px Arial";
-    this.ctx.fillText(weight, textX, textY);
+    // const textX = (startX + endX) / 2;
+    // const textY = (startY + endY) / 2;
+    // this.ctx.fillStyle = "black";
+    // this.ctx.textAlign = "center";
+    // this.ctx.textBaseline = "middle";
+    // this.ctx.font = "10px Arial";
+    // this.ctx.fillText(weight, textX, textY);
   }
 
   //This will display the popup

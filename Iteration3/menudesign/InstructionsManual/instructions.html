@@ -7,8 +7,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
+            text-align: left;
+            margin: 15px;
             padding: 0;
         }
         h1 {
@@ -30,19 +30,28 @@
     <br>
     When all controls are collected the game is finished. Both your path and the most effective path is displayed.
     <h2>Pre-Made Courses</h2>
-    Two pre-made courses are found here, mark what map you want to play by pressing it, and the "Play" button consequently.
+    Two pre-made courses are found here, mark what map you want to play by pressing it, and then press the "Play" button.
     <h2>Random Courses</h2>
-    Here you have the possibility to generate a random course, choose what map you want to play, what difficulty and lastly the amount of controls. Press play when you are satisfied with the settings.
+    Here you have the possibility to generate a random course, choose what map, difficulty and number of controls you want to play. Press the "Play" button when you are satisfied with the settings.
     <h2>Build Your Own Course</h2>
-    This is a prototype option for developers only, to pre-make a course or more easily generate a JSON-file.
+    This is a prototype option for developers, to pre-make a course or more easily generate a JSON-file containing a graph.
     <br>
     <br>
     Here you can draw out nodes where a player is going to have the possibility to move and where controls can be placed.
     <br>
     <br>
-    Nodes are placed by simply clicking with the computer pointer on the map, to make sure a player can move between these a connection is needed. A connection is created by click-and-drag movement from one node to another.
+    Nodes are placed by pressing the left mouse button. Note that the first node you place is always the starting point. Be careful to place nodes on the correct floor. 
+    In the top left of the screen there is a counter which tells you what floor it is. This counter is changed with the "+" and "-" buttons. 
     <br>
     <br>
-    Choosing what nodes have controls placed on them is done by pressing a node giving them a number, the control number is indicated on the node.
+    Edges can be bidirectional or onedirectional. Bidirectional edges are created by a click-and-drag movement from one node to another, using the left mouse button. 
+    Unidirectional edges are created by a click-and-drag movement from one node to another, using the left mouse button while also pressing the "shift" button.
+    When creating an edges on stairs between floors, draw an edge with the right mouse button. After drawing the edge you must declare what stair it is by writing some identification for it in the pop-up.
+    <br> 
+    <br>
+    Controls are placed by clicking on an already existing node again, with the left mouse button. The node will get a number on it representing what control is. The last control you create will be the goal.
+    <br>
+    <br>
+
 </body>
 </html>

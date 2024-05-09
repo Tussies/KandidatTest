@@ -87,8 +87,9 @@ class GameView {
       this.ctx.closePath();
 
       // Render control number
-      this.ctx.fillStyle = "black";
-      this.ctx.font = "12px Arial";
+      this.ctx.fillStyle = "purple";
+      this.ctx.font = "16px Arial";
+      this.ctx.lineWidth = 3;
       this.ctx.textAlign = "center";
       this.ctx.textBaseline = "middle";
       this.ctx.fillText(i + 1, node.posX + 15, node.posY - 15);
@@ -113,6 +114,7 @@ class GameView {
         this.ctx.beginPath();
         this.ctx.moveTo(startX, startY);
         this.ctx.lineTo(endX, endY);
+        this.ctx.lineWidth = 1;
         this.ctx.stroke();
         this.ctx.closePath();
       } else {
@@ -121,6 +123,7 @@ class GameView {
         this.ctx.arc(node.posX, node.posY, CONTROL_RADIUS - 3, 0, Math.PI * 2);
 
         this.ctx.strokeStyle = "purple";
+        this.ctx.lineWidth = 1;
         this.ctx.stroke();
         this.ctx.closePath();
       }
