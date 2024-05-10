@@ -34,7 +34,6 @@ class Graph {
     if (this.contains(startId) && this.contains(neighbourId)) {
       const neighNode = this.getNode(neighbourId).node;
 
-      // Add the edge from startId to neighbourId
       this.adjacencyList[startId].edges[neighbourId] = {
         node: neighNode,
         weight,
@@ -42,10 +41,6 @@ class Graph {
         oneDirectional: oneDirectional,
       };
 
-      // Log the edge object immediately after adding it
-      console.log(this.adjacencyList[startId].edges[neighbourId]);
-
-      // Add the reverse edge if it's not one-directional
       if (
         this.adjacencyList[neighbourId].edges[startId] === undefined &&
         oneDirectional == false

@@ -115,8 +115,8 @@ class EditView {
     this.ctx.closePath();
 
     // Draw arrow
-    const arrowLength = 10; // Length of the arrow
-    const arrowAngle = Math.PI / 4; // Angle of the arrow
+    const arrowLength = 10; 
+    const arrowAngle = Math.PI / 4; 
     const arrowStartX = endX - arrowLength * Math.cos(angle - arrowAngle);
     const arrowStartY = endY - arrowLength * Math.sin(angle - arrowAngle);
     const arrowEndX = endX - arrowLength * Math.cos(angle + arrowAngle);
