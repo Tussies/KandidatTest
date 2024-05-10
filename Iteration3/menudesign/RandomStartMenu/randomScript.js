@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Placeholder data
   const difficulties = ["Easy", "Medium", "Hard"];
   const imagePaths = ["../images/karta1.jpeg", "../images/FourLevels.jpg"];
-  const jsonGraphPaths = ["../graphs/preMadeOneLevel.json", "../graphs/FourLevelGraph.json"];
+  const jsonGraphPaths = ["../graphs/PreMadeOneLevel.json", "../graphs/FourLevelGraph.json"];
 
   const mapDropdown = document.getElementById("map-dropdown");
   const difficultyDropdown = document.getElementById("difficulty-dropdown");
