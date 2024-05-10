@@ -19,14 +19,14 @@ class RandomCourse {
 
   buildLeg(currentControlNode, legDifficulty) {
     if (legDifficulty == "e") {
-      return this.findValidControlNodes(currentControlNode, 5, 15, 0, 1);
+      return this.findValidControlNodes(currentControlNode, 5, 10, 0, 1);
     }
 
     if (legDifficulty == "m") {
       let control = this.findValidControlNodes(
         currentControlNode,
         10,
-        40,
+        20,
         1,
         2
       );
@@ -37,9 +37,9 @@ class RandomCourse {
     if (legDifficulty == "h") {
       let control = this.findValidControlNodes(
         currentControlNode,
-        20,
-        700,
-        1,
+        15,
+        100,
+        2,
         4
       );
       return control;
@@ -90,14 +90,14 @@ class RandomCourse {
       const alreadyAControl = this.controls.some(
         (node) => node.id == currentNodeId
       );
-      let isNeighbour = false;
-
+      let tooClose = false;
+      let distance = 0;
       for (let control of this.controls) {
         let controlNode = this.graph.getNode(control.id);
+        distance = this.distance(currentNode.node, controlNode.node);
 
-        if (controlNode.edges.hasOwnProperty(currentNodeId)) {
-          isNeighbour = true;
-          break;
+        if (distance <= 30) {
+          tooClose = true;
         }
       }
 
@@ -105,11 +105,11 @@ class RandomCourse {
       if (
         distances[currentNodeId].stairs >= minFloorChanges &&
         distances[currentNodeId].jumps >= minJumps &&
-        (distances[currentNodeId].stairs <= maxFloorChanges ||
-          distances[currentNodeId].jumps <= maxJumps) &&
+        distances[currentNodeId].stairs <= maxFloorChanges &&
+        distances[currentNodeId].jumps <= maxJumps &&
         currentNodeId != 1 &&
         !alreadyAControl &&
-        !isNeighbour
+        !tooClose
       ) {
         if ((xy[0] === 0 && xy[1] === 0) || control === null) {
           // No controls placed
@@ -222,7 +222,10 @@ class RandomCourse {
         let stairsToNeighbour = distances[currentNodeId].stairs;
         const jumpsToNeighbour = distances[currentNodeId].jumps + 1;
 
-        if (currentNode.edges[neighbourId].stair.stairCase !== undefined && currentNode.edges[neighbourId].stair.stairCase !== null) {
+        if (
+          currentNode.edges[neighbourId].stair.stairCase !== undefined &&
+          currentNode.edges[neighbourId].stair.stairCase !== null
+        ) {
           stairsToNeighbour++;
         }
         if (
