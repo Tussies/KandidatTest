@@ -17,5 +17,5 @@ document.getElementById("build-course").addEventListener("click", function () {
 });
 
 document.getElementById("instructions").addEventListener("click", function () {
-  window.open("/iteration3/menudesign/InstructionsManual/instructions.html", "_blank");
+  window.open("./Iteration3/menudesign/InstructionsManual/instructions.html", "_blank");
 });
