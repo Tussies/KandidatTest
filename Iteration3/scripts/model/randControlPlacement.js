@@ -65,6 +65,8 @@ class RandomCourse {
     // Initialize distances and priority queue
     for (const nodeId in this.graph.adjacencyList) {
       if (nodeId == startNode) {
+        priorityQueue.set(nodeId, 0);
+
         distances[nodeId] = { cost: 0, stairs: 0, jumps: 0 };
       } else {
         distances[nodeId] = {
@@ -73,7 +75,6 @@ class RandomCourse {
           jumps: Infinity,
         };
       }
-      priorityQueue.set(nodeId, distances[nodeId].cost);
     }
 
     //Calculation to gain better coverage.
@@ -83,7 +84,7 @@ class RandomCourse {
       const currentNodeId = Array.from(priorityQueue.keys()).reduce((a, b) =>
         priorityQueue.get(a) < priorityQueue.get(b) ? a : b
       );
-
+      
       const currentNode = this.graph.adjacencyList[currentNodeId];
       const currentDistance = priorityQueue.get(currentNodeId);
 

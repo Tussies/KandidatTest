@@ -11,12 +11,10 @@ class EditMode extends Mode {
 
     if (image.naturalWidth > document.documentElement.clientWidth) {
       this.width = image.naturalWidth;
-      //this.width = document.documentElement.clientWidth - 200;
     }
 
     if (image.naturalHeight > document.documentElement.clientHeight) {
       this.height = image.naturalHeight;
-      //this.height = document.documentElement.clientHeight - 200;
     }
 
     this.view = new EditView(this, this.width, this.height);
@@ -46,21 +44,16 @@ class EditMode extends Mode {
       return value;
     });
   
-    // Create a Blob object from the JSON data
     const blob = new Blob([jsonData], { type: "application/json" });
   
-    // Create a URL for the Blob object
     const url = URL.createObjectURL(blob);
   
-    // Create a link element to trigger the download
     const link = document.createElement("a");
     link.href = url;
     link.download = "graph_data.json";
   
-    // Simulate a click event to trigger the download
     link.click();
   
-    // Revoke the URL to release the resources
     URL.revokeObjectURL(url);
   }  
 
