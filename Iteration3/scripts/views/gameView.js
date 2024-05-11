@@ -86,12 +86,18 @@ class GameView {
       this.ctx.stroke();
       this.ctx.closePath();
 
-      // Render control number
-      this.ctx.fillStyle = "purple";
+      //Rendering of the control numbers
+      this.ctx.fillStyle = "white"; 
+      this.ctx.strokeStyle = "white"; 
+      this.ctx.lineWidth = 5; 
       this.ctx.font = "16px Arial";
-      this.ctx.lineWidth = 3;
       this.ctx.textAlign = "center";
       this.ctx.textBaseline = "middle";
+      
+      this.ctx.strokeText(i + 1, node.posX + 15, node.posY - 15);
+      
+      this.ctx.fillStyle = "black";
+      
       this.ctx.fillText(i + 1, node.posX + 15, node.posY - 15);
 
       if (controlNodes[i + 1]) {
@@ -198,7 +204,7 @@ class GameView {
               (node === playerPathNode && nextNode === nextPlayerPathNode) ||
               (node === nextPlayerPathNode && nextNode === playerPathNode)
             ) {
-              color = "green";
+              color = "#005300"; //dark green
               coloredPlayerPaths.push([playerPathNode, nextPlayerPathNode]);
             }
           }
