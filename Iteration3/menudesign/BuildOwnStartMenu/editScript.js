@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("instructions").addEventListener("click", function () {
-    window.open("./Iteration3/menudesign/InstructionsManual/instructions.html", "_blank");
+    window.open("/Iteration3/menudesign/InstructionsManual/instructions.html", "_blank");
   });
 
   var selectedCourse = null;
