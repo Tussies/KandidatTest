@@ -33,10 +33,7 @@ class EditController {
   }
 
   openInstructions() {
-    window.open(
-      "/iteration3/menudesign/InstructionsManual/instructions.html",
-      "_blank"
-    );
+    window.open("/Iteration3/menudesign/InstructionsManual/instructions.html", "_blank");
   }
 
   handleKeyDown(event) {
