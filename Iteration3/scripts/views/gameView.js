@@ -42,7 +42,6 @@ class GameView {
   }
   //Render the startNode as a triangle
   renderStartNode(startNode, angle, fstControl) {
-    //this.ctx.arc(startNode.node.posX,startNode.node.posY)
 
     // Calculate the coordinates of the vertices relative to the start node's position
     const x = startNode.node.posX;

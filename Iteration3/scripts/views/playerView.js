@@ -44,11 +44,6 @@ class PlayerView {
       this.ctx.closePath();
 
       this.ctx.lineWidth = 1;
-
-      // this.ctx.beginPath();
-      // this.ctx.arc(playerNode.edges[neighbour.node.id].weight);
-      // this.ctx.stroke();
-      // this.ctx.closePath();
     }
   }
 
